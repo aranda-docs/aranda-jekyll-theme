@@ -1,0 +1,123 @@
+## Aranda Docs Jekyll Theme Settings
+
+## Theme Settings
+## ==============
+
+## Settings used when generating the website
+title           : Aranda Jekyll Theme
+author          : Aranda Software
+version         : 1.0
+keywords        : Aranda Software, documentación, manuales
+description     : Hacemos tu gestión de IT mucho más fácil
+locale          : "es-CO"
+language        : es
+
+## Patterns
+# pattern_styles:
+#  - /patterns/css/example.css
+# pattern_scripts:
+#  - /patterns/js/example.js
+
+## Branding files
+styles          : /assets/css/style.css
+favicon         : /assets/branding/favicon.ico
+
+## Enable to modify the CSS style
+#sass:
+#  sass_dir: styleguide/_scss
+#  style: :compressed
+
+## Output
+url             :                ## Optional
+url             :                ## Optional
+destination     : _site          ## Output folder
+
+## Collection Settings
+## ===================
+
+## Outputs the _docs collection !Required
+#collections:
+#  docs:
+#    output: true
+
+## Sets the default attributes for each folder/path
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: doc
+
+## General Settings
+## ================
+
+# These settings are standard Jekyll Settings, check the Jekyll docs for help
+
+## Preprocessor settings
+highlighter: rouge
+markdown: kramdown
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
+## Markdown Processing
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+
+## Jekyll Serve
+port: 4000
+
+
+## HTML Compression
+## - https://jch.penibelst.de/
+compress_html:
+  clippings: all
+  ignore:
+    envs: development
+
+## Files to process
+include:
+  - .htaccess
+  - _pages
+exclude:
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - vendor
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - assets/js/plugins
+  - assets/js/_main.js
+  - assets/js/vendor
+  - Capfile
+  - CHANGELOG
+  - config
+  - Gemfile
+  - Gruntfile.js
+  - gulpfile.js
+  - LICENSE
+  - log
+  - node_modules
+  - package.json
+  - package-lock.json
+  - Rakefile
+  - README
+  - tmp
+keep_files:
+  - .git
+  - .svn
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+## Generates Styles
+## Disable to prevent styles from being generated.
+sass:
+  sass_dir: _scss
+  style: :compressed   

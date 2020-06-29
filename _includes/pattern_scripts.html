@@ -1,0 +1,5 @@
+{% if site.pattern_scripts %}{% for item in site.pattern_scripts %}
+<script src="{{ site.baseurl }}{{ item }}"></script>
+{% endfor %}{% endif %}
+<!--   iFrame Script required for Styleguide only -->
+<script src="{{ site.baseurl }}/assets/js/libs/iframeResizer.contentWindow.min.js" defer></script>

@@ -1,0 +1,9 @@
+// Links
+a {
+  color: $link-color;   // @CHANGE
+  
+  &:hover,
+  &:focus {
+    color: darken($link-color, 12%);
+  }
+}

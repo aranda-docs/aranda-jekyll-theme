@@ -1,0 +1,41 @@
+<a href="javascript:void(0)" class="sg_sidebar_button"><i class="icon" data-icon="menu"></i></a>
+<div class="sg_sidebar">
+
+  <a href="{{ site.baseurl }}/index.html" class="logo">
+    <div class="icon"><img src="{{ site.baseurl }}/assets/branding/png/styleguide-64x64.png"></div>
+    <div class="title">{{ site.sg_title }}</div>
+  </a>
+
+  <a href="{{ site.url }}{{ site.baseurl }}"{% if page.url == '/' %} class="active"{% endif %}>{{ site.title }}</a></li>
+
+
+  {% if page.sidebar and site.data.sidebar[page.sidebar] != null %}
+    {% for item in site.data.sidebar[page.sidebar] %}
+
+    <div class="group">
+      <div class="group_title">{{ item.title }}</div>
+
+      {% if item.children != null %}
+      <ul>
+        {% for child in item.children %}
+          <li><a href="{{ child.url | relative_url }}"{% if child.url == page.url %} class="active"{% endif %}>{{ child.title }}</a></li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+
+      {% if item.category %}
+        {% for child in site.pages %}
+          <ul>
+            {% if child.categories == item.category %}
+              <li><a href="{{ child.url | relative_url }}"{% if child.url == page.url %} class="active"{% endif %}>{{ child.title }}</a></li>
+            {% endif %}
+          </ul>
+        {% endfor %}
+      {% endif %}
+
+    </div>
+
+    {% endfor %}
+  {% endif %}
+
+</div>

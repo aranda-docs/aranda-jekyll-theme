@@ -1,0 +1,20 @@
+
+test:
+  - title: Aranda Docs
+    url: https://aranda-docs.github.io
+    children:
+      - title: Sistema de Diseño
+        url: https://aranda-labs.github.io/design-system
+      - title: ADM
+        url: https://aranda-docs.github.io/adm
+  - title: Otros Sitios
+    children:
+      - title: Google
+        url: https://www.google.com
+
+
+docs:
+  - title: Instalación
+    category: Instalación
+  - title: Uso
+    category: Uso

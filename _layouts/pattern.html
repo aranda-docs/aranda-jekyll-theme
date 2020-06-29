@@ -1,0 +1,12 @@
+<!DOCTYPE HTML>
+ <html {% if site.language %}lang="{{ site.pattern_language }}"{% endif %}>
+  <head>
+    {% include header.html %}
+    {% include pattern_header.html %}
+  </head>
+  <body id="content">
+    {{ content }}
+    {% include pattern_footer.html %}
+    {% include pattern_scripts.html %}
+  </body>
+</html>

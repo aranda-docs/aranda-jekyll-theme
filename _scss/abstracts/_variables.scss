@@ -1,0 +1,94 @@
+// Devices
+$medium-screen: 1080px;
+$tablet-screen: 768px;
+$mobile-screen: 480px;
+
+$extended_screen: 1400px;
+$large_screen: 1200px;
+$medium_screen: 800px;
+$small_screen: 480px;
+
+// Navigation Rails
+$left_rail: 300px;
+$right_rail: 300px;
+
+// Type Systems
+$sans-serif: 'Arial', sans-serif;      // @CHANGE
+$base-font-family: 'Arial', serif;       // @CHANGE
+$icon: 'Material Icons';
+$code: Menlo, Consolas, "Courier New", Courier, "Liberation Mono", monospace;
+
+// Font Sizing
+$base-font-size: 16px;
+$base-line-height: 1.6;
+$heading-line-height: 1.25;
+
+// Font Sizes
+$typo_ostrich: 2rem;    // @CHANGE
+$typo_albatros: 2rem;   // @CHANGE
+$typo_eagle: 1.8rem;    // @CHANGE
+$typo_hawk: 1.5rem;
+$typo_crow: 1.25rem;    // @CHANGE
+$typo_sparrow: 0.80rem;     // @CHANGE
+$typo_hummingbird: .875rem;
+
+// Mobile Font Sizes
+$m_typo_ostrich: 2rem;
+$m_typo_albatros: 1.8rem;
+$m_typo_eagle: 1.4rem;
+$m_typo_hawk: 1.25rem;
+
+// Special Fonts
+$micro-font-size: 70%;
+$small-font-size: 80%;
+
+// Brand Colors
+$white: #fff;
+$smoke: whitesmoke;
+$black: #000;
+$red: orangered;
+$blue: dodgerblue;
+$green: #16b491;
+$amber: orange;
+$grey: lightgrey;
+
+// Animations
+$base-duration: .2s;
+$base-timing: ease;
+
+// Base Colors
+$base-font-color: #515151;
+$heading-font-color:  #00a1c6;      // @CHANGE
+$subheading-font-color: $grey;
+
+$highlighter-font-color: #00a1c6;
+$link-color: #515151;
+$masthead-font-color: #00a1c6;
+$sidebar-color: #00a1c6;
+
+// Code Color
+$code-color: #232020;           // @CHANGE
+$code-font-color: #ffffff;
+
+// Borders
+$base-border-radius: 1rem;
+$base-border: 1px solid $smoke;
+
+// Margins
+$margin: 1rem;
+$margin_small: .5rem;
+$margin_large: 1.5rem;
+$margin_huge: 3rem;
+$margin_massive: 4.5rem;
+
+
+// Mobile Margins
+$m_margin_huge: 1.5rem;
+$m_margin_massive: 3rem;
+
+// Aranda Products
+// ===============
+
+// Aranda Field Service
+$green: #00a99d;
+$blue_high: #425966;
