@@ -29,7 +29,7 @@ favicon         : /assets/branding/favicon.ico
 
 ## Output
 url             :                ## Optional
-url             :                ## Optional
+baseurl         : /aranda-jekyll-theme
 destination     : _site          ## Output folder
 
 ## Collection Settings
