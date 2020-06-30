@@ -119,5 +119,5 @@ markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 ## Generates Styles
 ## Disable to prevent styles from being generated.
 sass:
-  sass_dir: _scss
+  sass_dir: _sass
   style: :compressed   
