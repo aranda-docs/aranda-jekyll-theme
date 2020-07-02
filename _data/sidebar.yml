@@ -15,6 +15,6 @@ test:
 
 docs:
   - title: Instalación
-    category: Instalación
+    chapter: Instalación
   - title: Uso
-    category: Uso
+    chapter: Uso

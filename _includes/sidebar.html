@@ -23,14 +23,14 @@
       </ul>
       {% endif %}
 
-      {% if item.category %}
+      {% if item.chapter %}
+        <ul>
         {% for child in site.pages %}
-          <ul>
-            {% if child.categories == item.category %}
-              <li><a href="{{ child.url | relative_url }}"{% if child.url == page.url %} class="active"{% endif %}>{{ child.title }}</a></li>
-            {% endif %}
-          </ul>
+          {% if child.chapter == item.chapter %}
+            <li><a href="{{ child.url | relative_url }}"{% if child.url == page.url %} class="active"{% endif %}>{{ child.title }}</a></li>
+          {% endif %}
         {% endfor %}
+        </ul>
       {% endif %}
 
     </div>
