@@ -23,7 +23,7 @@
     display: block;
     color: transparentize($white, 0.5);
     // font-size: $typo_sparrow;        // @CHANGE
-    font-weight: 700;
+    font-weight: 400;
     text-decoration:none;
     padding: $margin_small/3 0;
     padding: $margin;
@@ -56,7 +56,7 @@
     color: $white;
     // text-transform: capitalize;  // @CHANGE
     font-size: $typo_sparrow;
-    font-weight: 700;
+    font-weight: 400;
     text-decoration:none;
     
     .icon {
@@ -84,7 +84,7 @@
   
     .group_title {
       // font-size: $typo_hummingbird;  // @@CHANGE
-      font-weight: 700;
+      font-weight: 400;
       padding: $margin;
       padding-bottom: $margin_small;
       margin-bottom: 0;
@@ -94,7 +94,7 @@
       
       a {
         padding: $margin_small/2 $margin;
-        font-weight: 600;
+        font-weight: 400;
       }
     }
   }

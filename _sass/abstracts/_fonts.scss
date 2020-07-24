@@ -2,6 +2,56 @@
 
 // Aranda Fonts
 
+// Neusa
+@font-face {
+  font-family: 'Neusa Next';
+  src: url('../fonts/neusa/neusanextstd-bold-webfont.woff2') format('woff2'),
+  url('../fonts/neusa/neusanextstd-bold-webfont.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neusa Next';
+  src: url('../fonts/neusa/neusanextstd-italic-webfont.woff2') format('woff2'),
+  url('../fonts/neusa/neusanextstd-italic-webfont.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neusa Next';
+  src: url('../fonts/neusa/neusanextstd-light-webfont.woff2') format('woff2'),
+  url('../fonts/neusa/neusanextstd-light-webfont.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neusa Next';
+  src: url('../fonts/neusa/neusanextstd-medium-webfont.woff2') format('woff2'),
+  url('../fonts/neusa/neusanextstd-medium-webfont.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neusa Next';
+  src: url('../fonts/neusa/neusanextstd-regular-webfont.woff2') format('woff2'),
+  url('../fonts/neusa/neusanextstd-regular-webfont.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neusa Next';
+  src: url('../fonts/neusa/neusanextstd-thin-webfont.woff2') format('woff2'),
+  url('../fonts/neusa/neusanextstd-thin-webfont.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+}
+
+
 // PTSans
 @font-face {
   font-family: 'PTSans';
