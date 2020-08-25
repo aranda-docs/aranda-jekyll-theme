@@ -122,7 +122,7 @@ body#sg {
 .sg_contain {
   max-width: 70rem;
   margin: 0 auto;
-  padding: 0 $right_rail 0 $left_rail - 70;
+  padding: 0 $right_rail 0 $left_rail + 12;
 
   @media only screen and (max-width: $extended_screen) {
     max-width: 52rem;
