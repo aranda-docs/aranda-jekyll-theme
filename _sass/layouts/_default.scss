@@ -28,7 +28,7 @@ body#sg {
   position: relative;
   min-height: 100%;
   margin: 0 $margin_large;
-  
+
   @media only screen and (max-width: $medium_screen) {
     margin: 0 $margin;
   }
@@ -37,7 +37,7 @@ body#sg {
 // Sidebar Button Styles
 .sg_sidebar_button {
   display: none;
-  
+
   @media only screen and (max-width: $large_screen) {
     font-size: 2rem;
     height: 2rem;
@@ -108,9 +108,9 @@ body#sg {
   min-height: 100%;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
-  
+
   @media only screen and (max-width: $large_screen) {
-    left: -$left_rail;  
+    left: -$left_rail;
   }
 }
 .sg-main {
@@ -120,15 +120,15 @@ body#sg {
   min-height: 100%;
 }
 .sg_contain {
-  max-width: 50rem;
+  max-width: 60rem;
   margin: 0 auto;
   padding: 0 $right_rail 0 $left_rail + 20;
-  
+
   @media only screen and (max-width: $extended_screen) {
     max-width: 52rem;
     padding: 0 0 0 $left_rail + 20;
   }
   @media only screen and (max-width: $large_screen) {
-    padding: 0;  
+    padding: 0;
   }
 }
