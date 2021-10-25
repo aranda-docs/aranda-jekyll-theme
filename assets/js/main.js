@@ -31,6 +31,12 @@ function smoothScroll() {
   });
 }
 
+//-- Scroll to Active link
+function ScrollToActive() {
+  $('.sg_sidebar').animate({
+      scrollTop: $('.active').offset().top
+  }, 1000);
+}
 // Collapse H1
 function collapseH() {
   $('#documentationArea h1').click(function() {
@@ -78,6 +84,7 @@ function maturityCount() {
 $(document).ready(function() {
   contentList();
   smoothScroll();
+  ScrollToActive();
   maturityCount();
   collapseH();
   TargetExt();
