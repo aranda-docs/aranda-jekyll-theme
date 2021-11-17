@@ -7,9 +7,9 @@
     <div class="title">{{ site.sg_title }}</div>
   </a>
 
-  <a href="https://aranda-poc-docs.azureedge.net/">Portal Documentación</a></li>
+  <a href="https://aranda-poc-docs.azureedge.net/">Home</a></li>
 
-  <a href="{{ site.url }}{{ site.baseurl }}"{% if page.url == '/' %} class="active"{% endif %}>{{ site.title }}</a></li>
+  <a href="{{ site.url }}{{ site.baseurl }}" aria-title="current-manual" {% if page.url == '/' %}  class="active"{% endif %}>{{ site.title }}</a></li>
 
 
   {% if page.sidebar and site.data.sidebar[page.sidebar] != null %}

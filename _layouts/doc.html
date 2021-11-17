@@ -4,6 +4,24 @@ layout: default
 <header id="mastheadArea" class="sg_masthead">
   <div class="sg_contain">
     <div class="head">
+      <!--Buscador Aranda docs-->
+      <div class="row no-gutters">
+        <div class="col">
+            <div class="form-group input-group-lg buscador-container">
+               <input typ id="formulario" class="form-control" placeholder="Busca documentos"/>
+                <a  class="cerrar" href="http://127.0.0.1:4000/aranda-docs-theme/"></a>
+            </div>
+        </div>
+        <div class="col-auto">
+            <button id="Buscar"  type="submit" class="btn btn-lg btn-outline-primary --white mb-2 ml-3">Buscar</button>
+        </div>                        
+      </div>
+      <!--Buscador Aranda docs-->
+      <!-- Adding result container -->                    
+      <div class="row">                        
+        <ul  class="demo" class="form-control col-md-5" id="demo"></ul>
+      </div>
+      <!-- Adding result container -->
       <div class="title header typo_ostrich">{{ page.title }}</div>
       {% if page.info %}<div class="sub_title typo_crow">{{ page.info }}</div>{% endif %}
     </div>
