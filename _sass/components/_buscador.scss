@@ -1,0 +1,78 @@
+.buscador-container{
+    margin-bottom: 0px !important;
+    height: 50px;
+}
+
+#demo{    
+    position: absolute;
+    width: 450px;
+    max-width: 451px;
+    max-height: 400px;
+    overflow-y: scroll;
+    z-index: 1;
+    background-color:$aranda-white;  
+    /* Box shadow */
+    box-shadow: -3px 10px 15px -8px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -3px 10px 15px -8px rgba(0,0,0,0.75);
+    -moz-box-shadow: -3px 10px 15px -8px rgba(0,0,0,0.75);     
+}
+
+#demo::-webkit-scrollbar {
+    background-color: $aranda-white;
+    width: 16px;
+}
+
+#demo::-webkit-scrollbar-track {
+    background-color: #f4f4f4;
+}
+
+#demo::-webkit-scrollbar-track:hover {
+    background-color: #f4f4f4;
+}
+
+#demo::-webkit-scrollbar-thumb {
+    background-color: #babac0;
+    border-radius: 16px;
+    border: 5px solid #fff
+}
+
+#demo::-webkit-scrollbar-thumb:hover {
+    background-color: #a0a0a5;
+    border: 4px solid #f4f4f4
+}
+
+#demo::-webkit-scrollbar-button {
+    display: none
+}
+
+.demo-item{
+    position: relative;
+    background: #Fff;
+    color: #000;
+    width: 100%;
+    height: auto;
+    font-size: 10px;
+    font-weight:normal;    
+    font-size: 12px;
+    font-family: 'neusa_next_std_regularregular', sans-serif;
+}
+.item-manual{
+    font-size: x-large;
+    color: $aranda-title;
+}
+.item-title{
+    font-size: large;
+    color: $aranda-text;
+}
+.demo-abstract{
+    position: relative;
+    font-weight:normal;
+    color:$aranda-text;
+    font-size: 12pt !important;
+    font-family: 'neusa_next_std_regularregular', sans-serif;
+
+}
+.item-url{
+    font-size: medium;
+    color: $aranda-blue;
+}

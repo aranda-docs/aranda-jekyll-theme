@@ -1,3 +1,7 @@
+//-- enable javascript engine for the search control
+import { searchBar } from "./modules/SearchBar.js";
+import { ResultItem } from "./modules/ResultItem.js";
+
 // Create Content List
 function contentList() {
   $('#documentationArea').find('h1').each(function() {
@@ -80,15 +84,51 @@ function maturityCount() {
   }
 }
 
+//  Get Manual title based on the Aria title
+function getCurrentManual() {
+  const manual = document.querySelector('[aria-title="current-manual"]');
+  return manual ? manual.textContent : -1;
+}
+
+//-- Getting form control and html container
+const searchInput = document.querySelector('#formulario');
+const searchButton = document.querySelector('#Buscar');
+const htmlElement = document.querySelector('#demo');
+
+//-- Render results inside html container
+const setResults = ( evt ) => {
+    const search = evt.target.value.toString();
+    const subject = getCurrentManual();
+    const results = search.length > 0 ? searchBar( evt.target.value.toString(),  subject) : [];
+    if( search.length > 0 && results.map( result =>  ResultItem( result ) ).length > 0 ){  
+        const htmlNodes =  results.map( result =>  ResultItem( result ) ).toString().replace(/,/g, "");
+        htmlElement.innerHTML = htmlNodes;
+    } else if(search.length === 0) {
+        htmlElement.innerHTML = [];
+    }else {
+        htmlElement.innerHTML = `<p class="item-title">No hay resultados para la busqueda '${search}'</p>`;
+    }        
+}
+
+//-- Search by button
+const SearchByButton = () => {
+    setResults({target: { value:  searchInput.value}})
+}
+
+//-- Adding listener and triggering  render function when key is up.
+searchInput.onkeyup = setResults;
+searchButton.onclick = SearchByButton;
+
 //Functions that run when all HTML is loaded
 $(document).ready(function() {
   contentList();
   smoothScroll();
-  ScrollToActive();
+  //ScrollToActive();
   maturityCount();
   collapseH();
   TargetExt();
   sidebarButton();
+  getCurrentManual();
 });
 
 
