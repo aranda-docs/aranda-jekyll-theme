@@ -1,0 +1,25 @@
+
+th {
+
+    padding-inline-end: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border: 1px solid #dcdfe3;
+    background: #f8f8fa;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border: 2px solid #ffffff;
+    background: #f8f8fa;
+    color: #535659;
+    font-size: 0.9rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}

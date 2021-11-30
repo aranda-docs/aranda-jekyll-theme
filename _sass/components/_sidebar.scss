@@ -3,11 +3,11 @@
   background: $sidebar-color;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
-  
-  &::-webkit-scrollbar { 
-    display: none; 
+
+  &::-webkit-scrollbar {
+    display: none;
   }
-  
+
   ul,
   ol {
     margin: 0;
@@ -29,7 +29,7 @@
     padding: $margin;
     transition: all $base-timing $base-duration;
     margin-left: $margin_large;
-        
+
     &:before {
       @extend .icon;
       content: 'remove';
@@ -42,30 +42,30 @@
     &.active:before {
       content: 'arrow_forward';
     }
-    
+
     &:hover,
     &.active {
       color: $white;
     }
   }
-  
+
   .logo {
     display: flex;
     align-items: center;
-    padding: $margin_large $margin; 
+    padding: $margin_large $margin;
     color: $white;
     // text-transform: capitalize;  // @CHANGE
     font-size: $typo_sparrow;
     font-weight: 400;
     text-decoration:none;
-    
+
     .icon {
       height: 2rem;   // @CHANGE
       width: 2rem;    // @CHANGE
       flex: 0 0 auto;
       margin-right: $margin;
       overflow: hidden;
-      
+
       img {
         width: 3rem;
         height: 3rem;
@@ -74,14 +74,14 @@
     .title {
       font-size: $typo_crow;
       margin-bottom: 0;
-      line-height: 1.2;   // @CHANGE
+      line-height: 2;   // @CHANGE
     }
   }
   .group {
     border-top: 1px solid transparentize($white, 0.8);
     padding-bottom: $margin;
     font-size: $typo_hummingbird;   // @@CHANGE
-  
+
     .group_title {
       // font-size: $typo_hummingbird;  // @@CHANGE
       font-weight: 400;
@@ -91,7 +91,7 @@
     }
     li {
       border-top: none;
-      
+
       a {
         padding: $margin_small/2 $margin;
         font-weight: 400;
