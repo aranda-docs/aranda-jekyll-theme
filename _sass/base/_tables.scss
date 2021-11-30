@@ -1,6 +1,7 @@
 
 th {
 
+    color: $heading-font-color;
     padding-inline-end: 100px;
     white-space: nowrap;
     overflow: hidden;
@@ -10,6 +11,7 @@ th {
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 10px;
+  
 }
 
 td {
