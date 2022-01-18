@@ -13,15 +13,24 @@ layout: default
             </div>
         </div>
         <div class="col-auto">
-            <button id="Buscar"  type="submit" class="btn btn-lg btn-outline-primary --white mb-2 ml-3">Buscar</button>
+            {% if site.data.messages['tooltip'] != null %}
+              <div class="tooltip hide_tooltip" id="tooltip" >{{ site.data.messages['tooltip'] }}</div>
+            {% endif %}
+            <button id="convertPDF"  type="submit" class="btn btn-lg --white mb-2 ml-3">
+              <img src="{{ site.baseurl }}/assets/images/ic_descarga.svg" width="64" alt="Adobe PDF" id="pdf-ic">
+            </button>
         </div>                        
       </div>
-      <!--Buscador Aranda docs-->
       <!-- Adding result container -->                    
       <div class="row">                        
-        <ul  class="demo" class="form-control col-md-5" id="demo"></ul>
+        <ul id="result-box"></ul>
       </div>
-      <!-- Adding result container -->
+      <!-- Adding result container -->      
+
+      <!--Buscador Aranda docs-->
+      <!-- <div id="no-results">
+        <p class="item-title">No hay resultados para la busqueda </p>
+      </div> -->
       <div class="title header typo_ostrich">{{ page.title }}</div>
       {% if page.info %}<div class="sub_title typo_crow">{{ page.info }}</div>{% endif %}
     </div>
@@ -32,7 +41,7 @@ layout: default
   </div>
 </header>
 <article id="documentationArea" class="sg_doc">
-  <div class="sg_contain">
+  <div class="sg_contain" id="article-content">
     {{ content }}
   </div>
 </article>

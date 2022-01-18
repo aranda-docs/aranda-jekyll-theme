@@ -5,8 +5,31 @@
   -webkit-overflow-scrolling: touch;
   
   &::-webkit-scrollbar { 
-    display: none; 
+    background-color: $aranda-white;
+    width: 10px;
   }
+  &::-webkit-scrollbar-track {
+    background-color: #f4f4f4;
+}
+
+&::-webkit-scrollbar-track:hover {
+    background-color: #f4f4f4;
+}
+
+&::-webkit-scrollbar-thumb {
+    background-color: #babac0;
+    border-radius: 16px;
+    border: 3px solid #fff;    
+}
+
+&::-webkit-scrollbar-thumb:hover {
+    background-color: #a0a0a5;
+    border: 3px solid #f4f4f4
+}
+
+&::-webkit-scrollbar-button {
+    display: none
+}  
   
   ul,
   ol {

@@ -1,10 +1,9 @@
-export const ResultItem  = ( { manual, titulo, abstract, url } ) => {
+export const ResultItem  = ( { parent, title, url } ) => {
    const item = `<div class="demo-item">
-        <span class="item-manual"><strong>${manual}</strong></span>
+        <span class="item-manual"><strong>${parent}</strong></span>
         <br>
-        <span class="item-title"><strong>${titulo}</strong></span>
-        <br>
-        <p class="demo-abstract">${abstract}</p>
+        <span class="item-title"><strong>${title}</strong></span>
+        <br>        
         <a href="${url}" class="item-url">${url}</a>
         <hr />
     </div>`
