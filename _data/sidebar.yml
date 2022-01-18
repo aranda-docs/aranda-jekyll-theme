@@ -1,7 +1,7 @@
 
 test:
   - title: Aranda Docs
-    url: https://aranda-docs.github.io
+    url: https://docs.arandasoft.com
     children:
       - title: Sistema de Diseño
         url: https://aranda-labs.github.io/design-system
