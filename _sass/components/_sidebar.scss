@@ -68,11 +68,10 @@
 
     &:hover,
     &.active {
-      color: $white;
       font-weight: 500;
       color: $white;
-      text-decoration-line: underline;
-      text-underline-position: under;
+      background-color: transparentize($white, 0.5);
+
     }
   }
 
