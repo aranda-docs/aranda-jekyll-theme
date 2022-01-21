@@ -64,14 +64,15 @@
     }
     &.active:before {
       content: 'arrow_forward';
-      font-weight: 500;
-      color: $white;
-      text-decoration-line: underline;
     }
 
     &:hover,
     &.active {
       color: $white;
+      font-weight: 500;
+      color: $white;
+      text-decoration-line: underline;
+      text-underline-position: under;
     }
   }
 
