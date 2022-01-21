@@ -44,10 +44,9 @@
   a:not(.logo) {
     // text-transform: capitalize;      // @CHANGE
     display: block;
-    color: $white;
+    color: transparentize($white, 0.5);
     // font-size: $typo_sparrow;        // @CHANGE
-    text-decoration-line: underline;
-    font-weight: 500;
+    font-weight: 400;
     text-decoration:none;
     padding: $margin_small/3 0;
     padding: $margin;
@@ -65,6 +64,9 @@
     }
     &.active:before {
       content: 'arrow_forward';
+      font-weight: 500;
+      color: $white;
+      text-decoration-line: underline;
     }
 
     &:hover,
