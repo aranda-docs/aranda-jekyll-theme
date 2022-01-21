@@ -3,8 +3,8 @@
   background: $sidebar-color;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
-  
-  &::-webkit-scrollbar { 
+
+  &::-webkit-scrollbar {
     background-color: $aranda-white;
     width: 10px;
   }
@@ -19,7 +19,7 @@
 &::-webkit-scrollbar-thumb {
     background-color: #babac0;
     border-radius: 16px;
-    border: 3px solid #fff;    
+    border: 3px solid #fff;
 }
 
 &::-webkit-scrollbar-thumb:hover {
@@ -29,8 +29,8 @@
 
 &::-webkit-scrollbar-button {
     display: none
-}  
-  
+}
+
   ul,
   ol {
     margin: 0;
@@ -44,9 +44,10 @@
   a:not(.logo) {
     // text-transform: capitalize;      // @CHANGE
     display: block;
-    color: transparentize($white, 0.5);
+    color: $white;
     // font-size: $typo_sparrow;        // @CHANGE
-    font-weight: 400;
+    text-decoration-line: underline;
+    font-weight: 500;
     text-decoration:none;
     padding: $margin_small/3 0;
     padding: $margin;
