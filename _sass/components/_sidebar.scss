@@ -68,7 +68,6 @@
 
     &:hover,
     &.active {
-      font-weight: 500;
       color: $white;
       background-color: transparentize($white, 30%);
 
