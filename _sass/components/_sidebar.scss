@@ -69,7 +69,7 @@
     &:hover,
     &.active {
       color: $white;
-      background-color: transparentize($white, 28%);
+      background-color: transparentize($white, 0.5);
       margin-left: 0.2rem;
 
     }
