@@ -70,6 +70,7 @@
     &.active {
       color: $white;
       background-color: transparentize($white, 30%);
+      margin-left: 0.2rem;
 
     }
   }
