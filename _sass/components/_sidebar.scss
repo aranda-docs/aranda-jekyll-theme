@@ -108,6 +108,8 @@
     padding-bottom: $margin;
     font-size: $typo_hummingbird;   // @@CHANGE
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
 
     .group_title {
       font-weight: 400;
