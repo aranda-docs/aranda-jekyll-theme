@@ -112,13 +112,15 @@
     .group_title {
       font-weight: 400;
       padding: $margin;
+
     }
     li {
       border-top: none;
 
       a {
-        padding: $margin_small/2 $margin;
+        // padding: $margin_small/2 $margin; //
         font-weight: 400;
+        display: flex;
       }
     }
   }
