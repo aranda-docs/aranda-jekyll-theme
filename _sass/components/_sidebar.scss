@@ -113,8 +113,8 @@
 
     .group_title {
       font-weight: 400;
-      padding: $margin;
       margin-bottom: 0;
+      display: flex;
     }
     li {
       border-top: none;
