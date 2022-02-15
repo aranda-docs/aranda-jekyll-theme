@@ -52,22 +52,22 @@ The following are instructions for Ubuntu Linux (or Ubuntu/WSL on Windows 10)
 
    ```
    sudo apt-get install ruby-full build-essential zlib1g-dev
-   ``` 
+   ```
 
-2. Configure the Ruby language to install software in the `$HOME` directory 
+2. Configure the Ruby language to install software in the `$HOME` directory
 
    ```
    echo '# Install Ruby Gems to ~/gems' >> ~/.bashrc
    echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc
    echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc
    source ~/.bashrc
-   ``` 
+   ```
 
 3. Install Jekyll
 
    ```
    gem install jekyll bundler
-   ``` 
+   ```
 
 ### Clone and modify the repository
 
@@ -75,18 +75,17 @@ The following are instructions for Ubuntu Linux (or Ubuntu/WSL on Windows 10)
 
    ```
    git clone https://github.com/aranda-docs/aranda-jekyll-theme
-   ``` 
+   ```
 
 2. Run the Jekyll preview to preview and regenerate the website when the files are changed
 
    ```
    cd aranda-jekyll-theme
    bundle exec jekyll serve
-   ``` 
+   ```
 
 5. Preview the included test site (in the `test/` directory) using a web browser. While this command is running, each time you modify  the theme or the included websites (in the `test/` and `docs/`directories), it will regenerate the sites and you may see the changes in the browser after a refresh.
 
    ```
    http://localhost:4000/test/
-   ``` 
-   
+   ```
