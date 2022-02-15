@@ -1,6 +1,7 @@
 //-- enable javascript engine for the search control
 import { searchBar } from "./modules/SearchBar.js";
 import { ResultItem } from "./modules/ResultItem.js";
+const { jsPDF } = window.jspdf;
 // Create Content List
 function contentList() {
   $('#documentationArea').find('h1').each(function() {
@@ -83,36 +84,20 @@ function maturityCount() {
   }
 }
 
+//-- Workaround for html2canvas blank image
+function fnIgnoreElements(el) {
+  if (typeof el.shadowRoot == 'object' && el.shadowRoot !== null) return true
+}
+
 //-- Download manual to PDF
-const downloadManual = () => {
-   // const content = $('#article-content').html();
-
-  html2canvas(document.querySelector('#article-content')).then(function(canvas) {
-    var printWindow = window.open('', '', 'height=980,width=980');
-    var pageHeight = 980;
-    var pageWidth = 900;
-    var srcImg = canvas;
-    var sX = 0;
-    var sY = pageHeight * 1 // start 1 pageHeight down for every new page
-    var sWidth = pageWidth;
-    var sHeight = pageHeight;
-    var dX = 0;
-    var dY = 0;
-    var dWidth = pageWidth;
-    var dHeight = pageHeight;
-
-    window.onePageCanvas = document.createElement("canvas");
-    onePageCanvas.setAttribute('width', pageWidth);
-    onePageCanvas.setAttribute('height', pageHeight);
-    var ctx = onePageCanvas.getContext('2d');
-    ctx.drawImage(srcImg, 0, 0, 980, 980, 0,0, 980, 980);
-
-    var canvasDataURL = onePageCanvas.toDataURL("image/png", 1.0);
-    document.body.appendChild(canvas);
-    printWindow.document.write('<img src="' + canvasDataURL + '">');
-    printWindow.document.close();
-    printWindow.print();
-});
+const downloadManual = async () => {
+  const printableArea = document.querySelector('body');
+  html2canvas(printableArea, {useCORS: true, allowTaint: true, ignoreElements: fnIgnoreElements}).then(function(canvas) {
+      const img = canvas.toDataURL("image/png");
+      var doc = new jsPDF('l', 'mm', [1200, 1210]);
+      doc.addImage(img,'JPEG',20,20, 980, 980);
+      doc.save(`Aranda-${new Date().toLocaleDateString()}.pdf`);
+  });
 }
 
 //-- Getting form control and html container
@@ -173,7 +158,8 @@ const setResults = ( evt ) => {
 }
 
 const ifHighlightedWord = () => {
-  if( $('mark') && scrollTimes == 0){
+  const yellowHighlighter = document.querySelector('mark');
+  if( yellowHighlighter && scrollTimes == 0){
     $('html').animate({
       scrollTop: $('mark').offset().top
     }, 1000);
@@ -186,7 +172,7 @@ setInterval(ifHighlightedWord, 1000);
 //-- Activating download tooltip
 const tooltip = document.querySelector('#tooltip');
 const searchButton = document.querySelector('#pdf-ic');
-// const convertPDF = document.querySelector('#convertPDF');
+const convertPDF = document.querySelector('#convertPDF');
 
 //-- Show Tooltip
 const showTooltip = (evt) => {
@@ -203,7 +189,7 @@ const hideTooltip = (evt) => {
 //-- Binding events
 searchButton.onmouseover = showTooltip;
 searchButton.onmouseout = hideTooltip;
-// convertPDF.onclick = downloadManual;
+convertPDF.onclick = downloadManual;
 
 //-- Adding listener and triggering  render function when key is up.
 searchInput.onkeyup = setResults;
