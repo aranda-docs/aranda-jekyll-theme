@@ -37,9 +37,11 @@ function smoothScroll() {
 
 //-- Scroll to Active link
 function ScrollToActive() {
-  $('.sg_sidebar').animate({
+  if( $('.active').offset() !== undefined ){
+    $('.sg_sidebar').animate({
       scrollTop: $('.active').offset().top
-  }, 1000);
+    }, 1000);  
+  }
 }
 // Collapse H1
 function collapseH() {
@@ -198,7 +200,7 @@ searchInput.onkeyup = setResults;
 $(document).ready(function() {
   contentList();
   smoothScroll();
-  //ScrollToActive();
+  ScrollToActive();
   maturityCount();
   collapseH();
   TargetExt();
