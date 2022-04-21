@@ -46,21 +46,50 @@
     position: absolute;
     left: 86%;
   }
-  .contenedor-menu .menu {
-  ul {
-    display: none;
+  
+    .sg_sidebar a:before
+  display: none !important
 
-    li a {
-      background: #424242;
-      color: #e9e9e9;
-    }
-  }
+.contenedor-menu
+  ul
+    list-style: none
 
-  .activado > a {
-    background: #1a95d5;
-    color: #fff;
-  }  
-}
+  .menu
+    li a
+      color: #ffffff80
+      font-size: 16px
+      display: block
+      padding: 15px 20px
+
+      &:hover
+        background: #ffffff80
+        color: #fff
+
+    .icono
+      font-size: 12px
+      line-height: 18px
+
+      &.izquierda
+        float: left
+        margin-right: 10px
+
+      &.derecha
+        float: right
+        margin-left: 10px
+
+    ul
+      display: none
+
+      li a
+        background: #424242
+        color: #e9e9e9
+
+    .activado > a
+      background: #1a95d5
+      color: #fff
+  
+     }
+      
   a:not(.logo) {
     // text-transform: capitalize;      // @CHANGE
     display: block;
