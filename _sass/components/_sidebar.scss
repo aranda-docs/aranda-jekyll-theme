@@ -31,12 +31,18 @@
     display: none
 }
 
-i.icono.derecha.fa.fa-chevron-down {
-  margin-left: 10px;
-  position: absolute;
-  left: 86%;
-}
+.contenedor-menu .menu {
+  .icono {
+    &.izquierda {
+      margin-left: 10px;
+      position: absolute;
+      left: 86%;
+    }
 
+    &.derecha {
+      float: right;
+      margin-left: 10px;
+    }
   }
 
   ul {
@@ -52,6 +58,7 @@ i.icono.derecha.fa.fa-chevron-down {
     background: #1a95d5;
     color: #fff;
   }
+}
 
   ul,
   ol {
