@@ -41,9 +41,10 @@
     border-top: 1px solid transparentize($white, 0.8);
     line-height: $heading-line-height;
   }
-  .contenedor-menu .menu .icono.izquierda {
-    float: left;
-    margin-right: 10px;
+  .fa {
+    margin-left: 10px;
+    position: absolute;
+    left: 86%;
   }  
   a:not(.logo) {
     // text-transform: capitalize;      // @CHANGE
