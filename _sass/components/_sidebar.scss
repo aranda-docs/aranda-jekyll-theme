@@ -31,28 +31,6 @@
     display: none
 }
 
-.icono.derecha.fa.fa-chevron-down {
-      margin-left: 10px;
-      position: absolute;
-      left: 86%;
-    }
-  }
-
-  ul {
-    display: none;
-
-    li a {
-      background: #424242;
-      color: #e9e9e9;
-    }
-  }
-
-  .activado > a {
-    background: #1a95d5;
-    color: #fff;
-  }
-}
-
   ul,
   ol {
     margin: 0;
@@ -127,13 +105,13 @@
   }
   .group {
     border-top: 1px solid transparentize($white, 0.8);
+    padding-bottom: $margin;
     font-size: $typo_hummingbird;   // @@CHANGE
 
 
     .group_title {
       font-weight: 400;
       padding: $margin;
-      font-size: 16px;
 
     }
     li {
