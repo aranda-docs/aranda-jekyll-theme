@@ -31,6 +31,34 @@
     display: none
 }
 
+.contenedor-menu .menu {
+  .icono {
+    &.izquierda {
+      float: left;
+      margin-right: 10px;
+    }
+
+    &.derecha {
+      float: right;
+      margin-left: 10px;
+    }
+  }
+
+  ul {
+    display: none;
+
+    li a {
+      background: #424242;
+      color: #e9e9e9;
+    }
+  }
+
+  .activado > a {
+    background: #1a95d5;
+    color: #fff;
+  }
+}
+
   ul,
   ol {
     margin: 0;
