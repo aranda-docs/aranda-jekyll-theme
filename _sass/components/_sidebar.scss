@@ -53,7 +53,7 @@
 .contenedor-menu
   ul
     list-style: none
-
+  }
   .menu
     li a
       color: #ffffff80
@@ -89,7 +89,7 @@
       color: #fff
   
      }
-    }  
+   
   a:not(.logo) {
     // text-transform: capitalize;      // @CHANGE
     display: block;
