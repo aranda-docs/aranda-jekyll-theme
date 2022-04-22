@@ -40,11 +40,7 @@
   li {
     border-top: 1px solid transparentize($white, 0.8);
     line-height: $heading-line-height;
-  }
-  .fa {
-    margin-left: 10px;
-    position: absolute;
-    left: 86%;
+ 
   }
   
   
@@ -119,7 +115,7 @@
 
     .group_title {
       font-weight: 400;
-      // padding: $margin; // 
+      padding: $margin;
 
     }
     li {
@@ -128,7 +124,7 @@
       a {
         // padding: $margin_small/2 $margin; //
         font-weight: 400;
-        // display: flex; //
+        display: flex;
       }
     }
   }
