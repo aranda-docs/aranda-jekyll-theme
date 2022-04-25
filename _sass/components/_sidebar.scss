@@ -31,6 +31,33 @@
     display: none
 }
 
+.icono.derecha.fa.fa-chevron-down {
+      margin-left: 10px;
+      position: absolute;
+      left: 86%;
+    }
+
+    &.derecha {
+      float: right;
+      margin-left: 10px;
+    }
+  }
+
+  ul {
+    display: none;
+
+    li a {
+      background: #424242;
+      color: #e9e9e9;
+    }
+  }
+
+  .activado > a {
+    background: #1a95d5;
+    color: #fff;
+  }
+
+
   ul,
   ol {
     margin: 0;
@@ -40,11 +67,7 @@
   li {
     border-top: 1px solid transparentize($white, 0.8);
     line-height: $heading-line-height;
- 
   }
-  
-  
-          
   a:not(.logo) {
     // text-transform: capitalize;      // @CHANGE
     display: block;
@@ -109,13 +132,13 @@
   }
   .group {
     border-top: 1px solid transparentize($white, 0.8);
-    padding-bottom: $margin;
     font-size: $typo_hummingbird;   // @@CHANGE
 
 
     .group_title {
       font-weight: 400;
       padding: $margin;
+      font-size: 16px;
 
     }
     li {
@@ -128,4 +151,52 @@
       }
     }
   }
+
+.sg_sidebar a:before{
+	display:none!important;
+}
+
+.contenedor-menu ul {
+	list-style: none;
+}
+
+.contenedor-menu .menu li a {
+	color:#ffffff80;
+	font-size: 16px;
+	display: block;
+	padding: 15px 20px;
+}
+
+.contenedor-menu .menu li a:hover {
+	background: #ffffff80;
+	color:#fff;
+}
+
+.contenedor-menu .menu .icono {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+.contenedor-menu .menu .icono.izquierda {
+	float: left;
+	margin-right: 10px;
+}
+
+.contenedor-menu .menu .icono.derecha {
+	float: right;
+	margin-left: 10px;
+}
+
+.contenedor-menu .menu ul {
+	display: none;
+}
+
+.contenedor-menu .menu ul li a {
+	background: #424242;
+	color:#e9e9e9;
+}
+
+.contenedor-menu .menu .activado > a {
+	background: #1a95d5;
+	color:#fff;
 }
