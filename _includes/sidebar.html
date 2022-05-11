@@ -17,7 +17,11 @@
   {% for item in site.data.sidebar[page.sidebar] %}
 
   <div class="group">
-    <div class="group_title collapsible" id="{{item.chapter}}-btn">{{ item.title }}</div>
+    <div class="group_title collapsible" id="{{item.chapter}}-btn">{{ item.title }}
+      <span id="{{item.chapter}}-span">
+        <img src="{{ site.baseurl }}/assets/images/ic_flecha.svg" width="13" alt="Collapse menú">
+      </span>
+    </div>
 
     {% if item.children != null %}
     <ul>
@@ -51,9 +55,11 @@
   <script>
     if (document.getElementById('{{item.chapter}}-content').getElementsByClassName('active').length > 0) {
       document.getElementById('{{item.chapter}}-content').classList.add("collapsible_active");
+      document.getElementById('{{item.chapter}}-span').classList.add('collapsible_arrow')
     }
     document.getElementById('{{item.chapter}}-btn').addEventListener('click', function () {
       document.getElementById('{{item.chapter}}-content').classList.toggle('collapsible_active')
+      document.getElementById('{{item.chapter}}-span').classList.toggle('collapsible_arrow')
     })
   </script>
   {% endfor %}

@@ -1,5 +1,17 @@
 .collapsible {
     cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+
+.collapsible span {
+    transform: rotate(-90deg);
+    transition: .5s;
+    filter: invert(100%) contrast(100%);
+}
+
+.collapsible_arrow {
+    transform: rotate(0deg) !important;
 }
 
 .collapsible_content {
