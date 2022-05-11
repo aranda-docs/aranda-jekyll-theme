@@ -10,36 +10,53 @@
 
   <a href="https://docs.arandasoft.com/">Home</a></li>
 
-  <a href="{{ site.url }}{{ site.baseurl }}" aria-title="current-manual" {% if page.url == '/' %}  class="active"{% endif %}>{{ site.title }}</a></li>
-
+  <a href="{{ site.url }}{{ site.baseurl }}" aria-title="current-manual" {% if page.url=='/' %} class="active" {% endif
+    %}>{{ site.title }}</a></li>
 
   {% if page.sidebar and site.data.sidebar[page.sidebar] != null %}
-    {% for item in site.data.sidebar[page.sidebar] %}
+  {% for item in site.data.sidebar[page.sidebar] %}
 
-    <div class="group">
-      <div class="group_title">{{ item.title }}</div>
+  <div class="group">
+    <div class="group_title collapsible" id="{{item.chapter}}-btn">{{ item.title }}</div>
 
-      {% if item.children != null %}
-      <ul>
-        {% for child in item.children %}
-          <li><a href="{{ child.url | relative_url }}"{% if child.url == page.url %} class="active"{% endif %}>{{ child.title }}</a></li>
-        {% endfor %}
-      </ul>
+    {% if item.children != null %}
+    <ul>
+      {% for child in item.children %}
+      <li>
+        <a href="{{ child.url | relative_url }}" {% if child.url==page.url %} class="active" {% endif %}>
+          {{child.title}}
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+
+    {% if item.chapter %}
+    <!-- Container with each all items -->
+    <ul class="collapsible_content" id="{{item.chapter}}-content">
+      {% for child in site.pages %}
+      {% if child.chapter == item.chapter %}
+      <!-- Single item -->
+      <li>
+        <a href="{{ child.url | relative_url }}" {% if child.url==page.url %} class="active" {% endif %}>
+          {{child.title }}
+        </a>
+      </li>
       {% endif %}
+      {% endfor %}
+    </ul>
+    {% endif %}
 
-      {% if item.chapter %}
-        <ul>
-        {% for child in site.pages %}
-          {% if child.chapter == item.chapter %}
-            <li><a href="{{ child.url | relative_url }}"{% if child.url == page.url %} class="active"{% endif %}>{{ child.title }}</a></li>
-          {% endif %}
-        {% endfor %}
-        </ul>
-      {% endif %}
-
-    </div>
-
-    {% endfor %}
+  </div>
+  <script>
+    if (document.getElementById('{{item.chapter}}-content').getElementsByClassName('active').length > 0) {
+      document.getElementById('{{item.chapter}}-content').classList.add("collapsible_active");
+    }
+    document.getElementById('{{item.chapter}}-btn').addEventListener('click', function () {
+      document.getElementById('{{item.chapter}}-content').classList.toggle('collapsible_active')
+    })
+  </script>
+  {% endfor %}
   {% endif %}
 
 </div>

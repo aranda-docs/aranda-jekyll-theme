@@ -8,28 +8,29 @@
     background-color: $aranda-white;
     width: 10px;
   }
+
   &::-webkit-scrollbar-track {
     background-color: #f4f4f4;
-}
+  }
 
-&::-webkit-scrollbar-track:hover {
+  &::-webkit-scrollbar-track:hover {
     background-color: #f4f4f4;
-}
+  }
 
-&::-webkit-scrollbar-thumb {
+  &::-webkit-scrollbar-thumb {
     background-color: #babac0;
     border-radius: 16px;
     border: 3px solid #fff;
-}
+  }
 
-&::-webkit-scrollbar-thumb:hover {
+  &::-webkit-scrollbar-thumb:hover {
     background-color: #a0a0a5;
     border: 3px solid #f4f4f4
-}
+  }
 
-&::-webkit-scrollbar-button {
+  &::-webkit-scrollbar-button {
     display: none
-}
+  }
 
   ul,
   ol {
@@ -37,25 +38,27 @@
     padding: 0;
     list-style: none;
   }
+
   li {
     border-top: 1px solid transparentize($white, 0.8);
     line-height: $heading-line-height;
   }
+
   .fa {
     margin-left: 10px;
     position: absolute;
     left: 86%;
   }
-  
-  
-          
+
+
+
   a:not(.logo) {
     // text-transform: capitalize;      // @CHANGE
     display: block;
     color: transparentize($white, 0.5);
     // font-size: $typo_sparrow;        // @CHANGE
     font-weight: 400;
-    text-decoration:none;
+    text-decoration: none;
     padding: $margin_small/3 0;
     padding: $margin;
     transition: all $base-timing $base-duration;
@@ -70,6 +73,7 @@
       margin-right: $margin_small;
       margin-left: - $margin_large;
     }
+
     &.active:before {
       content: 'arrow_forward';
     }
@@ -91,11 +95,11 @@
     // text-transform: capitalize;  // @CHANGE
     font-size: $typo_sparrow;
     font-weight: 400;
-    text-decoration:none;
+    text-decoration: none;
 
     .icon {
-      height: 2rem;   // @CHANGE
-      width: 2rem;    // @CHANGE
+      height: 2rem; // @CHANGE
+      width: 2rem; // @CHANGE
       flex: 0 0 auto;
       margin-right: $margin;
       overflow: hidden;
@@ -105,23 +109,26 @@
         height: 3rem;
       }
     }
+
     .title {
       font-size: $typo_crow;
       margin-bottom: 0;
-      line-height: 2;   // @CHANGE
+      line-height: 2; // @CHANGE
     }
   }
+
   .group {
     border-top: 1px solid transparentize($white, 0.8);
-    padding-bottom: $margin;
-    font-size: $typo_hummingbird;   // @@CHANGE
+    // padding-bottom: $margin;
+    font-size: $typo_hummingbird; // @@CHANGE
 
 
     .group_title {
       font-weight: 400;
-      padding: $margin; 
+      padding: $margin;
 
     }
+
     li {
       border-top: none;
 

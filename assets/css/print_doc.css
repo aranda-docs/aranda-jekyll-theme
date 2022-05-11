@@ -1,0 +1,61 @@
+body {
+    background: #fff none !important;
+    margin: 30px;
+}
+
+.title.header.typo_ostrich {
+    border-bottom: 1pt solid #666d73;
+    padding-bottom: 18px;
+}
+
+main.sg-main {
+    font-family: sans-serif;
+    color: #666d73;
+    font-size: 15px;
+}
+
+.head {
+    font-size: 19px;
+    font-weight: 800;
+    font-family: sans-serif;
+}
+
+#wrapper {
+    clear: both !important;
+    display: block !important;
+    float: none !important;
+    position: relative !important;
+}
+
+img {
+    margin: auto;
+    display: block;
+    vertical-align: middle;
+}
+
+.sg_sidebar {
+    display: none;
+}
+
+.row.no-gutters {
+    display: none;
+}
+
+.sg_doc .sg_contain h1:after {
+    content: 'arrow_back';
+    display: none
+}
+
+h1 {
+    margin-left: 20px;
+}
+
+ul,
+ol,
+dd,
+p,
+hr {
+    margin: 0;
+    margin-bottom: 1rem;
+    text-align: justify;
+}

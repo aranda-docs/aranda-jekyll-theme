@@ -7,25 +7,25 @@ layout: default
       <!--Buscador Aranda docs-->
       <div class="row no-gutters">
         <div class="col">
-            <div class="form-group input-group-lg buscador-container">
-               <input typ id="formulario" class="form-control" placeholder="Busca documentos"/>
-                <a  class="cerrar" href="http://127.0.0.1:4000/aranda-docs-theme/"></a>
-            </div>
+          <div class="form-group input-group-lg buscador-container">
+            <input typ id="formulario" class="form-control" placeholder="Busca documentos" />
+            <a class="cerrar" href="http://127.0.0.1:4000/aranda-docs-theme/"></a>
+          </div>
         </div>
         <div class="col-auto">
-            {% if site.data.messages['tooltip'] != null %}
-              <div class="tooltip hide_tooltip" id="tooltip" >{{ site.data.messages['tooltip'] }}</div>
-            {% endif %}
-            <button id="convertPDF"  type="submit" class="btn btn-lg --white mb-2 ml-3">
-              <img src="{{ site.baseurl }}/assets/images/ic_descarga.svg" width="64" alt="Adobe PDF" id="pdf-ic">
-            </button>
-        </div>                        
+          {% if site.data.messages['tooltip'] != null %}
+          <div class="tooltip hide_tooltip" id="tooltip">{{ site.data.messages['tooltip'] }}</div>
+          {% endif %}
+          <button id="convertPDF" type="submit" class="btn btn-lg --white mb-2 ml-3">
+            <img src="{{ site.baseurl }}/assets/images/ic_descarga.svg" width="64" alt="Adobe PDF" id="pdf-ic">
+          </button>
+        </div>
       </div>
-      <!-- Adding result container -->                    
-      <div class="row">                        
+      <!-- Adding result container -->
+      <div class="row">
         <ul id="result-box"></ul>
       </div>
-      <!-- Adding result container -->      
+      <!-- Adding result container -->
 
       <!--Buscador Aranda docs-->
       <!-- <div id="no-results">
