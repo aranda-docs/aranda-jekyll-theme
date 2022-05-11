@@ -1,0 +1,15 @@
+.collapsible {
+    cursor: pointer;
+}
+
+.collapsible_content {
+    display: none;
+    overflow: hidden;
+    height: 0;
+    transition: 1s ease-out;
+}
+
+.collapsible_active {
+    display: block;
+    height: auto;
+}
