@@ -4,7 +4,7 @@
 
   <a href="{{ site.baseurl }}/index.html" class="logo">
     <div class="icon"><img src="{{ site.baseurl }}/assets/branding/png/styleguide-128x128.png"></div>
-    <div class="title">{{ site.sg_title }}</div>
+    <div class="title">{{ site.title }}</div>
   </a>
 
 
@@ -12,7 +12,9 @@
 
   <a href="{{ site.url }}{{ site.baseurl }}" aria-title="current-manual" {% if page.url=='/' %} class="active" {% endif
     %}>{{ site.title }}</a></li>
-
+  <script>
+    console.log('{{site.title}}');
+  </script>
   {% if page.sidebar and site.data.sidebar[page.sidebar] != null %}
   {% for item in site.data.sidebar[page.sidebar] %}
 
