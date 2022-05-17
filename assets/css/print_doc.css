@@ -1,11 +1,67 @@
+@font-face {
+    font-family: 'Neusa Next';
+    src: url('../fonts/neusa/neusanextstd-bold-webfont.woff2') format('woff2'),
+        url('../fonts/neusa/neusanextstd-bold-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neusa Next';
+    src: url('../fonts/neusa/neusanextstd-italic-webfont.woff2') format('woff2'),
+        url('../fonts/neusa/neusanextstd-italic-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neusa Next';
+    src: url('../fonts/neusa/neusanextstd-light-webfont.woff2') format('woff2'),
+        url('../fonts/neusa/neusanextstd-light-webfont.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neusa Next';
+    src: url('../fonts/neusa/neusanextstd-medium-webfont.woff2') format('woff2'),
+        url('../fonts/neusa/neusanextstd-medium-webfont.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neusa Next';
+    src: url('../fonts/neusa/neusanextstd-regular-webfont.woff2') format('woff2'),
+        url('../fonts/neusa/neusanextstd-regular-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neusa Next';
+    src: url('../fonts/neusa/neusanextstd-thin-webfont.woff2') format('woff2'),
+        url('../fonts/neusa/neusanextstd-thin-webfont.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
+
+
+
+
 body {
     background: #fff none !important;
-    margin: 30px;
+    margin: 30px 20px;
+}
+
+* {
+    font-family: "Neusa Next", sans-serif !important;
 }
 
 .title.header.typo_ostrich {
     border-bottom: 1pt solid #666d73;
     padding-bottom: 18px;
+    font-size: 30px;
 }
 
 main.sg-main {
@@ -28,9 +84,11 @@ main.sg-main {
 }
 
 img {
-    margin: auto;
+    margin: 30px auto;
     display: block;
-    vertical-align: middle;
+    min-width: 45%;
+    max-width: 70%;
+    page-break-inside: avoid;
 }
 
 .sg_sidebar {
@@ -46,8 +104,22 @@ img {
     display: none
 }
 
+
+
 h1 {
-    margin-left: 20px;
+    font-size: 30px;
+    page-break-before: always;
+}
+
+h2 {
+    margin-top: .7cm;
+}
+
+.TableGrid {
+    margin: 25px auto;
+    width: 90% !important;
+    margin-left: auto !important;
+    page-break-inside: avoid;
 }
 
 ul,
