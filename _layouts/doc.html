@@ -12,6 +12,9 @@ layout: default
             <a class="cerrar" href="http://127.0.0.1:4000/aranda-docs-theme/"></a>
           </div>
         </div>
+
+        {% if site.title contains "Release Notes" %}
+        {% else %}
         <div class="col-auto">
           {% if site.data.messages['tooltip'] != null %}
           <div class="tooltip hide_tooltip" id="tooltip">{{ site.data.messages['tooltip'] }}</div>
@@ -20,6 +23,7 @@ layout: default
             <img src="{{ site.baseurl }}/assets/images/ic_descarga.svg" width="64" alt="Adobe PDF" id="pdf-ic">
           </button>
         </div>
+        {% endif %}
       </div>
       <!-- Adding result container -->
       <div class="row">
