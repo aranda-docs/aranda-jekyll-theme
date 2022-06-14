@@ -94,7 +94,7 @@ function fnIgnoreElements(el) {
 //-- Download manual to PDF
 const downloadManual = async () => {
   const loc = window.location.href.split('/')[3]
-  var printWindow = window.open(`/${loc}/pdf`, 'Print', "width=" + screen.availWidth + ",height=" + screen.availHeight + ' toolbar=0, resizable=0');
+  var printWindow = window.open(`/${loc}/pdf.html`, 'Print', "width=" + screen.availWidth + ",height=" + screen.availHeight + ' toolbar=0, resizable=0');
 
   printWindow.addEventListener('load', function () {
     if (Boolean(printWindow.chrome)) {
