@@ -164,6 +164,34 @@ pre.highlight
 
 }
 
+.apis {
+    align-items: baseline;
+    color: #576574;
+    padding: 10px 16px;
+  
+}  
+  .apis h2 {
+    color: #576574;
+    font-weight: 500;
+    border-left: 4px solid #6dcdff;
+    padding: 4px 16px;
+    background-color: #fcfcfc;
+    margin-bottom: 36px;
+    
+ }  
+  .apis th {
+    color: #576574;
+
+    
+ }  
+  .apis td {
+    color: #576574;
+  
+}
+.highlight code:before {
+    display: none;
+}
+
 #contenido .body {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
