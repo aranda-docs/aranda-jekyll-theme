@@ -181,13 +181,69 @@ pre.highlight
  }  
   .apis th {
     color: #576574;
-
     
  }  
   .apis td {
     color: #576574;
-  
 }
+.instal p {
+    color: #999999;
+    font-size: 14px;
+    font-weight: 300;
+} 
+.instal h1 {
+    color: #727E89;
+    font-weight: 500;
+    border-left: 4px solid #1AA99D;
+    padding: 4px 16px;
+    margin-bottom: 36px;
+    font-size: 22px;
+    margin-top: 46px;
+}  
+.instal h2 {
+    color: #727E89;
+    font-weight: 500;
+    border-left: 4px solid #FF6D6D;
+    padding: 4px 16px;
+    margin-bottom: 36px;
+    font-size: 22px;
+    margin-top: 46px;  
+}  
+  .instal h3 {
+    color: #727E89;
+    font-weight: 500;
+    border-left: 4px solid #F8D40E;
+    padding: 4px 16px;
+    margin-bottom: 36px;
+    font-size: 22px;
+    margin-top: 46px;
+}
+ .instal h4 {
+    color: #727E89;
+    font-weight: 500;
+    margin-bottom: 36px;
+    font-size: 22px;
+    margin-top: 31px;
+} 
+ .title_alert {
+    color: #F57171;
+    font-size: 14px;
+    margin-left: 24px;
+    margin-top: 8px;
+} 
+.content_alert {
+    top: 164px;
+    left: 371px;
+    height: 103px;
+    background: #f5717121;
+    border-radius: 4px;
+ }  
+.alert {
+    padding-top: 35px;
+    padding-left: 28px;
+    display: -webkit-box;
+ }
+   
 .highlight code:before {
     display: none;
 }
