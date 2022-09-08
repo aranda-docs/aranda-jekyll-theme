@@ -1,2 +1,3 @@
 tooltip: Descargar manual PDF
 instaladores: Para la instalación de esta versión si cuenta con Office 365 por favor comunicarse con el área de soporte.
+instaladoresCMDB: A partir de la  versión  de Base de Datos 8.0.93 solo se soporta motor Sql 2012 o Superior y Motor Oracle 11.2.04 o Superior
