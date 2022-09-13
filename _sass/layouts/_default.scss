@@ -225,13 +225,17 @@ pre.highlight
     font-size: 22px;
     margin-top: 31px;
 } 
-
+.blockquote p {
+    color: #727e89;
+    font-size: 15px;
+    padding-left: 16px;
+}    
 .instal blockquote {
     margin-left: 0px;
     margin-top: 55px;
     margin-bottom: 55px;
     color: #727e89;
-    border-left: 2px solid #d3d3d3;
+    border-left: 4px solid #d3d3d3;
 }      
  .title_alert {
     color: #F57171;
