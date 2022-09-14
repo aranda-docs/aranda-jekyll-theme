@@ -83,26 +83,6 @@ function maturityCount() {
   }
 }
 
-
-//-- Download manual to PDF
-const downloadManual = async () => {
-  const loc = window.location.href.split('/')[3]
-  var printWindow = window.open(`/${loc}/pdf.html`, 'Print', "width=" + screen.availWidth + ",height=" + screen.availHeight + ' toolbar=0, resizable=0');
-
-  printWindow.addEventListener('load', function () {
-    if (Boolean(printWindow.chrome)) {
-      printWindow.print();
-      setTimeout(function () {
-        printWindow.close();
-      }, 500);
-    } else {
-      printWindow.print();
-      printWindow.close();
-    }
-  }, true);
-}
-
-
 //-- Scroll to result once per search
 let scrollTimes = 0;
 
@@ -128,7 +108,7 @@ setInterval(ifHighlightedWord, 1000);
 //-- Activating download tooltip
 const tooltip = document.querySelector('#tooltip');
 const searchButton = document.querySelector('#pdf-ic');
-const convertPDF = document.querySelector('#convertPDF');
+
 
 //-- Show Tooltip
 const showTooltip = (evt) => {
@@ -145,7 +125,6 @@ const hideTooltip = (evt) => {
 //-- Binding events
 searchButton.onmouseover = showTooltip;
 searchButton.onmouseout = hideTooltip;
-convertPDF.onclick = downloadManual;
 
 //-- Adding listener and triggering  render function when key is up.
 
