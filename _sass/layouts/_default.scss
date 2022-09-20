@@ -250,7 +250,19 @@ pre.highlight
     padding-left: 28px;
     display: -webkit-box;
  }
-   
+.block blockquote
+    margin-left: 0px;
+    margin-top: 55px;
+    margin-bottom: 55px;
+    color: #f57171;
+    font-size: 15px;
+    /* background: blue; */
+    top: 164px;
+    left: 371px;
+    /* height: 103px; */
+    background: #f5717121;
+    border-radius: 4px;
+ } 
 .highlight code:before {
     display: none;
 }
