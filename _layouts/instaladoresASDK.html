@@ -20,10 +20,9 @@ layout: default
          <div class="content_alert">
            <div class="alert">
              <div class="img_alert"><img src="{{ site.baseurl }}/assets/images/ic_alert.svg"></div>
-               <div class="title_alert">Nota: Para la version 8.29.0 es indispensable contar con Microsoft .NET Framework 4.8 en el servidor de aplicaciones, antes de realizar la actualización o instalación del producto.
-             </div>
-         </div> 
-       <div class="instal">{{ content }}</div>
-     </div>
-</post>
+               <div class="message_asdk" id="message">
+                 {{ site.data.messages['asdk'] }}
+               </div>
+            <div class="instal">{{ content }}</div>
+          </div>
 </post>
