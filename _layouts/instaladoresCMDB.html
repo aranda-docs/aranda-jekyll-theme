@@ -15,15 +15,11 @@ layout: default
        
 </header>
 
-<post id="documentationArea" class="sg_doc">
-     <div class="sg_post" id="post-content">
-         <div class="content_alert">
-           <div class="alert">
-             <div class="img_alert"><img src="{{ site.baseurl }}/assets/images/ic_alert.svg"></div>
-               <div class="title_alert">A partir de la  versión  de Base de Datos 8.0.93 solo se soporta motor Sql 2012 o Superior y Motor Oracle 11.2.04 o Superior</div>
-            </div>
-         </div> 
-       <div class="instal">{{ content }}</div>
-     </div>
-</post>
+<post id="documentationArea" class="instal-content"> 
+  <div class="content-instal">
+     <div class="content_alert">  
+         <div class="notes">{% include note-instaladores-cmdb.html %}</div>
+         <div class="instal">{{ content }}</div>    
+     </div>  
+  </div>
 </post>
