@@ -84,11 +84,6 @@ pre.highlight
       left: $left_rail + 20;
       opacity: .2;
     }
-    .sg_post {
-        position: absolute;
-        left: $left_rail + 20;
-        opacity: .2;
-      }
   }
 }
 @media only screen and (max-width: $small_screen) {
@@ -114,6 +109,12 @@ pre.highlight
         left: $left_rail - 30;
         opacity: .2;
     }
+    .sg_apis {
+        position: absolute;
+        left: $left_rail - 30;
+        opacity: .2;
+      
+    }
   }
 }
 // Sidebar Position
@@ -135,6 +136,11 @@ pre.highlight
 
 .post {
     align-items: baseline;
+    color: #576574;
+    border-left: 4px solid #ff6d6d;
+    font-weight: 500;
+    padding: 10px 16px;
+    background-color: #fcfcfc;
 }
 
 .ts {
@@ -142,34 +148,26 @@ pre.highlight
     border-radius: 2px;
     color: currentColor;
  
-}
+ }
 
-.post ul {
+  .post ul {
     padding-bottom: 96px;
-}
+ }
 
-.post h2 {
+  .post h2 {
     color: #576574;
-    border-left: 4px solid #ff6d6d;
     font-weight: 500;
     padding: 10px 16px;
     background-color: #fcfcfc;
-  
-}  
 
- .post hr {
-    border-top: 0;
-    border-bottom: 2px solid #f5f5f5;
-    margin: 1.5rem 0;
+  }
 
-}
-
-.apis {
+  .apis {
     align-items: baseline;
     color: #576574;
     padding: 10px 16px;
   
-}  
+  }  
   .apis h2 {
     color: #576574;
     font-weight: 500;
@@ -178,19 +176,36 @@ pre.highlight
     background-color: #fcfcfc;
     margin-bottom: 36px;
     
- }  
+  }  
   .apis th {
     color: #576574;
     
- }  
+}  
   .apis td {
     color: #576574;
-}
 
+}
+.content-instal {
+    position: absolute;
+    padding-left: 315px;
+    max-width: 68%;
+ } 
 .instal p {
     color: #999999;
     font-size: 14px;
+    font-weight: 300;
 } 
+
+.instal blockquote {
+    margin: 1rem 0;
+    padding-left: 2rem;
+    top: 164px;
+    left: 371px;
+    height: 103px;
+    background: #f5717121;
+    border-radius: 4px;
+
+}
 .instal h1 {
     color: #727E89;
     font-weight: 500;
@@ -225,23 +240,13 @@ pre.highlight
     font-size: 22px;
     margin-top: 31px;
 } 
-.instal blockquote {
-    margin-left: 0px;
-    margin-top: 55px;
-    margin-bottom: 55px;
-    color: #727e89;
-    font-size: 15px;
-}      
  .title_alert {
     color: #F57171;
     font-size: 14px;
     margin-left: 24px;
-    margin-right: 24px;
+    margin-top: 8px;
 } 
 .content_alert {
-    top: 164px;
-    left: 371px;
-    height: 103px;
     background: #f5717121;
     border-radius: 4px;
  }  
@@ -250,14 +255,36 @@ pre.highlight
     padding-left: 28px;
     display: -webkit-box;
  }
-.block blockquote {
-    margin-left: 2px;
-    margin-top: 43px;
-    margin-bottom: 55px;
+.notes {
+    display: inline-block;
+}
+.notes h1 {
+    font-size: 13px;
     color: #f57171;
-    font-size: 14px;
-    border-left: 3px solid #feeded;
- } 
+    margin-left: 79px;
+    margin-right: 22px;
+    margin-bottom: 14px; 
+ 
+ }     
+.notes li {
+    font-size: 13px;
+    color: #f57171;
+    margin-left: 79px;
+    margin-right: 22px;
+    margin-bottom: 14px;
+    display: block;
+  }
+  .note-icon {
+    padding-left: 30px;
+    padding-top: 13px;
+    color: #f57171;
+    display: flex;
+ }
+  .note-icon h2 {
+    margin-left: 14px;
+}
+
+   
 .highlight code:before {
     display: none;
 }
