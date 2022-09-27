@@ -1,5 +1,8 @@
 .pdf {
-    display: flex;
+   display: flex;
+   background: $sidebar-color;
+   border-radius: 4px;
+   padding-left: 10px;
 }
 
 .pdf h1{
@@ -9,13 +12,6 @@
 #convertPDF>img {
     width: 22px;
     padding-left: 10px;
-    
-}
-.col-auto convertPDF {
-    background: $sidebar-color;
-    border-radius: 4px;
 }    
-    #convertPDF {
-    background: none;
-    padding-left: 10px;
+ #convertPDF {
 }
