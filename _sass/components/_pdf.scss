@@ -1,17 +1,19 @@
 .pdf {
    display: flex;
-   background: $sidebar-color;
-   border-radius: 4px;
-   padding-left: 10px;
 }
 
 .pdf h1{
     font-size: 13px;
     color: fff;
+    background: #999;
+    border-radius: 4px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 12px;
+    padding-bottom: 12px;
 }
 #convertPDF>img {
     width: 22px;
-    padding-left: 10px;
 }    
  #convertPDF {
 }
