@@ -4,12 +4,18 @@
 
 .pdf h1{
     font-size: 13px;
-    color: $sidebar-color;
-    padding-right: 10px;
-    padding-top: 3px;
+    color: fff;
 }
 #convertPDF>img {
     width: 22px;
-    padding-top: 10px;
-    padding-right: 10px;
+    padding-left: 10px;
+    
+}
+.col-auto convertPDF {
+    background: $sidebar-color;
+    border-radius: 4px;
+}    
+    #convertPDF {
+    background: none;
+    padding-left: 10px;
 }
