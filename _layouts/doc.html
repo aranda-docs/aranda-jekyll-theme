@@ -20,13 +20,13 @@ layout: default
 
                <div class="pdf">
                 
-                {% if site.title contains "Release Notes" %} {% else %}
+                <!--{% if site.title contains "Release Notes" %} {% else %}-->
                 <div class="col-auto">
-                    <h1>Descargar PDF</h1>
+                    
                     <a
                         id="convertPDF"
                         class="mb-2 ml-5"
-                        href="{{ site.baseurl }}/assets/{{site.baseurl | remove_first: '/'}}.pdf"
+                        href=" <h1>Descargar PDF</h1> {{ site.baseurl }}/assets/{{site.baseurl | remove_first: '/'}}.pdf"
                         download
                     >
                         <img
