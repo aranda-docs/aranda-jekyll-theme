@@ -1,16 +1,19 @@
 .pdf {
-   display: flex;
+    display: flex;
+    padding: 6px 12px;
+    background-color: #c2cadf38;
+    border: 1px solid #c2cad8;
+    border-radius: 4px;
 }
 
 .pdf h1{
     font-size: 13px;
     color: #c2cad8;
 }
-#convertPDF>img {
+#convertPDF {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    background-color: none;
 }    
- #convertPDF {
-    padding: 6px 12px;
-    background-color: #ffffff12;
-    border: 1px solid #c2cad8;
-    border-radius: 4px;
-}
+ 
