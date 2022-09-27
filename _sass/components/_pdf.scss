@@ -1,14 +1,14 @@
 .pdf {
     position: sticky;
     display: flex;
-    background: #99999921;
+    background: $sidebar-color;
     border-radius: 4px;
 
 }
 
 .pdf h1{
     font-size: 13px;
-    color: #999999;
+    color: #000000;
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 3px;
@@ -17,4 +17,6 @@
     width: 22px;
     padding-top: 10px;
     padding-right: 10px;
+    background: none;
+    color: #000000;
 }
