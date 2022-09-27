@@ -2,157 +2,21 @@
 
 // Aranda Fonts
 
-// Neusa
+// Lederman
 @font-face {
-  font-family: 'Neusa Next';
-  src: url('../fonts/neusa/neusanextstd-bold-webfont.woff2') format('woff2'),
-  url('../fonts/neusa/neusanextstd-bold-webfont.woff') format('woff');
-  font-weight: 700;
-  font-style: normal;
+    font-family: "Lederman";
+    src: url("../fonts/Lederman/Lederman-Regular.woff2") format("woff2"),
+        url("../fonts/Lederman/Lederman-Regular.woff") format("woff"),
+        url("../fonts/Lederman/Lederman-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: 'Neusa Next';
-  src: url('../fonts/neusa/neusanextstd-italic-webfont.woff2') format('woff2'),
-  url('../fonts/neusa/neusanextstd-italic-webfont.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Neusa Next';
-  src: url('../fonts/neusa/neusanextstd-light-webfont.woff2') format('woff2'),
-  url('../fonts/neusa/neusanextstd-light-webfont.woff') format('woff');
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Neusa Next';
-  src: url('../fonts/neusa/neusanextstd-medium-webfont.woff2') format('woff2'),
-  url('../fonts/neusa/neusanextstd-medium-webfont.woff') format('woff');
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Neusa Next';
-  src: url('../fonts/neusa/neusanextstd-regular-webfont.woff2') format('woff2'),
-  url('../fonts/neusa/neusanextstd-regular-webfont.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Neusa Next';
-  src: url('../fonts/neusa/neusanextstd-thin-webfont.woff2') format('woff2'),
-  url('../fonts/neusa/neusanextstd-thin-webfont.woff') format('woff');
-  font-weight: 200;
-  font-style: normal;
-}
-
-
-// PTSans
-@font-face {
-  font-family: 'PTSans';
-  src:  url('../fonts/PT_Sans/PTSans-Bold.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'PTSans';
-  src: url('../fonts/PT_Sans/PTSans-Bold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'PTSans';
-  src: url('../fonts/PT_Sans/PTSans-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-// Sans Serif
-@font-face {
-  font-family: 'Roboto';
-  src:  url('../fonts/roboto/Roboto-Light.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Roboto';
-  src:  url('../fonts/roboto/Roboto-LightItalic.ttf') format('truetype');
-  font-weight: 300;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'Roboto';
-  src: url('../fonts/roboto/Roboto-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Roboto';
-  src: url('../fonts/roboto/Roboto-Italic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'Roboto';
-  src: url('../fonts/roboto/Roboto-Bold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Roboto';
-  src: url('../fonts/roboto/Roboto-BoldItalic.ttf') format('truetype');
-  font-weight: bold;
-  font-style: italic;
-}
-
-// Slab
-@font-face {
-  font-family: 'Roboto Slab';
-  src:  url('../fonts/roboto-slab/RobotoSlab-Light.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Roboto Slab';
-  src: url('../fonts/roboto-slab/RobotoSlab-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Roboto Slab';
-  src: url('../fonts/roboto-slab/RobotoSlab-Bold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'HKGrotesk';
-  src: url('../fonts/HKGrotesk/Bold/HKGrotesk-Bold.woff2') format('woff2'), 
-       url('../fonts/HKGrotesk/Bold/HKGrotesk-Bold.woff') format('woff'),
-       url('../fonts/HKGrotesk/Bold/HKGrotesk-Bold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'HKGrotesk';
-  src: url('../fonts/HKGrotesk/Regular/HKGrotesk-Regular.woff2') format('woff2'), 
-       url('../fonts/HKGrotesk/Regular/HKGrotesk-Regular.woff') format('woff'),
-       url('../fonts/HKGrotesk/Regular/HKGrotesk-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'HKGrotesk';
-  src: url('../fonts/HKGrotesk/Semibold/HKGrotesk-Semibold.woff2') format('woff2'), 
-       url('../fonts/HKGrotesk/Semibold/HKGrotesk-Semibold.woff') format('woff'),
-       url('../fonts/HKGrotesk/Semibold/HKGrotesk-Semibold.ttf') format('truetype');
-  font-weight: 600;
-  font-style: normal;
+    font-family: "Lederman";
+    src: url("../fonts/Lederman/Lederman-Medium.woff2") format("woff2"),
+        url("../fonts/Lederman/Lederman-Medium.woff") format("woff"),
+        url("../fonts/Lederman/Lederman-Medium.ttf") format("truetype");
+    font-weight: medium;
+    font-style: normal;
 }

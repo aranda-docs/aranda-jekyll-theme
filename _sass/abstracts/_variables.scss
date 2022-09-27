@@ -13,9 +13,9 @@ $left_rail: 300px;
 $right_rail: 300px;
 
 // Type Systems
-$sans-serif: 'Neusa Next', sans-serif;      // @CHANGE
-$base-font-family: 'Neusa Next', sans-serif;       // @CHANGE
-$icon: 'Material Icons';
+$sans-serif: "Lederman", sans-serif; // @CHANGE
+$base-font-family: "Lederman", sans-serif; // @CHANGE
+$icon: "Material Icons";
 $code: Menlo, Consolas, "Courier New", Courier, "Liberation Mono", monospace;
 
 // Font Sizing
@@ -24,13 +24,13 @@ $base-line-height: 1.6;
 $heading-line-height: 1.25;
 
 // Font Sizes
-$typo_ostrich: 2rem;    // @CHANGE
-$typo_albatros: 2rem;   // @CHANGE
-$typo_eagle: 1.4rem;    // @CHANGE
+$typo_ostrich: 2rem; // @CHANGE
+$typo_albatros: 2rem; // @CHANGE
+$typo_eagle: 1.4rem; // @CHANGE
 $typo_hawk: 1.5rem;
-$typo_crow: 1.25rem;    // @CHANGE
-$typo_sparrow: 0.80rem;     // @CHANGE
-$typo_hummingbird: .875rem;
+$typo_crow: 1.25rem; // @CHANGE
+$typo_sparrow: 0.8rem; // @CHANGE
+$typo_hummingbird: 0.875rem;
 
 // Mobile Font Sizes
 $m_typo_ostrich: 2rem;
@@ -53,12 +53,12 @@ $amber: orange;
 $grey: lightgrey;
 
 // Animations
-$base-duration: .2s;
+$base-duration: 0.2s;
 $base-timing: ease;
 
 // Base Colors
 $base-font-color: #515151;
-$heading-font-color:  #00a1c6;      // @CHANGE
+$heading-font-color: #00a1c6; // @CHANGE
 $subheading-font-color: $grey;
 
 $highlighter-font-color: #00a1c6;
@@ -67,7 +67,7 @@ $masthead-font-color: #00a1c6;
 $sidebar-color: #00a1c6;
 
 // Code Color
-$code-color: #232020;           // @CHANGE
+$code-color: #232020; // @CHANGE
 $code-font-color: #ffffff;
 
 // Borders
@@ -76,11 +76,10 @@ $base-border: 1px solid $smoke;
 
 // Margins
 $margin: 1rem;
-$margin_small: .5rem;
+$margin_small: 0.5rem;
 $margin_large: 1rem;
 $margin_huge: 2rem;
 $margin_massive: 2.5rem;
-
 
 // Mobile Margins
 $m_margin_huge: 1.5rem;
@@ -97,7 +96,7 @@ $blue_high: #425966;
 $orange: #f77a63;
 
 // Aranda search colors
-$aranda-white: #FFF;
-$aranda-blue: #391C9B;
+$aranda-white: #fff;
+$aranda-blue: #391c9b;
 $aranda-title: #5a595f;
 $aranda-text: #918f99;
