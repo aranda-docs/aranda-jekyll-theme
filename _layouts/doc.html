@@ -19,13 +19,9 @@ layout: default
                 </div>
 
                 <h1></h1>
-                {% if site.title contains "Release Notes" %} {% else %}
+                
                 <div class="col-auto">
-                    {% if site.data.messages['tooltip'] != null %}
-                    <div class="tooltip hide_tooltip" id="tooltip">
-                        {{ site.data.messages['tooltip'] }}
-                    </div>
-                    {% endif %}
+                  
                     <a
                         id="convertPDF"
                         class="mb-2 ml-5"
@@ -40,7 +36,6 @@ layout: default
                         />
                     </a>
                 </div>
-                {% endif %}
             </div>
             <!-- Adding result container -->
             <div class="row">
