@@ -1,12 +1,13 @@
 ---
 layout: default
 ---
+
 <header id="mastheadArea" class="sg_masthead">
-  <div class="sg_contain">
-    <div class="head">
+    <div class="sg_contain">
+        <div class="head">
             <!--Buscador Aranda docs-->
-            <div class="row no-gutters">
-                <!--<div class="col searchbar-container">
+            <!--<div class="row no-gutters">
+                <div class="col searchbar-container">
                     <div class="form-group input-group-lg buscador-container">
                         <input
                             id="searchbar"
@@ -17,14 +18,18 @@ layout: default
                     <div id="search_result"></div>
                 </div>-->
 
-               <div class="pdf">
-                
-                <!--{% if site.title contains "Release Notes" %} {% else %}-->
-                <div class="col-auto"> 
+                <h1></h1>
+                {% if site.title contains "Release Notes" %} {% else %}
+                <div class="col-auto">
+                    {% if site.data.messages['tooltip'] != null %}
+                    <div class="tooltip hide_tooltip" id="tooltip">
+                        {{ site.data.messages['tooltip'] }}
+                    </div>
+                    {% endif %}
                     <a
                         id="convertPDF"
                         class="mb-2 ml-5"
-                        href=" {{ site.baseurl }}/assets/{{site.baseurl | remove_first: '/'}}.pdf"
+                        href="{{ site.baseurl }}/assets/{{site.baseurl | remove_first: '/'}}.pdf"
                         download
                     >
                         <img
@@ -33,18 +38,15 @@ layout: default
                             alt="Adobe PDF"
                             id="pdf-ic"
                         />
-                       <h1>Descargar PDF</h1>  
                     </a>
                 </div>
-               </div>    
                 {% endif %}
             </div>
             <!-- Adding result container -->
-        
             <div class="row">
                 <ul id="result-box"></ul>
             </div>
-            <!-- Adding result container-->
+            <!-- Adding result container -->
 
             <!--Buscador Aranda docs-->
             <!-- <div id="no-results">
@@ -61,13 +63,43 @@ layout: default
             <ul></ul>
         </aside>
         {% endif %}
-  </div>
-       
+    </div>
 </header>
-
-<post id="documentationArea" class="sg_doc">
-     <div class="sg_post" id="post-content">
+<article id="documentationArea" class="sg_doc">
+    <div class="sg_post" id="post-content">
        <div class="instal">{{ content }}</div>
      </div>
-</post>
-</post>
+</article>
+
+
+<script>
+    document.getElementById("searchbar").addEventListener("keyup", () => {
+        let searched = document.getElementById("searchbar").value;
+        let emptyList = document.getElementById("search_result");
+        let articles = [];
+
+        ("{% for article in site.pages %}");
+        if (JSON.parse("{{ article.tags | jsonify }}") !== null) {
+            JSON.parse("{{ article.tags | jsonify }}").map((string) => {
+                if (string.toLowerCase().includes(searched.toLowerCase())) {
+                    articles.push({
+                        title: "{{article.title}}",
+                        chapter: "{{article.chapter}}",
+                        url: "{{article.url}}",
+                    });
+                }
+            });
+        }
+        ("{%endfor%}");
+        let completeList = "";
+        let baseurl = "{{ site.baseurl }}";
+
+        articles.forEach(({ title, chapter, url }) => {
+            completeList += `<li><a href="${baseurl}${url}">${title} | ${chapter}</a></li>`;
+        });
+        if (searched === "") {
+            completeList = "";
+        }
+        emptyList.innerHTML = completeList;
+    });
+</script>
