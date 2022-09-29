@@ -4,6 +4,7 @@
     border-radius: 4px;
     margin-left: auto;
     max-height: 42px;
+    text-decoration: none;
 }
 
 .pdf h1{
@@ -18,13 +19,12 @@
 #convertPDF {
     width: 0px;
     height: 0px;
-    background-color: #c2cadf38;
+    background-color: none;
     text-decoration: none;
     
 }    
 
  #convertPDF>img {
-    width: 18px;
-    margin-left: 10px;
+    width: 39px;
      
 } 
