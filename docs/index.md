@@ -1,6 +1,5 @@
 ---
 title: Bienvenido
-layout: doc
 info: Prueba del Tema de Aranda para Jekyll.
 permalink: /docs/
 sidebar: docs
