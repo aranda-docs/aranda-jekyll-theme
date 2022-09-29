@@ -5,26 +5,23 @@
     margin-left: auto;
     max-height: 42px;
     text-decoration: none;
+    display: flex;
+    flex-direction: row;
 }
 
 .pdf h1{
-    font-size: 13px;
-    color: #FF6D6D;
-    margin-left: 41px;
+    font-size: 15px;
+    color: #db4655;
+    margin-left: 13px;
     margin-right: 11px;
     text-decoration: none;
-    margin-top: 12px;
-    
+    margin-top: 11px;
 }
 #convertPDF {
-    width: 0px;
-    height: 0px;
+    width: 40px;
+    height: 40px;
     background-color: none;
     text-decoration: none;
-    
-}    
-
- #convertPDF>img {
-    width: 39px;
-     
-} 
+    margin-top: 8px;
+    margin-left: 13px;
+}  
