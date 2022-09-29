@@ -7,7 +7,7 @@ layout: default
         <div class="head">
             <!--Buscador Aranda docs-->
             <div class="row no-gutters">
-                <!--<div class="col searchbar-container">
+                <div class="col searchbar-container">
                     <div class="form-group input-group-lg buscador-container">
                         <input
                             id="searchbar"
@@ -16,34 +16,37 @@ layout: default
                         />
                     </div>
                     <div id="search_result"></div>
-                
-                </div>-->
-               
+                </div>
+
+                <h1></h1>
+                {% if site.title contains "Release Notes" %} {% else %}
                 <div class="col-auto">
-                    <!--{% if site.title contains "Release Notes" %} {% else %}-->
-                    <h1>Descargar PDF</h1> 
-                    <a href=" {{ Descargar PDF | remove_first: '/'}}.pdf"
-                        download
-                    >
-                    </a>
-                <div class="col-auto"> 
+                    {% if site.data.messages['tooltip'] != null %}
+                    <div class="tooltip hide_tooltip" id="tooltip">
+                        {{ site.data.messages['tooltip'] }}
+                    </div>
+                    {% endif %}
                     <a
                         id="convertPDF"
                         class="mb-2 ml-5"
-                  <h1>Descargar PDF</h1>
+                        href="{{ site.baseurl }}/assets/{{site.baseurl | remove_first: '/'}}.pdf"
+                        download
+                    >
+                        <img
+                            src="{{ site.baseurl }}/assets/images/ic_descarga.svg"
+                            width="64"
                             alt="Adobe PDF"
                             id="pdf-ic"
                         />
-                       <h1>Descargar PDF</h1>  
                     </a>
-               </div>    
+                </div>
                 {% endif %}
             </div>
             <!-- Adding result container -->
             <div class="row">
                 <ul id="result-box"></ul>
             </div>
-            <!-- Adding result container-->
+            <!-- Adding result container -->
 
             <!--Buscador Aranda docs-->
             <!-- <div id="no-results">
