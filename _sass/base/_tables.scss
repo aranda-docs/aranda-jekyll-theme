@@ -28,7 +28,10 @@ td {
 
 }
 .instal th {
+    color: none;
     padding-inline-end: 100px;
+    border: none;
+    background: #none;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 10px;
@@ -36,6 +39,7 @@ td {
 .instal td {
     overflow: hidden;
     text-overflow: ellipsis;
+    background: #none;
     border: 0px solid #ffffff;
     color: #535659;
     font-size: 0.9rem;
