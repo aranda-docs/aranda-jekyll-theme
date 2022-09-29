@@ -246,8 +246,6 @@ pre.highlight
     margin-top: 8px;
 } 
 .content_alert {
-    background: #f5717121;
-    border-radius: 4px;
  }  
 .alert {
     padding-top: 35px;
@@ -278,6 +276,9 @@ pre.highlight
     padding-top: 13px;
     color: #f57171;
     display: flex;
+    background: #f5717121;
+    border-radius: 4px;
+    padding-bottom: 13px;
  }
   .note-icon h2 {
     margin-left: 14px;
