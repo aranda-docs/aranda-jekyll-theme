@@ -1,24 +1,22 @@
 .pdf {
-    background-color: #c2cadf42;
     border: 2px solid #FF6D6D;
     border-radius: 4px;
-    text-decoration: none;
-    display: block;
 }
 
 .pdf h1{
-    font-size: 20px;
+    font-size: 17px;
     color: #db4655;
-    margin-left: 8px;
-    margin-right: 22px;
+    margin-left: 55px;
+    margin-right: 10px;
     text-decoration: none;
-    display: inline-block;
 }
 #convertPDF {
-    margin-left: 13px;
     background-color: transparent;
+    text-decoration: none;
 }  
 #convertPDF>img {
-    width: 37px;
-    padding-bottom: 3px;
+   width: 37px;
+    padding-top: 12px;
+    position: absolute;
+    padding-left: 10px;
  }
