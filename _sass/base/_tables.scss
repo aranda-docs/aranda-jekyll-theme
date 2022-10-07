@@ -27,3 +27,28 @@ td {
   padding-right: 30px;
 
 }
+.instal th {
+    color: none;
+    padding-inline-end: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border: none;
+    background: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+.instal td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background: none;
+    border: 0px solid #ffffff;
+    color: #535659;
+    font-size: 0.9rem;
+    padding-top: 10px;
+    padding-bottom: 11px;
+    padding-left: 4px;
+    padding-right: 30px;
+    border-top: 1px solid #e0e0e0;
+}

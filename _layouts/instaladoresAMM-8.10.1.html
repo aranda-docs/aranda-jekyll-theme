@@ -20,7 +20,7 @@ layout: default
 
 
                 <div class="col-auto">
-                    <div class="pdf">
+                    <!--<div class="pdf">
                     <a
                         id="convertPDF"
                         class="mb-2 ml-5"
@@ -36,7 +36,7 @@ layout: default
                         <h1>Descargar PDF</h1>
                     </a>
                         
-                   </div>
+                   </div>--> 
                  </div>    
             </div> 
             <!-- Adding result container -->
@@ -61,14 +61,15 @@ layout: default
     </div>
 </header>
 
-  <post id="documentationArea" class="sg_doc">
-    <div class="sg_post" id="post-content">
-      <div class="apis">
-         <div class="ap">{{ content }}</div>
-      </div>  
-    </div>
-  </post>
-  
+<post id="documentationArea" class="instal-content"> 
+  <div class="content-instal">
+     <div class="content_alert">  
+         <div class="notes">{% include note-instaladores-aam-8.10.1.html %}</div>
+         <div class="instal">{{ content }}</div>    
+     </div>  
+  </div>
+</post>
+
 <script>
     document.getElementById("searchbar").addEventListener("keyup", () => {
         let searched = document.getElementById("searchbar").value;

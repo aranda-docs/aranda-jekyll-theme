@@ -246,8 +246,7 @@ pre.highlight
     margin-top: 8px;
 } 
 .content_alert {
-    background: #f5717121;
-    border-radius: 4px;
+    border-bottom: 1px solid #feeded;
  }  
 .alert {
     padding-top: 35px;
@@ -260,7 +259,7 @@ pre.highlight
 .notes h1 {
     font-size: 13px;
     color: #f57171;
-    margin-left: 79px;
+    margin-left: 31px;
     margin-right: 22px;
     margin-bottom: 14px; 
  
@@ -268,16 +267,21 @@ pre.highlight
 .notes li {
     font-size: 13px;
     color: #f57171;
-    margin-left: 79px;
+    margin-left: 31px;
     margin-right: 22px;
     margin-bottom: 14px;
     display: block;
+    margin-top: 17px;
+    
   }
   .note-icon {
     padding-left: 30px;
     padding-top: 13px;
     color: #f57171;
     display: flex;
+    background: #f5717121;
+    border-radius: 4px;
+    padding-bottom: 13px;
  }
   .note-icon h2 {
     margin-left: 14px;

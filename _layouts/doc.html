@@ -18,38 +18,35 @@ layout: default
                     <div id="search_result"></div>
                 </div>-->
 
-               <div class="pdf">
-                
-                <!--{% if site.title contains "Release Notes" %} {% else %}-->
-                <div class="col-auto"> 
+
+                <div class="col-auto">
+                    <div class="pdf">
                     <a
                         id="convertPDF"
                         class="mb-2 ml-5"
-                        href=" {{ site.baseurl }}/assets/{{site.baseurl | remove_first: '/'}}.pdf"
+                        href="{{ site.baseurl }}/assets/{{site.baseurl | remove_first: '/'}}.pdf"
                         download
                     >
                         <img
-                            src="{{ site.baseurl }}/assets/images/ic_descarga.svg"
+                            src="{{ site.baseurl }}/assets/images/icon-pdf.svg"
                             width="64"
                             alt="Adobe PDF"
                             id="pdf-ic"
                         />
-                       <h1>Descargar PDF</h1>  
-                    </a>
-                </div>
-               </div>    
-                {% endif %}
-            </div>
+                       <h1>Descargar PDF</h1>
+                    </a>   
+                   </div> 
+                 </div>    
+            </div> 
+            
             <!-- Adding result container -->
             <div class="row">
                 <ul id="result-box"></ul>
             </div>
-            <!-- Adding result container-->
+            <!-- Adding result container -->
 
             <!--Buscador Aranda docs-->
-            <!-- <div id="no-results">
-        <p class="item-title">No hay resultados para la busqueda </p>
-      </div> -->
+            <!-- <div id="no-results"><p class="item-title">No hay resultados para la busqueda </p></div> -->
             <div class="title header typo_ostrich">{{ page.title }}</div>
             {% if page.info %}
             <div class="sub_title typo_crow">{{ page.info }}</div>
@@ -63,6 +60,7 @@ layout: default
         {% endif %}
     </div>
 </header>
+
 <article id="documentationArea" class="sg_doc">
     <div class="sg_contain" id="article-content">{{ content }}</div>
 </article>

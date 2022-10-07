@@ -1,9 +1,10 @@
 ---
 layout: default
 ---
+
 <header id="mastheadArea" class="sg_masthead">
-  <div class="sg_contain">
-    <div class="head">
+    <div class="sg_contain">
+        <div class="head">
             <!--Buscador Aranda docs-->
             <div class="row no-gutters">
                 <!--<div class="col searchbar-container">
@@ -17,39 +18,35 @@ layout: default
                     <div id="search_result"></div>
                 </div>-->
 
-               <div class="pdf">
-                
-                <!--{% if site.title contains "Release Notes" %} {% else %}-->
-                <div class="col-auto"> 
+
+                <div class="col-auto">
+                    <!--<div class="pdf">
                     <a
                         id="convertPDF"
                         class="mb-2 ml-5"
-                        href=" {{ site.baseurl }}/assets/{{site.baseurl | remove_first: '/'}}.pdf"
+                        href="{{ site.baseurl }}/assets/{{site.baseurl | remove_first: '/'}}.pdf"
                         download
                     >
                         <img
-                            src="{{ site.baseurl }}/assets/images/ic_descarga.svg"
+                            src="{{ site.baseurl }}/assets/images/icon-pdf.svg"
                             width="64"
                             alt="Adobe PDF"
                             id="pdf-ic"
                         />
-                       <h1>Descargar PDF</h1>  
+                        <h1>Descargar PDF</h1>
                     </a>
-                </div>
-               </div>    
-                {% endif %}
-            </div>
-        
+                        
+                   </div>--> 
+                 </div>    
+            </div> 
             <!-- Adding result container -->
             <div class="row">
                 <ul id="result-box"></ul>
             </div>
-            <!-- Adding result container-->
+            <!-- Adding result container -->
 
             <!--Buscador Aranda docs-->
-            <!-- <div id="no-results">
-        <p class="item-title">No hay resultados para la busqueda </p>
-      </div> -->
+            <!-- <div id="no-results"><p class="item-title">No hay resultados para la busqueda </p></div> -->
             <div class="title header typo_ostrich">{{ page.title }}</div>
             {% if page.info %}
             <div class="sub_title typo_crow">{{ page.info }}</div>
@@ -61,8 +58,7 @@ layout: default
             <ul></ul>
         </aside>
         {% endif %}
-  </div>
-       
+    </div>
 </header>
 
 <post id="documentationArea" class="instal-content"> 
@@ -73,3 +69,35 @@ layout: default
      </div>  
   </div>
 </post>
+
+<script>
+    document.getElementById("searchbar").addEventListener("keyup", () => {
+        let searched = document.getElementById("searchbar").value;
+        let emptyList = document.getElementById("search_result");
+        let articles = [];
+
+        ("{% for article in site.pages %}");
+        if (JSON.parse("{{ article.tags | jsonify }}") !== null) {
+            JSON.parse("{{ article.tags | jsonify }}").map((string) => {
+                if (string.toLowerCase().includes(searched.toLowerCase())) {
+                    articles.push({
+                        title: "{{article.title}}",
+                        chapter: "{{article.chapter}}",
+                        url: "{{article.url}}",
+                    });
+                }
+            });
+        }
+        ("{%endfor%}");
+        let completeList = "";
+        let baseurl = "{{ site.baseurl }}";
+
+        articles.forEach(({ title, chapter, url }) => {
+            completeList += `<li><a href="${baseurl}${url}">${title} | ${chapter}</a></li>`;
+        });
+        if (searched === "") {
+            completeList = "";
+        }
+        emptyList.innerHTML = completeList;
+    });
+</script>
