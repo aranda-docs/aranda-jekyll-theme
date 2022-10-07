@@ -17,28 +17,28 @@ layout: default
                     </div>
                     <div id="search_result"></div>
                 </div>-->
-
-
+                {% if site.title != "Aranda Database" %}
                 <div class="col-auto">
                     <div class="pdf">
-                    <a
-                        id="convertPDF"
-                        class="mb-2 ml-5"
-                        href="{{ site.baseurl }}/assets/{{site.baseurl | remove_first: '/'}}.pdf"
-                        download
-                    >
-                        <img
-                            src="{{ site.baseurl }}/assets/images/icon-pdf.svg"
-                            width="64"
-                            alt="Adobe PDF"
-                            id="pdf-ic"
-                        />
-                       <h1>Descargar PDF</h1>
-                    </a>   
-                   </div> 
-                 </div>    
-            </div> 
-            
+                        <a
+                            id="convertPDF"
+                            class="mb-2 ml-5"
+                            href="{{ site.baseurl }}/assets/{{site.baseurl | remove_first: '/'}}.pdf"
+                            download
+                        >
+                            <img
+                                src="{{ site.baseurl }}/assets/images/icon-pdf.svg"
+                                width="64"
+                                alt="Adobe PDF"
+                                id="pdf-ic"
+                            />
+                            <h1>Descargar PDF</h1>
+                        </a>
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+
             <!-- Adding result container -->
             <div class="row">
                 <ul id="result-box"></ul>
