@@ -1,36 +1,41 @@
+
 @font-face {
     font-family: "Lederman";
     src: url("../fonts/Lederman/Lederman-Regular.woff2") format("woff2"),
         url("../fonts/Lederman/Lederman-Regular.woff") format("woff");
     font-weight: normal;
     font-style: normal;
-}
+}  
 
 body {
     background: #fff none !important;
-    margin: 30px 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 100px;
 }
+    
 
 * {
     font-family: "Lederman", sans-serif !important;
+  
 }
 
 .title.header.typo_ostrich {
     border-bottom: 1pt solid #666d73;
     padding-bottom: 18px;
-    font-size: 30px;
+    
 }
 
 main.sg-main {
     font-family: sans-serif;
-    color: #666d73;
-    font-size: 15px;
+    font-size: 17px;
 }
 
-.head {
-    font-size: 19px;
+head {
+    font-size: 30px;
     font-weight: 800;
     font-family: sans-serif;
+    page-break-before: always;
 }
 
 #wrapper {
@@ -62,27 +67,34 @@ img {
 }
 
 h1 {
-    font-size: 30px;
+    font-size: 25px;
     page-break-before: always;
 }
 
 h2 {
     margin-top: 0.7cm;
+    font-size: 16px;
+    color: #666d73;
 }
-
-.TableGrid {
-    margin: 25px auto;
-    width: 90% !important;
-    margin-left: auto !important;
-    page-break-inside: avoid;
-}
+table {
+    display: grid;
+    background-color: #fafafa;
+    border: 1px solid rgba(219, 227, 250, 1);
+    background-clip: padding-box;
+    border-radius: 2px;
+}    
 
 ul,
 ol,
 dd,
 p,
 hr {
-    margin: 0;
     margin-bottom: 1rem;
     text-align: justify;
+    color: #666d73;
+}
+
+div.saltopagina {
+    display: block;
+    page-break-before: always;
 }
