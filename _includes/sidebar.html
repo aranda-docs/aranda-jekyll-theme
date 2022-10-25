@@ -29,7 +29,7 @@
     </div>
 
     {% if item.children != null %}
-    <ul class="collapsible_content" id="{{item.chapter}}-content">
+    <ul>
       {% for child in item.children %}
       <li>
         <a href="{{ child.url | relative_url }}" {% if child.url==page.url %} class="active" {% endif %}>
