@@ -24,6 +24,10 @@ body {
     padding-bottom: 18px;
     page-break-before: always;
     border-bottom: 4px solid #6d82ff;
+    font-size: 35px;
+    font-weight: 800;
+    font-family: sans-serif;
+    page-break-before: always;
     
 }
 .print .title.header.typo_ostrich{
@@ -34,13 +38,7 @@ body {
 main.sg-main {
     font-family: sans-serif;
     font-size: 17px;
-}
 
-head {
-    font-size: 30px;
-    font-weight: 800;
-    font-family: sans-serif;
-    page-break-before: always;
 }
 
 #wrapper {
@@ -79,7 +77,7 @@ h1 {
 h2 {
     margin-top: 0.7cm;
     font-size: 25px;
-    color: #576574;
+    color: #9db0c5;
 }
 table {
     display: inline-table;
@@ -89,7 +87,9 @@ table {
     max-width: 92%;
     font-size: 14px;
     text-align: left;
+    padding: 16px;
 }    
+
 th {
     padding: 14px;
 }
