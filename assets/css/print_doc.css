@@ -23,15 +23,12 @@ body {
 .title.header.typo_ostrich {
     padding-bottom: 18px;
     page-break-before: always;
-    border-bottom: 4px solid #6d82ff;
-    font-size: 35px;
+    border-bottom: 4px solid #505992;
+    font-size: 32px;
     font-weight: 800;
     font-family: sans-serif;
     page-break-before: always;
-    
-}
-.print .title.header.typo_ostrich{
-    color: #6d82ff;
+    color: #505992;
     
 }
 
@@ -72,12 +69,13 @@ img {
 h1 {
     font-size: 25px;
     color: #576574;
+    margin-top: 60px;
 }
 
 h2 {
-    margin-top: 0.7cm;
+    margin-top: 20px;
     font-size: 25px;
-    color: #9db0c5;
+    color: #576574;
 }
 table {
     display: inline-table;
@@ -112,3 +110,16 @@ div.saltopagina {
     display: block;
     page-break-before: always;
 }
+.note-icon {
+    display: none;
+    page-break-before: always;
+}
+.notes h1 {
+    font-size: 13px;
+    color: #f57171;
+ 
+ }     
+.notes li {
+    font-size: 13px;
+    color: #f57171;
+}      
