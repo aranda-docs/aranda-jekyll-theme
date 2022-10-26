@@ -77,6 +77,19 @@ h2 {
     font-size: 25px;
     color: #576574;
 }
+
+h3 {
+    font-size: 25px;
+    color: #576574;
+    margin-top: 60px;
+}
+
+h4 {
+    margin-top: 20px;
+    font-size: 25px;
+    color: #576574;
+}
+
 table {
     display: inline-table;
     background-color: #fafafa;
@@ -102,7 +115,7 @@ p,
 hr {
     margin-bottom: 1rem;
     text-align: justify;
-    color: #666d73;
+    color: #a7abaf;
     border: none;
 }
 
