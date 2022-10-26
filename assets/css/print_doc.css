@@ -21,9 +21,13 @@ body {
 }
 
 .title.header.typo_ostrich {
-    border-bottom: 1pt solid $print-header-color;
-    color: $print-header-color;
     padding-bottom: 18px;
+    page-break-before: always;
+    border-bottom: 4px solid #6d82ff;
+    
+}
+.print .title.header.typo_ostrich{
+    color: #6d82ff;
     
 }
 
@@ -69,14 +73,13 @@ img {
 
 h1 {
     font-size: 25px;
-    page-break-before: always;
-    color: #f303e7;
+    color: #576574;
 }
 
 h2 {
     margin-top: 0.7cm;
-    font-size: 16px;
-    color: #f303e7;
+    font-size: 25px;
+    color: #576574;
 }
 table {
     display: inline-table;
