@@ -29,6 +29,7 @@ body {
     font-family: sans-serif;
     page-break-before: always;
     color: #505992;
+    background: linear-gradient(0deg, #f4f4f4, #babac02e);
     
 }
 
@@ -136,3 +137,15 @@ div.saltopagina {
     font-size: 13px;
     color: #f57171;
 }      
+
+pre.highlight {
+    font-family: Menlo, Consolas, "Courier New", Courier, "Liberation Mono", monospace;
+    max-width: 62%;
+    color: #ffffff;
+    font-size: 13px;
+    background: #232020;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    display: block;
+    padding: 24px;
+}
