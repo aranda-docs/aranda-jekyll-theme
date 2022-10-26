@@ -22,13 +22,13 @@ body {
 
 .title.header.typo_ostrich {
     padding-bottom: 18px;
-    border-bottom: 4px solid #505992;
-    font-size: 32px;
+    border-bottom: 3px solid #505992;
+    font-size: 30px;
     font-weight: 800;
     font-family: sans-serif;
     page-break-before: auto;
     color: #505992;
-    background: linear-gradient(0deg, #f4f4f4, #babac02e);
+    padding-top: 18px;
     
 }
 
@@ -67,26 +67,26 @@ img {
 }
 
 h1 {
-    font-size: 25px;
+    font-size: 22px;
     color: #576574;
     margin-top: 60px;
 }
 
 h2 {
     margin-top: 20px;
-    font-size: 25px;
+    font-size: 22px;
     color: #576574;
 }
 
 h3 {
-    font-size: 25px;
+    font-size: 22px;
     color: #576574;
     margin-top: 60px;
 }
 
 h4 {
     margin-top: 20px;
-    font-size: 25px;
+    font-size: 22px;
     color: #576574;
 }
 
@@ -96,10 +96,11 @@ table {
     border: 1px solid rgba(219, 227, 250, 1);
     border-radius: 4px;
     max-width: 92%;
-    font-size: 14px;
+    font-size: 17px;
     text-align: left;
     padding: 16px;
     page-break-before: avoid;
+    color: #576574;
 }    
 
 th {
@@ -134,7 +135,7 @@ hr {
 
 pre.highlight {
     font-family: Menlo, Consolas, "Courier New", Courier, "Liberation Mono", monospace;
-    max-width: 62%;
+    max-width: 80%;
     color: #ffffff;
     font-size: 13px;
     background: #232020;
