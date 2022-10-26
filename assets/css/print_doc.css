@@ -22,12 +22,11 @@ body {
 
 .title.header.typo_ostrich {
     padding-bottom: 18px;
-    page-break-before: always;
     border-bottom: 4px solid #505992;
     font-size: 32px;
     font-weight: 800;
     font-family: sans-serif;
-    page-break-before: always;
+    page-break-before: auto;
     color: #505992;
     background: linear-gradient(0deg, #f4f4f4, #babac02e);
     
@@ -51,7 +50,7 @@ img {
     display: block;
     min-width: 45%;
     max-width: 70%;
-    page-break-inside: avoid;
+    page-break-before: avoid;
 }
 
 .sg_sidebar {
@@ -100,6 +99,7 @@ table {
     font-size: 14px;
     text-align: left;
     padding: 16px;
+    page-break-before: avoid;
 }    
 
 th {
@@ -119,14 +119,8 @@ hr {
     color: #a7abaf;
     border: none;
 }
-
-div.saltopagina {
-    display: block;
-    page-break-before: always;
-}
 .note-icon {
     display: none;
-    page-break-before: always;
 }
 .notes h1 {
     font-size: 13px;
