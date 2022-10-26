@@ -48,7 +48,18 @@ img {
     content: "arrow_back";
     display: none;
 }
-    
+code {
+    font-family: Menlo, Consolas, "Courier New", Courier, "Liberation Mono", monospace;
+    max-width: 62%;
+    color: #ffffff;
+    font-size: 13px;
+    background: #232020;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    display: block;
+    padding: 24px;
+}
+
 ul,
 ol,
 dd,
