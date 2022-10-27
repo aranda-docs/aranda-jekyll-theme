@@ -129,12 +129,12 @@ hr {
 }
 .notes h1 {
     font-size: 13px;
-    color: #f57171;
+    color: #2a3745;
  
  }     
 .notes li {
     font-size: 13px;
-    color: #f57171;
+    color: #2a3745;
 }      
 
 pre.highlight {
@@ -147,4 +147,9 @@ pre.highlight {
     word-wrap: break-word;
     display: block;
     padding: 24px;
+}
+.print-first-page {
+    position: absolute;
+    display: block;
+    background: #391c9b;
 }
