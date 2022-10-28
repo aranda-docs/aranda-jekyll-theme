@@ -2,7 +2,6 @@
 th {
 
   color: $heading-font-color;
-  padding-inline-end: 100px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -10,7 +9,12 @@ th {
   background: #f8f8fa;
   padding-top: 10px;
   padding-bottom: 10px;
-  padding-left: 10px;
+  padding-left: 12px;
+  white-space: pre-line;
+  text-align: left;
+  padding-right: 12px;
+  font-size: 15px;
+}  
 
 }
 
