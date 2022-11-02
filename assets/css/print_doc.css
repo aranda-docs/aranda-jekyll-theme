@@ -5,11 +5,7 @@
         url("../fonts/Lederman/Lederman-Regular.woff") format("woff");
     font-weight: normal;
     font-style: normal;
-}  
-@page :blank {
-    @top-center { content: "Aranda" }
-  }
-
+}
 body {
     background: #fff none !important;
     margin-left: 100px;
