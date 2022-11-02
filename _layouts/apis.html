@@ -18,27 +18,25 @@ layout: default
                     <div id="search_result"></div>
                 </div>-->
 
-
                 <div class="col-auto">
                     <div class="pdf">
-                    <a
-                        id="convertPDF"
-                        class="mb-2 ml-5"
-                        href="{{ site.baseurl }}/assets/{{site.baseurl | remove_first: '/'}}.pdf"
-                        download
-                    >
-                        <img
-                            src="{{ site.baseurl }}/assets/images/icon-pdf.svg"
-                            width="64"
-                            alt="Adobe PDF"
-                            id="pdf-ic"
-                        />
-                        <h1>Descargar PDF</h1>
-                    </a>
-                        
-                   </div>
-                 </div>    
-            </div> 
+                        <a
+                            id="convertPDF"
+                            class="mb-2 ml-5"
+                            href="{{ site.baseurl }}/assets/{{site.baseurl | remove_first: '/'}}.pdf"
+                            download
+                        >
+                            <img
+                                src="{{ site.baseurl }}/assets/images/icon-pdf.svg"
+                                width="64"
+                                alt="Adobe PDF"
+                                id="pdf-ic"
+                            />
+                            <h1>Descargar PDF</h1>
+                        </a>
+                    </div>
+                </div>
+            </div>
             <!-- Adding result container -->
             <div class="row">
                 <ul id="result-box"></ul>
@@ -47,7 +45,7 @@ layout: default
 
             <!--Buscador Aranda docs-->
             <!-- <div id="no-results"><p class="item-title">No hay resultados para la busqueda </p></div> -->
-    
+
             <div class="title header typo_ostrich">{{ page.title }}</div>
             {% if page.info %}
             <div class="sub_title typo_crow">{{ page.info }}</div>
@@ -62,16 +60,16 @@ layout: default
     </div>
 </header>
 
-  <post id="documentationArea" class="sg_doc">
+<post id="documentationArea" class="sg_doc">
     <div class="sg_post" id="post-content">
-      <div class="apis">
-         <div class="ap">{{ content }}</div>
-      </div>  
+        <div class="apis">
+            <div class="ap">{{ content }}</div>
+        </div>
     </div>
-  </post>
-  
+</post>
+
 <script>
-    document.getElementById("searchbar").addEventListener("keyup", () => {
+    /* document.getElementById("searchbar").addEventListener("keyup", () => {
         let searched = document.getElementById("searchbar").value;
         let emptyList = document.getElementById("search_result");
         let articles = [];
@@ -99,5 +97,5 @@ layout: default
             completeList = "";
         }
         emptyList.innerHTML = completeList;
-    });
+    }); */
 </script>

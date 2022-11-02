@@ -18,7 +18,6 @@ layout: default
                     <div id="search_result"></div>
                 </div>-->
 
-
                 <div class="col-auto">
                     <!--<div class="pdf">
                      <a
@@ -35,10 +34,10 @@ layout: default
                         />
                        <h1>Descargar PDF</h1>
                      </a>
-                    </div>--> 
-                </div>    
-            </div> 
-            
+                    </div>-->
+                </div>
+            </div>
+
             <!-- Adding result container -->
             <div class="row">
                 <ul id="result-box"></ul>
@@ -62,12 +61,12 @@ layout: default
 </header>
 <article id="documentationArea" class="sg_doc">
     <div class="sg_post" id="post-content">
-       <div class="instal">{{ content }}</div>
-     </div>
+        <div class="instal">{{ content }}</div>
+    </div>
 </article>
 
 <script>
-    document.getElementById("searchbar").addEventListener("keyup", () => {
+    /* document.getElementById("searchbar").addEventListener("keyup", () => {
         let searched = document.getElementById("searchbar").value;
         let emptyList = document.getElementById("search_result");
         let articles = [];
@@ -95,5 +94,5 @@ layout: default
             completeList = "";
         }
         emptyList.innerHTML = completeList;
-    });
+    }); */
 </script>
