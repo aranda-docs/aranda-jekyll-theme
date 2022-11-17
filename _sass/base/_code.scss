@@ -1,12 +1,11 @@
 // Code
 code,
 pre {
-  font-family: $code;
-  color: $code-font-color;
-  font-size: $typo_hummingbird;
-  background: $code-color;
-  white-space: pre-wrap;
-  word-wrap: break-word
+  font-family: Menlo,Consolas,"Courier New",Courier,"Liberation Mono",monospace;
+    color: #69b8ff;
+    font-size: .875rem;
+    white-space: pre-wrap;
+    word-wrap: break-word;
 }
 pre {
   margin: 0;
