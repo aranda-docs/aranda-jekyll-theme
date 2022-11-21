@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html id="sg" {% if site.language %} lang="{{ site.language }}" {% endif %}>
+    <head>
+        {% include header.html %}
+    </head>
+
+    <body id="sg">
+        <img class="cover" src="{{ site.baseurl }}/assets/cover.png" />
+        <div class="sg-pusher">
+            <main class="sg-main">{{ content }}</main>
+        </div>
+    </body>
+</html>
