@@ -1,6 +1,7 @@
 @font-face {
     font-family: "Lederman";
-    src: url("../fonts/Lederman/Lederman-Regular.woff2") format("woff2"),
+    src: url("../fonts/Lederman/Lederman-Regular.ttf") format("truetype"),
+        url("../fonts/Lederman/Lederman-Regular.woff2") format("woff2"),
         url("../fonts/Lederman/Lederman-Regular.woff") format("woff");
     font-weight: normal;
     font-style: normal;
@@ -11,9 +12,9 @@ body {
 }
 
 .sg-pusher {
-    margin-left: 100px;
-    margin-right: 100px;
-    margin-top: 100px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 100px;
 }
 
 .print-first-page {
