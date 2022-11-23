@@ -2,6 +2,22 @@
 <html id="sg" {% if site.language %} lang="{{ site.language }}" {% endif %}>
     <head>
         {% include header.html %}
+
+        <style>
+            @font-face {
+                font-family: "Lederman";
+                src: url("{{ site.baseurl }}/assets/fonts/Lederman/Lederman-Regular.woff2")
+                        format("woff2"),
+                    url("{{ site.baseurl }}/assets/fonts/Lederman/Lederman-Regular.woff.woff")
+                        format("woff");
+                font-weight: normal;
+                font-style: normal;
+            }
+
+            * {
+                font-family: "Lederman", sans-serif !important;
+            }
+        </style>
     </head>
 
     <body id="sg">
