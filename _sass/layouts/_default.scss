@@ -278,7 +278,6 @@ pre.highlight
   .note-icon {
     padding-left: 30px;
     padding-top: 13px;
-    color: #f57171;
     display: flex;
     background: #f5717121;
     border-radius: 4px;
@@ -286,9 +285,9 @@ pre.highlight
  }
   .note-icon h2 {
     margin-left: 14px;
+    font-size: 1.1rem;
 }
 
-   
 .highlight code:before {
     display: none;
 }
