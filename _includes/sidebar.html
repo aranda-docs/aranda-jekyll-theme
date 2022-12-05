@@ -49,6 +49,9 @@
       <li>
         <a href="{{ child.url | relative_url }}" {% if child.url==page.url %} class="active" {% endif %}>
           {{child.title }}
+          {% if child.beta == true %}
+          <span class="beta_tag">BETA</span>
+          {% endif %}
         </a>
       </li>
       {% endif %}

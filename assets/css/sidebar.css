@@ -1,4 +1,4 @@
-.logo .title{
+.logo .title {
     line-height: 1 !important;
 }
 .collapsible {
@@ -9,7 +9,7 @@
 
 .collapsible span {
     transform: rotate(-90deg);
-    transition: .5s;
+    transition: 0.5s;
     filter: invert(100%) contrast(100%);
 }
 
@@ -27,4 +27,23 @@
 .collapsible_active {
     display: block;
     height: auto;
+}
+
+.collapsible_content li a {
+    display: flex;
+    align-items: center;
+}
+
+.collapsible_content li a .beta_tag {
+    background-color: white;
+    color: #716e7e;
+    min-width: 64px;
+    width: 64px;
+    border-radius: 25px;
+    font-size: 13px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
 }
