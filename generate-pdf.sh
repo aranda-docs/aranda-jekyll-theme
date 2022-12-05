@@ -11,6 +11,7 @@ MANUALNAME=$(grep 'title' _pages/index.md)
 echo "---
 $MANUALNAME
 permalink: /pdf
+layout: pdf
 ---" > _pages/pdf.md
 
 # Running through list of files $FILES to then open it and concat with pdf.md
