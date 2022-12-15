@@ -41,7 +41,7 @@ figure {
     text-transform: uppercase;
     font-size: $base-font-size - 2px;
   }
-  .highlight button {
+  div.highlight button {
     color: #adb5bd;
     box-sizing: border-box;
     transition: 0.2s ease-out;
@@ -54,7 +54,19 @@ figure {
     position: absolute;
     border-radius: 0 0.15rem;
 }
-
+div.pre.highlight button {
+  color: #adb5bd;
+  box-sizing: border-box;
+  transition: 0.2s ease-out;
+  cursor: pointer;
+  user-select: none;
+  background: rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0);
+  padding: 5px 10px;
+  font-size: 0.8em;
+  position: absolute;
+  border-radius: 0 0.15rem;
+}
 .centered {
   display: flex;
   justify-content: center;
