@@ -16,7 +16,6 @@ figure {
 }
 .highlighter-rouge {
   padding: .1rem .2rem;
-  /*background: transparentize($code-color, .9);*/
   color: $highlighter-font-color;
 }
 .highlight {
@@ -41,7 +40,7 @@ figure {
     text-transform: uppercase;
     font-size: $base-font-size - 2px;
   }
-  div.highlight button {
+  .highlight button {
     color: #adb5bd;
     box-sizing: border-box;
     transition: 0.2s ease-out;
@@ -53,19 +52,7 @@ figure {
     font-size: 0.8em;
     position: absolute;
     border-radius: 0 0.15rem;
-}
-div.pre.highlight button {
-  color: #adb5bd;
-  box-sizing: border-box;
-  transition: 0.2s ease-out;
-  cursor: pointer;
-  user-select: none;
-  background: rgba(0, 0, 0, 0.15);
-  border: 1px solid rgba(0, 0, 0, 0);
-  padding: 5px 10px;
-  font-size: 0.8em;
-  position: absolute;
-  border-radius: 0 0.15rem;
+
 }
 .centered {
   display: flex;
