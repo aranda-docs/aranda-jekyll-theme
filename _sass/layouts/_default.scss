@@ -32,17 +32,7 @@ body#sg {
   @media only screen and (max-width: $medium_screen) {
     margin: 0 $margin;
   }
-}
 
-.highlight
-{
-  background-color: yellow;
-}
-pre.highlight
-{
-  background: #091f3e;
-  border: 2px solid #DBE8F8;
-}
 
 // Sidebar Button Styles
 .sg_sidebar_button {
@@ -288,9 +278,7 @@ pre.highlight
     font-size: 1rem;
 }
 
-.highlight code:before {
-    display: none;
-}
+
 
 #contenido .body {
   -moz-box-sizing: border-box;
