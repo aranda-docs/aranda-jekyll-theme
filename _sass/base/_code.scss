@@ -2,7 +2,6 @@
 code,
 pre {
   font-family: Menlo,Consolas,"Courier New",Courier,"Liberation Mono",monospace;
-    color: #0865C8;
     font-size: .875rem;
     white-space: pre-wrap;
     word-wrap: break-word;
@@ -34,22 +33,6 @@ figure {
     margin: $m_margin_huge 0;
   }
 
-  code:before {
-    content: attr(data-lang);
-    display: block;
-    background: $blue;
-    color: $white;
-    font-weight: bold;
-    margin-top: -$margin;
-    margin-left: -$margin;
-    margin-right: -$margin;
-    margin-bottom: $margin;
-    padding: $margin_small $margin;
-    font-family: $base-font-family;
-    text-transform: uppercase;
-    font-size: $base-font-size - 2px;
-  
-  }
 
   div.highlight button {
   color: #adb5bd;
