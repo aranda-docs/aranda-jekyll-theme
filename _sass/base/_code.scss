@@ -37,20 +37,24 @@ div.highlight {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
   border: 1px solid rgba(0, 0, 0, 0.25);
   box-sizing: border-box;
-  display: inline-table;
+
 }
 
 .highlight pre {
   background: #091f3e;
+  overflow-x: auto;
+  
 }
 
 pre.highlight {
   margin: 0;
+  
 }
 
 .highlight, pre.highlight {
   background: #091f3e;
   color: #0865C8;
+  word-wrap: break-word;
 }
 
 /* atom one dark css for code blocks */
@@ -59,6 +63,7 @@ pre.highlight {
 pre.highlight {
   background: #091f3e;
   color: #0865C8;
+  word-wrap: break-word;
 }
 .highlight pre {
   background: #091f3e;
