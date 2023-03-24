@@ -52,11 +52,9 @@ body#sg {
     line-height: 1;
     margin: $margin 0;
     left: 0;
-    /* position: absolute; */
     display: block;
     z-index: 1;
     color: $heading-font-color;
-   /*  margin-top: 2rem; */
 
     .icon {
       font-size: inherit;
