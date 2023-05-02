@@ -105,6 +105,7 @@ table {
 th {
     padding: 14px;
 }
+
 td {
     padding: 14px;
 }
@@ -119,13 +120,16 @@ hr {
     color: #a7abaf;
     border: none;
 }
+
 .note-icon {
     display: none;
 }
+
 .notes h1 {
     font-size: 13px;
     color: #2a3745;
 }
+
 .notes li {
     font-size: 13px;
     color: #2a3745;
@@ -143,5 +147,15 @@ pre.highlight {
     display: block;
     padding: 24px;
 }
-.print-first-page {
+
+.print-first-page {}
+
+.pdf-icon {
+    width: .4cm;
+    height: auto;
+    min-width: auto;
+    margin: 0px;
+    display: initial;
+    max-width: auto;
+    page-break-before: auto;
 }
