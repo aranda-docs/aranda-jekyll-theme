@@ -151,11 +151,11 @@ pre.highlight {
 .print-first-page {}
 
 .pdf-icon {
-    width: .4cm;
-    height: auto;
-    min-width: auto;
+    width: .4cm !important;
+    height: .4cm !important;
+    min-width: .4cm !important;
+    max-width: .4cm !important;
     margin: 0px;
     display: initial;
-    max-width: auto;
     page-break-before: auto;
 }
