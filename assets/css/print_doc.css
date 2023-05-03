@@ -155,7 +155,7 @@ pre.highlight {
     height: .4cm !important;
     min-width: .4cm !important;
     max-width: .4cm !important;
-    margin: 0px;
+    margin: 0px .2cm;
     display: initial;
     page-break-before: auto;
 }
