@@ -1,29 +1,28 @@
-
 th {
-  color: $heading-font-color;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  border: 1px solid #e9edef;
-  background: #f8f8fa;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 12px;
-  white-space: pre-line;
-  text-align: left;
-  padding-right: 12px;
-  font-size: 15px;
-}  
+    color: $heading-font-color;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border: 1px solid #e9edef;
+    background: #f8f8fa;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 12px;
+    white-space: pre-line;
+    text-align: left;
+    padding-right: 12px;
+    font-size: 15px;
+}
 
 td {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  border: 0px solid #ffffff;
-  background: #dcdfe36b;
-  color: #535659;
-  font-size: 0.9rem;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 10px;
-  padding-right: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border: 0px solid #ffffff;
+    background: #dcdfe36b;
+    color: #535659;
+    font-size: 0.9rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 30px;
 }

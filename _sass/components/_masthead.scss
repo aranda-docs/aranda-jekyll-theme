@@ -94,11 +94,20 @@
 // The Masthead
 .sg_masthead {
   padding: $margin_massive 0;
-  margin-bottom: $margin_massive;
   border-bottom: $base-border;
   color: $masthead-font-color;    // @CHANGE
 
-  @media only screen and (max-width: $large_screen) {
+  @media only screen and (max-width:  $small_screen) {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+
+  } 
+
+  @media only screen and (min-width: $small_screen){
+    margin-bottom: 2.5rem;
+  }
+  
+  @media only screen and (min-width: $large_screen) and (max-width: $extended_screen) {
     padding: $m_margin_massive 0;
     margin-bottom: $m_margin_massive;
   }

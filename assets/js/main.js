@@ -80,6 +80,24 @@ function sidebarButton() {
   });
 }
 
+function outsideClickSidebar() {
+    $(document).mouseup(function (e) {
+        var container = $("#sgSidebar");
+        if (!container.is(e.target) && container.has(e.target).length === 0) {
+            $(".sg-pusher").removeClass("show_sidebar");
+        }
+    });
+}
+
+function hideSidebar() {
+    var $button = $("#hideSidebarButton");
+
+    $button.click(function (e) {
+        e.preventDefault();
+        $(this).parents(".sg-pusher").toggleClass("show_sidebar");
+    });
+}
+
 // Maturity Count
 function maturityCount() {
   var p = $('.sg_label.planned').length
@@ -150,4 +168,6 @@ $(document).ready(function () {
   collapseH();
   TargetExt();
   sidebarButton();
+  outsideClickSidebar();
+  hideSidebar();
 });

@@ -18,12 +18,13 @@ body {
 .title.header.typo_ostrich {
     padding-bottom: 18px;
     border-bottom: 3px solid #505992;
+    margin-bottom: 2rem;
     font-size: 30px;
     font-weight: 800;
     font-family: sans-serif;
     page-break-before: auto;
     color: #505992;
-    padding-top: 18px;
+    padding-top: 18px;    
 }
 
 main.sg-main {
