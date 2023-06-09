@@ -1,5 +1,6 @@
 <a href="javascript:void(0)" class="sg_sidebar_button"><i class="icon" data-icon="menu"></i></a>
-<div class="sg_sidebar">
+<div id="sgSidebar" class="sg_sidebar">
+  <p id="hideSidebarButton"  class="sg_sidebar_close_button"></p>
 
 
   <a href="{{ site.baseurl }}/index.html" class="logo">
@@ -20,7 +21,6 @@
 
   {% if page.sidebar and site.data.sidebar[page.sidebar] != null %}
   {% for item in site.data.sidebar[page.sidebar] %}
-
   <div class="group">
     <div class="group_title collapsible" id="{{item.chapter}}-btn">{{ item.title }}
       <span id="{{item.chapter}}-span">
@@ -69,6 +69,7 @@
       document.getElementById('{{item.chapter}}-content').classList.toggle('collapsible_active')
       document.getElementById('{{item.chapter}}-span').classList.toggle('collapsible_arrow')
     })
+
   </script>
   {% endfor %}
   {% endif %}
