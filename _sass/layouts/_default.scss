@@ -63,6 +63,22 @@ body#sg {
   }
 }
 
+.sg_sidebar_close_button {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    display: none;
+    @media only screen and (max-width: $large_screen) {
+        display: block;
+    }
+}
+
+.sg_sidebar_close_button:after {
+    display: inline-block;
+    font-size: 30px;
+    content: "\00d7";
+}
+
 //Sidebar menu 
 @media only screen and (max-width: $large_screen) {
   .sg-pusher.show_sidebar {
