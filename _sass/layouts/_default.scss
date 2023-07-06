@@ -1,66 +1,62 @@
 // Base Styles
 html#sg,
 body#sg {
-  margin: 0;
-  height: 100%;
-  width: 100%;
-  min-height: 100%;
-  font-size: $base-font-size;
-  font-family: $base-font-family;
-  line-height: $base-line-height;
-  background: $white;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    min-height: 100%;
+    font-size: $base-font-size;
+    font-family: $base-font-family;
+    line-height: $base-line-height;
+    background: $white;
 }
 
 body#sg {
-  position: relative;
-  color: $base-font-color;
-  text-rendering: optimizeLegibility;
-  -webkit-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
-  -webkit-font-feature-settings: normal;
-  -moz-font-feature-settings: normal;
-  -ms-font-feature-settings: normal;
-  font-feature-settings: normal;
-  -webkit-font-smoothing: antialiased;
+    position: relative;
+    color: $base-font-color;
+    text-rendering: optimizeLegibility;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-font-feature-settings: normal;
+    -moz-font-feature-settings: normal;
+    -ms-font-feature-settings: normal;
+    font-feature-settings: normal;
+    -webkit-font-smoothing: antialiased;
 }
 
-.sg-pusher{
+.sg-pusher {
+    position: relative;
+    min-height: 100%;
 
-  position: relative;
-  min-height: 100%;
+    @media only screen and (max-width: $small_screen) {
+        padding: 1.5rem;
+    }
 
-  @media only screen and (max-width:  $small_screen) {
-      padding: 1.5rem;
-  }
-
-  @media only screen and (min-width: $small_screen) {
-    padding: 2rem;
-    
-  } 
-
-} 
-
+    @media only screen and (min-width: $small_screen) {
+        padding: 2rem;
+    }
+}
 
 // Sidebar Button Styles
 .sg_sidebar_button {
-  display: none;
+    display: none;
 
-  @media only screen and (max-width: $large_screen) {
-    font-size: 2rem;
-    height: 2rem;
-    width: 2rem;
-    line-height: 1;
-    margin: $margin 0;
-    left: 0;
-    display: block;
-    z-index: 1;
-    color: $heading-font-color;
+    @media only screen and (max-width: $large_screen) {
+        font-size: 2rem;
+        height: 2rem;
+        width: 2rem;
+        line-height: 1;
+        margin: $margin 0;
+        left: 0;
+        display: block;
+        z-index: 1;
+        color: $heading-font-color;
 
-    .icon {
-      font-size: inherit;
-      margin-right: 0;
+        .icon {
+            font-size: inherit;
+            margin-right: 0;
+        }
     }
-  }
 }
 
 .sg_sidebar_close_button {
@@ -79,99 +75,93 @@ body#sg {
     content: "\00d7";
 }
 
-//Sidebar menu 
+//Sidebar menu
 @media only screen and (max-width: $large_screen) {
-  .sg-pusher.show_sidebar {
-    width: 100%;
-    overflow: hidden;
-    margin: 0;
+    .sg-pusher.show_sidebar {
+        width: 100%;
+        overflow: hidden;
+        margin: 0;
 
-    .sg_sidebar_button {
-      left: $left_rail + 20;
-      color: $blue;
-      
+        .sg_sidebar_button {
+            left: $left_rail + 20;
+            color: $blue;
+        }
+        .sg_sidebar {
+            width: $left_rail;
+            left: 0;
+        }
+        .sg-main {
+            left: $left_rail + 20;
+            opacity: 0.2;
+        }
     }
-    .sg_sidebar {
-      width: $left_rail;
-      left: 0;
-    }
-    .sg-main {
-      left: $left_rail + 20;
-      opacity: .2;
-    }
-  }
 }
 @media only screen and (max-width: $medium_screen) {
-  .sg-pusher.show_sidebar {
-    width: 60%;
-    overflow: hidden;
-    margin: 0;
+    .sg-pusher.show_sidebar {
+        width: 60%;
+        overflow: hidden;
+        margin: 0;
 
-    .sg_sidebar_button {
-      left: $left_rail + 20;
-      color: $blue;
-      
+        .sg_sidebar_button {
+            left: $left_rail + 20;
+            color: $blue;
+        }
+        .sg_sidebar {
+            width: 60%;
+            left: 0;
+        }
+        .sg-main {
+            left: $left_rail + 20;
+            opacity: 0.2;
+        }
     }
-    .sg_sidebar {
-      width: 60%;
-      left: 0;
-    }
-    .sg-main {
-      left: $left_rail + 20;
-      opacity: .2;
-    }
-  }
 }
 @media only screen and (max-width: $small_screen) {
-  .sg-pusher.show_sidebar {
-    width: 90%;
-    overflow: hidden;
-    margin: 0;
+    .sg-pusher.show_sidebar {
+        width: 90%;
+        overflow: hidden;
+        margin: 0;
 
-    .sg_sidebar_button {
-     
-      left: $left_rail - 30;
+        .sg_sidebar_button {
+            left: $left_rail - 30;
+        }
+        .sg_sidebar {
+            width: 100%;
+            left: 0;
+        }
+        .sg-main {
+            position: absolute;
+            left: $left_rail - 30;
+            opacity: 0.2;
+        }
+        .sg_post {
+            position: absolute;
+            left: $left_rail - 30;
+            opacity: 0.2;
+        }
+        .sg_apis {
+            position: absolute;
+            left: $left_rail - 30;
+            opacity: 0.2;
+        }
     }
-    .sg_sidebar {
-      width: 100%;
-      left: 0;
-    }
-    .sg-main {
-      position: absolute;
-      left: $left_rail - 30;
-      opacity: .2;
-    }
-    .sg_post {
-        position: absolute;
-        left: $left_rail - 30;
-        opacity: .2;
-    }
-    .sg_apis {
-        position: absolute;
-        left: $left_rail - 30;
-        opacity: .2;
-      
-    }
-  }
-  
 }
-
 
 // Sidebar Position
 .sg_sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  width: $left_rail;
-  height: 100%;
-  min-height: 100%;
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: $left_rail;
+    height: 100%;
+    min-height: 100%;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
 
-  @media only screen and (max-width: $large_screen) {
-    left: -$left_rail;
-  }
+    @media only screen and (max-width: $large_screen) {
+        left: -$left_rail;
+    }
 }
 
 .post {
@@ -187,53 +177,47 @@ body#sg {
     font-weight: 300;
     border-radius: 2px;
     color: currentColor;
- 
- }
+}
 
-  .post ul {
+.post ul {
     padding-bottom: 96px;
- }
+}
 
-  .post h2 {
+.post h2 {
     color: #576574;
     font-weight: 500;
     padding: 10px 16px;
     background-color: #fcfcfc;
+}
 
-  }
-
-  .apis {
+.apis {
     align-items: baseline;
     color: #576574;
     padding: 10px 16px;
-  
-  }  
-  .apis h2 {
+}
+.apis h2 {
     color: #576574;
     font-weight: 500;
     border-left: 4px solid #6dcdff;
     padding: 4px 16px;
     background-color: #fcfcfc;
     margin-bottom: 36px;
-    
-  }  
-  .apis th {
+}
+.apis th {
     color: #576574;
-    
-}  
-  .apis td {
+}
+.apis td {
     color: #576574;
-
 }
 .content-instal {
     position: absolute;
     padding-left: 315px;
     max-width: 68%;
- } 
+}
 .instal p {
     color: #999999;
     font-size: 14px;
-} 
+}
 
 .instal blockquote {
     margin: 1rem 0;
@@ -243,56 +227,55 @@ body#sg {
     height: 103px;
     background: #f5717121;
     border-radius: 4px;
-
 }
 .instal h1 {
-    color: #727E89;
+    color: #727e89;
     font-weight: 500;
-    border-left: 4px solid #1AA99D;
-    padding: 4px 16px;
-    margin-bottom: 36px;
-    font-size: 22px;
-    margin-top: 46px;
-}  
-.instal h2 {
-    color: #727E89;
-    font-weight: 500;
-    border-left: 4px solid #FF6D6D;
-    padding: 4px 16px;
-    margin-bottom: 36px;
-    font-size: 22px;
-    margin-top: 46px;  
-}  
-  .instal h3 {
-    color: #727E89;
-    font-weight: 500;
-    border-left: 4px solid #F8D40E;
+    border-left: 4px solid #1aa99d;
     padding: 4px 16px;
     margin-bottom: 36px;
     font-size: 22px;
     margin-top: 46px;
 }
- .instal h4 {
-    color: #727E89;
+.instal h2 {
+    color: #727e89;
+    font-weight: 500;
+    border-left: 4px solid #ff6d6d;
+    padding: 4px 16px;
+    margin-bottom: 36px;
+    font-size: 22px;
+    margin-top: 46px;
+}
+.instal h3 {
+    color: #727e89;
+    font-weight: 500;
+    border-left: 4px solid #f8d40e;
+    padding: 4px 16px;
+    margin-bottom: 36px;
+    font-size: 22px;
+    margin-top: 46px;
+}
+.instal h4 {
+    color: #727e89;
     font-weight: 500;
     margin-bottom: 36px;
     font-size: 22px;
     margin-top: 31px;
-} 
- .title_alert {
-    color: #F57171;
+}
+.title_alert {
+    color: #f57171;
     font-size: 14px;
     margin-left: 24px;
     margin-top: 8px;
-} 
+}
 .content_alert {
     border-bottom: 1px solid #feeded;
- }  
+}
 .alert {
     padding-top: 35px;
     padding-left: 28px;
     display: -webkit-box;
- }
+}
 .notes {
     display: inline-block;
 }
@@ -301,9 +284,8 @@ body#sg {
     color: #f57171;
     margin-left: 31px;
     margin-right: 22px;
-    margin-bottom: 14px; 
- 
- }     
+    margin-bottom: 14px;
+}
 .notes li {
     font-size: 13px;
     color: #f57171;
@@ -312,9 +294,8 @@ body#sg {
     margin-bottom: 14px;
     display: block;
     margin-top: 17px;
-    
-  }
-  .note-icon {
+}
+.note-icon {
     padding-left: 1rem;
     padding-right: 1rem;
     padding-top: 13px;
@@ -322,64 +303,61 @@ body#sg {
     background: #091f3e08;
     border-radius: 4px;
     padding-bottom: 13px;
- }
-  .note-icon h2 {
+}
+.note-icon h2 {
     margin-left: 14px;
     font-size: 1rem;
 }
 
-
-
 #contenido .body {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  border-top: 1px solid #eef1f2;
-  box-sizing: border-box;
-  display: block;
-  padding: 15px 15px 0;
-  width: 100%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border-top: 1px solid #eef1f2;
+    box-sizing: border-box;
+    display: block;
+    padding: 15px 15px 0;
+    width: 100%;
 }
 
 #contenido .body code {
-  border: 1px solid #e2e7ea;
-  background: #eef1f2;
-  border-radius: 2px;
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
-  color: #546974;
-  padding: 0 1px;
+    border: 1px solid #e2e7ea;
+    background: #eef1f2;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    color: #546974;
+    padding: 0 1px;
 }
 
 #contenido .body p > code {
-  display: block;
-  padding: 15px;
-  white-space: pre;
+    display: block;
+    padding: 15px;
+    white-space: pre;
 }
 .sg-main {
-  padding: 0;
-  width: 100%;
-  height: auto;
-  min-height: 100%;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    min-height: calc(100vh - 30px);
 }
 .sg_contain {
-  /*  problema padding */
-  max-width: 70rem;
-  margin: 0 auto;
-  
+    /*  problema padding */
+    max-width: 70rem;
+    margin: 0 auto;
 
-  @media only screen and (min-width: 1200px) {
-    padding: 0 $right_rail 0 $left_rail + 12;
-  }
+    @media only screen and (min-width: 1200px) {
+        padding: 0 $right_rail 0 $left_rail + 12;
+    }
 }
 .sg_post {
-  max-width: 70rem;
-  margin: 0 auto;
-  padding: 0 $right_rail 0 $left_rail + 12;
+    max-width: 70rem;
+    margin: 0 auto;
+    padding: 0 $right_rail 0 $left_rail + 12;
 
-  @media only screen and (max-width: $extended_screen) {
-    max-width: 52rem;
-  }
-  @media only screen and (max-width: $large_screen) {
-    padding: 0;
-  }
+    @media only screen and (max-width: $extended_screen) {
+        max-width: 52rem;
+    }
+    @media only screen and (max-width: $large_screen) {
+        padding: 0;
+    }
 }

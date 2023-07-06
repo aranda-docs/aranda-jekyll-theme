@@ -1,0 +1,75 @@
+<div class="footer">
+    <div class="PageNavigation" id="pagePagination">
+        <a
+            href="#"
+            onclick="goToPrevPage()"
+            id="prevLink"
+            class="paginator_prev"
+        >
+            <p>Página anterior</p>
+            <span>
+                <i class="icon" data-icon="navigate_before"></i>
+                <p class="PageNavigation_p" id="prevLink_p"></p>
+            </span>
+        </a>
+        <a
+            href="#"
+            onclick="goToNextPage()"
+            id="nextLink"
+            class="paginator_next"
+        >
+            <p>Página siguiente</p>
+            <span>
+                <p class="PageNavigation_p" id="nextLink_p"></p>
+                <i class="icon" data-icon="navigate_next"></i>
+            </span>
+        </a>
+    </div>
+</div>
+
+<script>
+    const currentChapter = `{{ page.url }}`;
+    const titles = JSON.parse(`{{site.html_pages | map: "title" | jsonify}}`);
+    const urls = JSON.parse(`{{site.html_pages | map: "url" | jsonify}}`);
+    const chapters = JSON.parse(
+        `{{site.html_pages | map: "chapter" | jsonify}}`
+    );
+
+    const currentPageIndex = urls.findIndex((item) => item === currentChapter);
+
+    const currentPage = {
+        title: titles[currentPageIndex],
+        url: urls[currentPageIndex],
+        chapter: chapters[currentPageIndex],
+    };
+
+    const prevPage = {
+        title: titles[currentPageIndex - 1],
+        url: urls[currentPageIndex - 1],
+        chapter: chapters[currentPageIndex - 1],
+    };
+
+    const nextPage = {
+        title: titles[currentPageIndex + 1],
+        url: urls[currentPageIndex + 1],
+        chapter: chapters[currentPageIndex + 1],
+    };
+
+    const goToPrevPage = () => {
+        if (prevPage.url) {
+            window.open(`${`{{site.baseurl}}`}${prevPage.url}`, "_self");
+        }
+    };
+
+    const goToNextPage = () => {
+        if (nextPage.url) {
+            window.open(`${`{{site.baseurl}}`}${nextPage.url}`, "_self");
+        }
+    };
+
+    document.getElementById("prevLink_p").innerText = prevPage.title ?? "";
+    document.getElementById("prevLink_p").title = prevPage.title ?? "";
+
+    document.getElementById("nextLink_p").innerText = nextPage.title ?? "";
+    document.getElementById("nextLink_p").title = nextPage.title ?? "";
+</script>
