@@ -40,6 +40,11 @@ h2,h3,h4,h5,h6 {
   font-size: $typo_eagle;
 }
 
+h3 {
+  color: $heading-font-color;
+  font-size: $typo_crow;
+}
+
 h5 {
   font-size  : 14px;
   font-weight: 300;
