@@ -15,16 +15,11 @@ function contentList() {
 }
 
 
-function resizeIframe(){
-  console.log("Executed");
-  const iframes = document.querySelectorAll("iframe.content-fit");
-  if (iframes.length) {
-      iframes.forEach((ifrm) => {
-          const fullIframeHeight =
-              ifrm.contentWindow.document.body.scrollHeight + "px";
-          ifrm.height = fullIframeHeight;
-      });
-  }
+function resizeIframe(id){
+  console.log("Executed with id:", id);
+  const iframe = document.getElementById(id);
+    const fullIframeHeight = iframe.contentWindow.document.body.scrollHeight + "px";
+    iframe.height = fullIframeHeight;
 }
 
 // SmoothScroll
