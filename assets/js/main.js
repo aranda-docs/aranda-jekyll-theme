@@ -14,6 +14,19 @@ function contentList() {
   });
 }
 
+
+function resizeIframe(){
+  console.log("Executed");
+  const iframes = document.querySelectorAll("iframe.content-fit");
+  if (iframes.length) {
+      iframes.forEach((ifrm) => {
+          const fullIframeHeight =
+              ifrm.contentWindow.document.body.scrollHeight + "px";
+          ifrm.height = fullIframeHeight;
+      });
+  }
+}
+
 // SmoothScroll
 function smoothScroll() {
   $('a[href^="#"]').click(function () {
@@ -170,4 +183,5 @@ $(document).ready(function () {
   sidebarButton();
   outsideClickSidebar();
   hideSidebar();
+  resizeIframe();
 });
