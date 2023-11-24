@@ -67,33 +67,12 @@ layout: default
 </article>
 
 <script>
-    /*  document.getElementById("searchbar").addEventListener("keyup", () => {
-        let searched = document.getElementById("searchbar").value;
-        let emptyList = document.getElementById("search_result");
-        let articles = [];
-
-        ("{% for article in site.pages %}");
-        if (JSON.parse("{{ article.tags | jsonify }}") !== null) {
-            JSON.parse("{{ article.tags | jsonify }}").map((string) => {
-                if (string.toLowerCase().includes(searched.toLowerCase())) {
-                    articles.push({
-                        title: "{{article.title}}",
-                        chapter: "{{article.chapter}}",
-                        url: "{{article.url}}",
-                    });
-                }
-            });
-        }
-        ("{%endfor%}");
-        let completeList = "";
-        let baseurl = "{{ site.baseurl }}";
-
-        articles.forEach(({ title, chapter, url }) => {
-            completeList += `<li><a href="${baseurl}${url}">${title} | ${chapter}</a></li>`;
+    const iframes = document.querySelectorAll("iframe.content-fit");
+    if (iframes.length) {
+        iframes.forEach((ifrm) => {
+            const fullIframeHeight =
+                ifrm.contentWindow.document.body.scrollHeight + "px";
+            ifrm.height = fullIframeHeight;
         });
-        if (searched === "") {
-            completeList = "";
-        }
-        emptyList.innerHTML = completeList;
-    }); */
+    }
 </script>
