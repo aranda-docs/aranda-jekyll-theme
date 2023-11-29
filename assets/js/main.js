@@ -1,6 +1,4 @@
 //-- enable javascript engine for the search control
-import { searchBar } from "./modules/SearchBar.js";
-import { ResultItem } from "./modules/ResultItem.js";
 const { jsPDF } = window.jspdf;
 // Create Content List
 function contentList() {
@@ -17,7 +15,6 @@ function contentList() {
 
 function resizeIframe(){
   const iframes = document.querySelectorAll("iframe.content-fit");
-  console.log("Executed with iframes: ", iframes);
   if (iframes.length) {
       iframes.forEach((ifrm) => {
           const fullIframeHeight =
