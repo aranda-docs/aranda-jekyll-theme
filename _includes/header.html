@@ -10,3 +10,15 @@
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/print_doc.css" media="print">
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/sidebar.css" media="screen">
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/index.css" media="screen">
+<script>
+    function resizeIframe(){
+        const iframes = document.querySelectorAll("iframe.content-fit");
+        if (iframes.length) {
+            iframes.forEach((ifrm) => {
+                const fullIframeHeight =
+                    ifrm.contentWindow.document.body.scrollHeight + "px";
+                ifrm.height = fullIframeHeight;
+            });
+        }
+    }
+</script>
