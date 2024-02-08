@@ -39,9 +39,17 @@ h3 {
   font-size: $typo_crow;
 }
 h6 {
-    font-weight: 500;
-    margin-bottom: 36px;
-    font-size: 1rem;    
+   font-weight: normal;
+    cursor: pointer;
+    white-space: nowrap;
+    padding-bottom: 8px;
+    font-size: 14px;
+    line-height: 1.428571429;
+    margin-right: 10px;
+    color: #333;
+    background: #fcfcfc;
+    border-left: 4px solid #06A1C6;
+    padding: 1px 2px;    
 }
 h5 {
   font-size  : 14px;
