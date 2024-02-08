@@ -16,7 +16,7 @@ table,fieldset,hr
 }
 
 .header,
-h1, h2, h3, h5, h6 {
+h1, h2, h3, h5 {
   line-height: $heading-line-height;
   margin-bottom: $margin;
   font-weight: 400;
@@ -27,7 +27,7 @@ h1 {
   color: $heading-font-color;
   font-size: $typo_ostrich;
 }
-h2,h3,h4,h5,h6 {
+h2,h3,h4,h5 {
   font-size: $typo_eagle;
 }
 
@@ -72,7 +72,7 @@ h5 {
   h1 {
   font-size: $m_typo_ostrich;
   }
-  h2,h3,h4,h5,h6 {
+  h2,h3,h4,h5 {
     font-size: $m_typo_eagle;
   }
 }
