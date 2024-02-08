@@ -48,15 +48,26 @@ h3 {
   font-size: $typo_crow;
 }
 h6 {
-    border-left: 4px solid #06A1C6;
+    font-size: 14px;
+    border-left: 4px solid #ffd800;
     color: #576574;
     font-weight: 500;
     padding: 13px 16px;
-    background-color: #f3f3f3;
+    background-color: #f5f5f5;
     margin-bottom: 36px;
     font-size: 1rem;
-    color: #06A1C6;
-
+    color: #101010;
+}
+h7 {
+    font-size: 14px;
+    border-left: 4px solid #0043ce;
+    color: #576574;
+    font-weight: 500;
+    padding: 13px 16px;
+    background-color: #0043ce14;
+    margin-bottom: 36px;
+    font-size: 1rem;
+    color: #101010;
 }
 h5 {
   font-size  : 14px;
