@@ -16,7 +16,7 @@ table,fieldset,hr
 }
 
 .header,
-h1, h2, h3, h5 {
+h1, h2, h3, h4, h5 {
   line-height: $heading-line-height;
   margin-bottom: $margin;
   font-weight: 400;
@@ -37,24 +37,6 @@ h2 {
     
 h3 {
   font-size: $typo_crow;
-}
-h4 {
-    font-weight: normal;
-    cursor: pointer;
-    padding-bottom: 8px;
-    font-size: 15px;
-    line-height: 1.428571429;
-    background: #f9c23c24;
-    border-left: 4px solid #f9b537;
-    padding: 9px 12px;
-    color: #091f3e;
-    font-weight: normal;
-}
-h6 {
-    color: #091f3e;
-    margin-left: 16px;
-    font-size: 15px;
-    font-weight: normal;
 }
 h5 {
   font-size  : 14px;
