@@ -9,10 +9,11 @@ a {
 }
 
 a#back {
-    border-bottom: 1px solid #1f73b7 !important;
+    border-bottom: 1px solid;
+    border-color: $heading-font-color;
     background-color: white !important;
     font-size: 1rem;
-    color: #1F73B7 !important;
+    color: $heading-font-color;
     height: 40px;
     cursor: pointer;
     border-radius: 10;
