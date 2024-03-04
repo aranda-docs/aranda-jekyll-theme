@@ -35,3 +35,15 @@ a#multi-language {
     font-weight: 100;
     float: right;
 }
+a#next {
+    background-color: white !important;
+    font-size: 1rem;
+    color: $heading-font-color;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 10;
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 7px 7px;
+    font-weight: 100;
+ }
