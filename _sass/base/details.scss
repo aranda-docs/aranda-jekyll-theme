@@ -11,12 +11,11 @@ details {
  }
 summary {
     display: block;
+    font-weight: 600;
 }
 details:focus {
-  border-bottom: 1px solid;
   background-color: #f2fafa;
 }
 details:hover {
-  border-bottom: 1px solid;
   background-color: #f2fafa;
 }
