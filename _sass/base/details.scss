@@ -9,7 +9,7 @@ details#product {
     border-radius: 3px;
 }
 summary#product {
-    display: block;
+    display: list-item;
 }
 details:focus#product  {
     border-bottom: 1px solid;
@@ -42,5 +42,5 @@ details::marker {
   font-size: 1.2em;
 }
 summary {
-    display: list-item;
+    display: block;
 }
