@@ -8,7 +8,7 @@ details#product {
     padding: 16px;
     border-radius: 3px;
 }
-summary {
+summary#product {
     display: block;
 }
 details:focus#product  {
@@ -40,4 +40,7 @@ details:focus{
 details::marker {
   color: blue;
   font-size: 1.2em;
-} 
+}
+summary {
+    display: list-item;
+}
