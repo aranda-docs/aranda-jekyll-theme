@@ -7,7 +7,7 @@ details#product {
     font-size: 16px;
     padding: 16px;
     border-radius: 3px;
- }
+}
 summary#product {
     display: block;
 }
@@ -41,3 +41,7 @@ details::marker {
   color: blue;
   font-size: 1.2em;
 } 
+}
+summary {
+    display: list-item;
+}
