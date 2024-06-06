@@ -1,4 +1,4 @@
-details {
+details#product {
     display: block;
     overflow: hidden;
     padding: 11px;
@@ -11,11 +11,33 @@ details {
  }
 summary {
     display: block;
-    font-weight: 600;
 }
-details:focus {
+details:focus#product  {
+  border-bottom: 1px solid;
   background-color: #f2fafa;
 }
-details:hover {
+details:hover#product {
+    
+  border-bottom: 1px solid;
   background-color: #f2fafa;
+}
+
+details {
+  display: block;
+  overflow: hidden;
+  padding: 11px;
+  color: #515151;
+  background-color: #ffffff;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 16px;
+  border-radius: 3px;
+}
+details:hover {  
+  border-bottom: none;
+  background-color: #ffffff;
+}
+details:focus{
+  border-bottom: none;
+  background-color: #ffffff;
 }
