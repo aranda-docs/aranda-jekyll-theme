@@ -1,7 +1,6 @@
 details#product {
     display: block;
     overflow: hidden;
-    padding: 11px;
     color: $heading-font-color;
     background-color: #f9f9fb;
     cursor: pointer;
@@ -13,19 +12,18 @@ summary {
     display: block;
 }
 details:focus#product  {
-  border-bottom: 1px solid;
-  background-color: #f2fafa;
+    border-bottom: 1px solid;
+    background-color: #f2fafa;
 }
 details:hover#product {
     
-  border-bottom: 1px solid;
-  background-color: #f2fafa;
+    border-bottom: 1px solid;
+    background-color: #f2fafa;
 }
 
 details {
   display: block;
   overflow: hidden;
-  padding: 11px;
   color: #727e89;
   background-color: #ffffff;
   cursor: pointer;
