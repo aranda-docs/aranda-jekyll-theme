@@ -40,11 +40,11 @@ details:focus{
 }
 details summary::marker {
   font-size: 1em;
-  content: '⇩';
+  content: ' ⇩ ';
 }
 
 details[open] summary::marker { 
-  content:"⇧"; 
+  content:" ⇧ "; 
 }
 summary { 
   font-weight: 600;  
