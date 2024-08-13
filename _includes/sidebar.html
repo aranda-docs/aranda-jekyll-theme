@@ -1,81 +1,61 @@
-<a href="javascript:void(0)" class="sg_sidebar_button"><i class="icon" data-icon="menu"></i></a>
-<div id="sgSidebar" class="sg_sidebar">
-  <p id="hideSidebarButton"  class="sg_sidebar_close_button"></p>
+<a href="javascript:void(0)" class="sg_sidebar_button">
+  <i class="icon" data-icon="menu"></i>
+</a>
 
+<div id="sgSidebar" class="sg_sidebar">
+  <p id="hideSidebarButton" class="sg_sidebar_close_button"></p>
 
   <a href="{{ site.baseurl }}/index.html" class="logo">
     <div class="icon"><img src="{{ site.baseurl }}/assets/branding/png/styleguide-128x128.png"></div>
     <div class="title">{{ site.title }}</div>
   </a>
 
-  {% if site.title contains "Release Notes" %}
-  <a href="https://docs.arandasoft.com/notes.html">Home</a></li>
-  {% elsif site.baseurl == "/database" %}
-  <a href="https://docs.arandasoft.com/notes.html">Home</a></li>
-  {% elsif site.title contains "Aranda Tools" %}
-  <a href="https://docs.arandasoft.com/notes.html">Home</a></li>
-  {% elsif site.title contains "API" %}
-  <a href="https://docs.arandasoft.com/apis.html">Home</a></li>
-  {% elsif site.title contains "Troubleshooting" %}
-  <a href="https://docs.arandasoft.com/ts.html">Home</a></li>
-  {% else %}
-  <a href="https://docs.arandasoft.com/">Home</a></li>
-  {% endif %}
-
+  {% include home-item.html %}
 
   {% if page.sidebar and site.data.sidebar[page.sidebar] != null %}
-  {% for item in site.data.sidebar[page.sidebar] %}
-
-  <div class="group">
-    <div class="group_title collapsible" id="{{item.chapter}}-btn">{{ item.title }}
-      <span id="{{item.chapter}}-span">
-        <img src="{{ site.baseurl }}/assets/images/ic_flecha.svg" width="13" alt="Collapse menú">
-      </span>
+    {% assign toc = site.data.sidebar[page.sidebar] %}
+    <div class="group">
+      {% assign nav = toc %}
+      {% include nav.html %}
     </div>
 
-    {% if item.children != null %}
-    <ul class="collapsible_content" id="{{item.chapter}}-content">
-      {% for child in item.children %}
-      <li>
-        <a href="{{ child.url | relative_url }}" {% if child.url==page.url %} class="active" {% endif %}>
-          {{child.title}}
-        </a>
-      </li>
-      {% endfor %}
-    </ul>
-    {% endif %}
-
-    {% if item.chapter %}
-    <!-- Container with each all items -->
-    <ul class="collapsible_content" id="{{item.chapter}}-content">
-      {% for child in site.pages %}
-      {% if child.chapter == item.chapter %}
-      <!-- Single item -->
-      <li>
-        <a href="{{ child.url | relative_url }}" {% if child.url==page.url %} class="active" {% endif %}>
-          {{child.title }}
-          {% if child.beta == true %}
-          <span class="beta_tag">BETA</span>
-          {% endif %}
-        </a>
-      </li>
-      {% endif %}
-      {% endfor %}
-    </ul>
-    {% endif %}
-
-  </div>
-  <script>
-    if (document.getElementById('{{item.chapter}}-content').getElementsByClassName('active').length > 0) {
-      document.getElementById('{{item.chapter}}-content').classList.add("collapsible_active");
-      document.getElementById('{{item.chapter}}-span').classList.add('collapsible_arrow')
-    }
-    document.getElementById('{{item.chapter}}-btn').addEventListener('click', function () {
-      document.getElementById('{{item.chapter}}-content').classList.toggle('collapsible_active')
-      document.getElementById('{{item.chapter}}-span').classList.toggle('collapsible_arrow')
-    })
-  </script>
-  {% endfor %}
+    <script>
+      var selection = document.getElementsByClassName('active');
+      
+      if (selection.length > 0){
+        var attribute = selection[0].getAttribute("data-chapter");
+      
+        if (attribute){                
+          document.getElementById(attribute +'-content')
+            .classList
+            .toggle('collapsible_active');
+          
+            document.getElementById(attribute +'-span')
+            .classList
+            .toggle('collapsible_arrow')   
+        }
+      }
+      
+      var elements = document.getElementsByClassName("chapter-btn");
+      
+      var toggleCollapsible = function() {
+        var attribute = this.getAttribute("data-chapter");
+      
+        if (attribute){
+          document.getElementById(attribute + '-content')
+            .classList
+            .toggle('collapsible_active');
+          
+            document.getElementById(attribute + '-span')
+            .classList
+            .toggle('collapsible_arrow')
+          }
+      };
+      
+      for (var i = 0; i < elements.length; i++) {
+        elements[i].addEventListener('click', toggleCollapsible, false);
+      }
+    </script>
   {% endif %}
 
 </div>

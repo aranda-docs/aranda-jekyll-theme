@@ -1,0 +1,48 @@
+{% for item in nav %}
+  <ul class="collapsible" id="{{item.chapter}}-content">
+    <div
+      class="group_title collapsible chapter-btn"
+      id="{{item.chapter}}-btn"
+      data-chapter="{{item.chapter}}">
+      {{ item.title }}
+      <span id="{{item.chapter}}-span">
+        <img
+          src="{{ site.baseurl }}/assets/images/ic_flecha.svg"
+          width="13"
+          alt="Collapse menú">
+      </span>
+    </div>
+
+    {% if item.chapter %}
+      {% if item.pages %}
+
+        {%  comment  %} Ordenamiento manual {% endcomment %}
+        {% for itemPage in item.pages %}
+          {% assign sitePage = site.pages | where: "path", itemPage | first %}
+
+          {% if sitePage %}
+            {% include nav-item.html current_page=sitePage chapter=item.chapter %}
+          {% endif %}
+        {% endfor %}
+
+      {% else %}
+
+        {% comment %} Ordenamiento por capítulo en página {% endcomment %}
+        {% for sitePage in site.pages %}
+          {% if sitePage.chapter == item.chapter %}
+            {% include nav-item.html current_page=sitePage %}
+          {% endif %}
+        {% endfor %}
+
+      {% endif %}
+
+      {% if item.children %}
+        <li>
+          {% assign nav = item.children %}
+          {% include nav.html %}
+        </li>
+      {% endif %}
+    {% endif %}
+
+  </ul>
+{% endfor %}

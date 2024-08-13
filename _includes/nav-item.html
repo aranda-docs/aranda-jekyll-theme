@@ -1,0 +1,15 @@
+<li>
+  <a
+    href="{{ include.current_page.url | relative_url }}"
+    {% if include.current_page.url == page.url %}
+    class="active"
+    {% endif %}
+    data-chapter="{% if include.current_page.chapter %}{{include.current_page.chapter}}{% else %}{{ include.chapter }}{% endif %}">
+
+    {{ include.current_page.title }}
+
+    {% if include.current_page.beta == true %}
+      <span class="beta_tag">BETA</span>
+    {% endif %}
+  </a>
+</li>

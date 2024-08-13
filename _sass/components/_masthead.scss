@@ -182,7 +182,7 @@
       list-style: none;
     }
     li a {
-      padding: $margin_small /2 0;
+      padding: calc($margin-small / 2) 0;
 
       &:before {
         content: 'remove';

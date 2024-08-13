@@ -1,11 +1,9 @@
 ---
 title: Introducción
-layout: doc
-info:
-nav: false
+sidebar: test
 ---
 
 ## Sitio de documentación
 
-- [Ejemplo de un Manual](docs/). La barra lateral se genera automáticamente usando la "category" de cada página
-- [Ejemplo de una página](test/). La barra lateral está definido con un listado de URLs.
+-   [Documentación plantilla](test/). Esta es la documentación de la plantilla.
+-   [Ejemplo de un Manual](docs/). Este es un ejemplo de un manual.

@@ -1,19 +1,45 @@
 test:
-  - title: Aranda Docs
-    url: https://docs.arandasoft.com
+  - chapter: chapter1-test
+    title: Aranda Docs
+    pages:
+      - test/index.md
+      - test/configuration.md
+      - test/content.md
+      - test/sidebar.md
+
+  - chapter: chapter2-test
+    title: Otros Sitios
     children:
-      - title: Sistema de Diseño
-        url: https://aranda-labs.github.io/design-system
-      - title: ADM
-        url: https://aranda-docs.github.io/adm
-  - title: Otros Sitios
-    children:
+      - title: Ejemplo documentación
+        url: ./docs
+
       - title: Google
         url: https://www.google.com
 
-
 docs:
-  - title: Instalación
-    chapter: Instalación
+  # Ordenamiento manual
+  - chapter: Instalación
+    title: Instalación
+    pages:
+      - docs/instalacion/inicio.md
+      - docs/instalacion/instalacion.md
+      - docs/instalacion/configuracion.md
+    children:
+      - chapter: level_2_1
+        title: Nivel 2.1
+        pages:
+          - docs/multilevel/level2.1A.md
+        children:
+          - chapter: level_2_1_1
+            title: Nivel 2.1.1
+            pages:
+              - docs/multilevel/level2.1.1A.md
+
+      - chapter: level_2_2
+        title: Nivel2.2
+        pages:
+          - docs/multilevel/level2.2A.md
+
+  # Ordenamiento automático por capitulo
   - title: Uso
     chapter: Uso
