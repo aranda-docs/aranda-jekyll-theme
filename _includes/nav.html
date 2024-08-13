@@ -1,19 +1,19 @@
 {% for item in nav %}
-  <ul class="collapsible" id="{{item.chapter}}-content">
-    <div
-      class="group_title collapsible chapter-btn"
-      id="{{item.chapter}}-btn"
-      data-chapter="{{item.chapter}}">
-      {{ item.title }}
-      <span id="{{item.chapter}}-span">
-        <img
-          src="{{ site.baseurl }}/assets/images/ic_flecha.svg"
-          width="13"
-          alt="Collapse menú">
-      </span>
-    </div>
+  {% if item.chapter %}
+    <ul class="collapsible" id="{{item.chapter}}-content">
+      <div
+        class="group_title collapsible chapter-btn"
+        id="{{item.chapter}}-btn"
+        data-chapter="{{item.chapter}}">
+        {{ item.title }}
+        <span id="{{item.chapter}}-span">
+          <img
+            src="{{ site.baseurl }}/assets/images/ic_flecha.svg"
+            width="13"
+            alt="Collapse menú">
+        </span>
+      </div>
 
-    {% if item.chapter %}
       {% if item.pages %}
 
         {%  comment  %} Ordenamiento manual {% endcomment %}
@@ -42,7 +42,14 @@
           {% include nav.html %}
         </li>
       {% endif %}
-    {% endif %}
 
-  </ul>
+    </ul>
+  {% elsif item.url %}
+    <li>
+      <a href="{{ item.url | relative_url }}">
+        {{ item.title }}
+      </a>
+    </li>
+  {% endif %}
+
 {% endfor %}
