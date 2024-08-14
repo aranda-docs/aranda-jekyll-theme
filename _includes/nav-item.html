@@ -1,6 +1,7 @@
 <li>
   <a
     href="{{ include.current_page.url | relative_url }}"
+    title="{{ include.current_page.title }}"
     {% if include.current_page.url == page.url %}
     class="active"
     {% endif %}

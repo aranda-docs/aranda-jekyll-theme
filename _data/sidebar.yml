@@ -19,26 +19,23 @@ test:
 docs:
   # Ordenamiento manual
   - chapter: Instalación
-    title: Instalación
+    title: Instalación Windows
     pages:
       - docs/instalacion/inicio.md
       - docs/instalacion/instalacion.md
-      - docs/instalacion/configuracion.md
-    children:
-      - chapter: level_2_1
-        title: Nivel 2.1
+      - chapter: WindowsXP1.1
+        title: Windows XP 1.1
         pages:
-          - docs/multilevel/level2.1A.md
-        children:
-          - chapter: level_2_1_1
-            title: Nivel 2.1.1
+          - docs/multilevel/level2.1.1A.md
+          - chapter: WindowsXP1.1.1
+            title: Windows XP 1.1.1
             pages:
-              - docs/multilevel/level2.1.1A.md
-
-      - chapter: level_2_2
-        title: Nivel2.2
-        pages:
-          - docs/multilevel/level2.2A.md
+              - docs/multilevel/level2.2A.md
+              - chapter: WindowsXP1.1.2
+                title: Windows XP 1.1.2
+                pages:
+                  - docs/multilevel/level2.1A.md
+      - docs/instalacion/configuracion.md
 
   # Ordenamiento automático por capitulo
   - title: Uso

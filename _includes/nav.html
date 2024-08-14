@@ -1,55 +1,43 @@
 {% for item in nav %}
   {% if item.chapter %}
-    <ul class="collapsible" id="{{item.chapter}}-content">
-      <div
-        class="group_title collapsible chapter-btn"
-        id="{{item.chapter}}-btn"
-        data-chapter="{{item.chapter}}">
-        {{ item.title }}
+    <div class="group">
+      <div class="group_title collapsible chapter-btn" id="{{item.chapter}}-btn" data-chapter="{{item.chapter}}">
+        <p title="{{ item.title }}">{{ item.title }}</p>
         <span id="{{item.chapter}}-span">
-          <img
-            src="{{ site.baseurl }}/assets/images/ic_flecha.svg"
-            width="13"
-            alt="Collapse menú">
+          <img src="{{ site.baseurl }}/assets/images/ic_flecha.svg" width="13" alt="Collapse menú">
         </span>
       </div>
 
-      {% if item.pages %}
+      <ul class="collapsible_content" id="{{item.chapter}}-content">
+        {% if item.pages or item.children %}
+          {% if item.pages %}
+            {%  comment  %} Ordenamiento manual {% endcomment %}
+            {% for itemPage in item.pages %}
 
-        {%  comment  %} Ordenamiento manual {% endcomment %}
-        {% for itemPage in item.pages %}
-          {% assign sitePage = site.pages | where: "path", itemPage | first %}
+              {% if itemPage.chapter %}
+                {% assign nav = "" %}
+                {% assign nav = nav | split: "," %}
+                {% assign nav = nav | push: itemPage %}
+                <div class="collapsible_child">
+                  {% include nav.html %}
+                </div>
+              {% endif %}
 
-          {% if sitePage %}
-            {% include nav-item.html current_page=sitePage chapter=item.chapter %}
+              {% assign sitePage = site.pages | where: "path", itemPage | first %}
+              {% if sitePage %}
+                {% include nav-item.html current_page=sitePage chapter=item.chapter %}
+              {% endif %}
+            {% endfor %}
           {% endif %}
-        {% endfor %}
-
-      {% else %}
-
-        {% comment %} Ordenamiento por capítulo en página {% endcomment %}
-        {% for sitePage in site.pages %}
-          {% if sitePage.chapter == item.chapter %}
-            {% include nav-item.html current_page=sitePage %}
-          {% endif %}
-        {% endfor %}
-
-      {% endif %}
-
-      {% if item.children %}
-        <li>
-          {% assign nav = item.children %}
-          {% include nav.html %}
-        </li>
-      {% endif %}
-
-    </ul>
-  {% elsif item.url %}
-    <li>
-      <a href="{{ item.url | relative_url }}">
-        {{ item.title }}
-      </a>
-    </li>
+        {% else %}
+          {% comment %} Ordenamiento por capítulo en página {% endcomment %}
+          {% for sitePage in site.pages %}
+            {% if sitePage.chapter == item.chapter %}
+              {% include nav-item.html current_page=sitePage %}
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+      </ul>
+    </div>
   {% endif %}
-
 {% endfor %}
