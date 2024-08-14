@@ -12,31 +12,32 @@ Cada capitulo o elemento de la lista debe contener las siguientes propiedades:
 
 -   **title**: Titulo. Es el nombre del capítulo que se muestra en la barra lateral.
 
--   **pages**: Páginas, Es un arreglo con las páginas que contiene el capitulo, se especifican en el orden que se debe incluir en la barra lateral y la ruta debe usar el carácter **/** como separador de carpetas
-
--   **children**: Capítulos anidados (opcional).
-    Es posible agregar capítulos en niveles anidados, para ello agregar la lista de sub capítulos.
+-   **pages**: Páginas, Es un arreglo con las páginas que contiene el capitulo, se especifican en el orden que se debe incluir en la barra lateral y la ruta debe usar el carácter **/** como separador de carpetas. Es posible agregar capítulos en niveles anidados, para ello agregue un capítulo en la lista de páginas
 
 Ejemplo: **\_data/sidebar.yml**
 
 ```
 docs:
+  # Ordenamiento manual
   - chapter: Instalación
-      title: Instalación
-      pages:
-        - docs/instalacion/inicio.md
-        - docs/instalacion/instalacion.md
-        - docs/instalacion/configuracion.md
-      children:
-        - chapter: level_2_1
-          title: Nivel 2.1
-          pages:
-            - docs/multilevel/level2.1A.md
-          children:
-            - chapter: level_2_1_1
-              title: Nivel 2.1.1
-              pages:
-                - docs/multilevel/level2.1.1A.md
+    title: Instalación Windows
+    pages:
+      - docs/instalacion/inicio.md
+      - docs/instalacion/instalacion.md
+      - chapter: WindowsXP1.1
+        title: Windows XP 1.1
+        pages:
+          - docs/multilevel/level2.1.1A.md
+          - chapter: WindowsXP1.1.1
+            title: Windows XP 1.1.1
+            pages:
+              - docs/multilevel/level2.2A.md
+              - chapter: WindowsXP1.1.2
+                title: Windows XP 1.1.2
+                pages:
+                  - docs/multilevel/level2.1A.md
+      - docs/instalacion/configuracion.md
+
 ```
 
 ## Ordenamiento automático (Obsoleto)
