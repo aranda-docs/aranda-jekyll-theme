@@ -9,19 +9,18 @@ test:
 
   - chapter: chapter2-test
     title: Otros Sitios
-    children:
-      - title: Ejemplo documentación
-        url: ./docs
+    pages:
+      - url: ./docs
+        title: Ejemplo documentación
 
-      - title: Google
-        url: https://www.google.com
+      - url: https://www.google.com
+        title: Google
 
 docs:
   # Ordenamiento manual
   - chapter: Instalación
     title: Instalación Windows
     pages:
-      - docs/instalacion/inicio.md
       - docs/instalacion/instalacion.md
       - chapter: WindowsXP1.1
         title: Windows XP 1.1
@@ -35,8 +34,13 @@ docs:
                 title: Windows XP 1.1.2
                 pages:
                   - docs/multilevel/level2.1A.md
+      - url: https://github.com/aranda-docs/aranda-jekyll-theme
+        title: Github
       - docs/instalacion/configuracion.md
+  - url: https://www.arandasoft.com
+    title: Página principal de Aranda
+  - docs/instalacion/inicio.md
 
   # Ordenamiento automático por capitulo
-  - title: Uso
-    chapter: Uso
+  - chapter: Uso
+    title: Uso

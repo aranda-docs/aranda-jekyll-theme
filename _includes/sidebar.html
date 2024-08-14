@@ -6,7 +6,9 @@
   <p id="hideSidebarButton" class="sg_sidebar_close_button"></p>
 
   <a href="{{ site.baseurl }}/index.html" class="logo">
-    <div class="icon"><img src="{{ site.baseurl }}/assets/branding/png/styleguide-128x128.png"></div>
+    <div class="icon">
+      <img src="{{ site.baseurl }}/assets/branding/png/styleguide-128x128.png" />
+    </div>
     <div class="title">{{ site.title }}</div>
   </a>
 
@@ -14,47 +16,47 @@
 
   {% if page.sidebar and site.data.sidebar[page.sidebar] != null %}
     {% assign toc = site.data.sidebar[page.sidebar] %}
-    <div class="group">
+
+    <ul>
       {% assign nav = toc %}
       {% include nav.html %}
-    </div>
+    </ul>
 
     <script>
-      function addClassToAllParentULs(element) {
-        while (element) {
-          if (element.tagName === 'UL') {
-            element.classList.toggle("collapsible_active");
-            element.classList.toggle("collapsible_arrow");
-          }
-          element = element.parentElement;
+        function addClassToAllParentULs(element) {
+            while (element) {
+                if (element.tagName === "UL") {
+                    element.classList.toggle("collapsible_active");
+                    element.classList.toggle("collapsible_arrow");
+                }
+                element = element.parentElement;
+            }
         }
-      }
-
-      var selection = document.querySelector('a.active');
-      if (selection) {
-        addClassToAllParentULs(selection)
-      }
-
-      var elements = document.getElementsByClassName("chapter-btn");
-
-      var toggleCollapsible = function () {
-        var attribute = this.getAttribute("data-chapter");
-
-        if (attribute) {
-          document.getElementById(attribute + '-content')
-            .classList
-            .toggle('collapsible_active');
-
-          document.getElementById(attribute + '-span')
-            .classList
-            .toggle('collapsible_arrow')
+      
+        var selection = document.querySelector("a.active");
+        if (selection) {
+            addClassToAllParentULs(selection);
         }
-      };
-
-      for (var i = 0; i < elements.length; i++) {
-        elements[i].addEventListener('click', toggleCollapsible, false);
-      }
+      
+        var elements = document.getElementsByClassName("chapter-btn");
+      
+        var toggleCollapsible = function () {
+            var attribute = this.getAttribute("data-chapter");
+      
+            if (attribute) {
+                document
+                    .getElementById(attribute + "-content")
+                    .classList.toggle("collapsible_active");
+      
+                document
+                    .getElementById(attribute + "-span")
+                    .classList.toggle("collapsible_arrow");
+            }
+        };
+      
+        for (var i = 0; i < elements.length; i++) {
+            elements[i].addEventListener("click", toggleCollapsible, false);
+        }
     </script>
   {% endif %}
-
 </div>
