@@ -18,28 +18,31 @@ test:
 
 docs:
   # Ordenamiento manual
-  - chapter: Instalación
-    title: Instalación Windows
+  - chapter: Chapter1
+    title: Capítulo 1
     pages:
-      - docs/instalacion/instalacion.md
-      - chapter: WindowsXP1.1
-        title: Windows XP 1.1
+      - docs/multilevel/level2.md
+      - chapter: Chapter1.1
+        title: Capítulo 1.1
         pages:
-          - docs/multilevel/level2.1.1A.md
-          - chapter: WindowsXP1.1.1
-            title: Windows XP 1.1.1
+          - docs/multilevel/level3.md
+          - chapter: Chapter1.1.1
+            title: Capítulo 1.1.1
             pages:
-              - docs/multilevel/level2.2A.md
-              - chapter: WindowsXP1.1.2
-                title: Windows XP 1.1.2
+              - docs/multilevel/level4.md
+              - chapter: Chapter1.1.1.1
+                title: Capítulo 1.1.1.1
                 pages:
-                  - docs/multilevel/level2.1A.md
+                  - docs/multilevel/level5.md
+              - docs/instalacion/instalacion.md
+          - docs/instalacion/configuracion.md
       - url: https://github.com/aranda-docs/aranda-jekyll-theme
         title: Github
-      - docs/instalacion/configuracion.md
+      - docs/instalacion/inicio.md
+
+  - docs/multilevel/level1.md
   - url: https://www.arandasoft.com
     title: Página principal de Aranda
-  - docs/instalacion/inicio.md
 
   # Ordenamiento automático por capitulo
   - chapter: Uso
