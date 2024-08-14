@@ -1,12 +1,8 @@
 ---
 title: "Instalacion"
-permalink: /docs/instalacion/instalacion/
 excerpt: "Página de Instalación"
-chapter: "Instalación" 
-sidebar: docs
 ---
 
 # Instalación {#title-article}
 
 Página de Instalación
-

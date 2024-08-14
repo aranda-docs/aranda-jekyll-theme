@@ -1,9 +1,6 @@
 ---
 title: "Introducción"
-permalink: /docs/instalacion/inicio/
 excerpt: "Página de inicio"
-chapter: "Instalación" 
-sidebar: docs
 ---
 
 # Inicio
@@ -21,20 +18,19 @@ sidebar: docs
 2. [Usuarios ↪](../03-instalacion_consola_web/01-instalacion_consola_adm.html){: #next}
 3. [Grupos ↪](../03-instalacion_consola_web/01-instalacion_consola_adm.html){: #next}
 
-
 <br>
 <br>
 
 > **NOTA:** <br> Useful information that users should know, even when skimming content.
 
-> ⚠  **Importante:** Sales were off the chart!
-{: #alert}
+> ⚠ **Importante:** Sales were off the chart!
+> {: #alert}
 
-> ⚐  **Nota:** Sales were off the chart!
-{: #important}
+> ⚐ **Nota:** Sales were off the chart!
+> {: #important}
 
-> ⎘  **Enlaces Relacionados:** <br> - [Configuracion Broker](../08-instalacion_broker/02-configuracion_broker.html)
-{: #related}
+> ⎘ **Enlaces Relacionados:** <br> - [Configuracion Broker](../08-instalacion_broker/02-configuracion_broker.html)
+> {: #related}
 
 ---
 
@@ -46,9 +42,7 @@ sidebar: docs
   este equipo y se muestra un conflicto en la hoja de vida respectiva en la consola.  
 </details>{: #product}
 
-
 ---
-
 
 <details> 
 <summary>Sin Estilos</summary>
@@ -60,7 +54,6 @@ sidebar: docs
 
 ---
 
-
-#  Scripts de actualizacion:
+# Scripts de actualizacion:
 
 [Scripts](https://download.arandasoft.com/UTILIDADES/Scrips_asdk/Script.zip)

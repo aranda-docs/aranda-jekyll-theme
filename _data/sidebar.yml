@@ -1,19 +1,46 @@
 test:
-  - title: Aranda Docs
-    url: https://docs.arandasoft.com
-    children:
-      - title: Sistema de Diseño
-        url: https://aranda-labs.github.io/design-system
-      - title: ADM
-        url: https://aranda-docs.github.io/adm
-  - title: Otros Sitios
-    children:
-      - title: Google
-        url: https://www.google.com
+  - chapter: chapter1-test
+    title: Aranda Docs
+    pages:
+      - test/index.md
+      - test/configuration.md
+      - test/content.md
+      - test/sidebar.md
 
+  - chapter: chapter2-test
+    title: Otros Sitios
+    pages:
+      - url: ./docs
+        title: Ejemplo documentación
+
+      - url: https://www.google.com
+        title: Google
 
 docs:
-  - title: Instalación
-    chapter: Instalación
-  - title: Uso
-    chapter: Uso
+  # Ordenamiento manual
+  - chapter: Instalación
+    title: Instalación Windows
+    pages:
+      - docs/instalacion/instalacion.md
+      - chapter: WindowsXP1.1
+        title: Windows XP 1.1
+        pages:
+          - docs/multilevel/level2.1.1A.md
+          - chapter: WindowsXP1.1.1
+            title: Windows XP 1.1.1
+            pages:
+              - docs/multilevel/level2.2A.md
+              - chapter: WindowsXP1.1.2
+                title: Windows XP 1.1.2
+                pages:
+                  - docs/multilevel/level2.1A.md
+      - url: https://github.com/aranda-docs/aranda-jekyll-theme
+        title: Github
+      - docs/instalacion/configuracion.md
+  - url: https://www.arandasoft.com
+    title: Página principal de Aranda
+  - docs/instalacion/inicio.md
+
+  # Ordenamiento automático por capitulo
+  - chapter: Uso
+    title: Uso

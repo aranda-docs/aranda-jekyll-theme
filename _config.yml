@@ -46,6 +46,13 @@ defaults:
       path: ""
     values:
       layout: doc
+      sidebar: docs
+
+  - scope:
+      path: "test"
+    values:
+      layout: doc
+      sidebar: test
 
 ## General Settings
 ## ================
@@ -72,7 +79,6 @@ kramdown:
 
 ## Jekyll Serve
 port: 4000
-
 
 ## HTML Compression
 ## - https://jch.penibelst.de/
@@ -120,4 +126,4 @@ markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 ## Disable to prevent styles from being generated.
 sass:
   sass_dir: _sass
-  style: :compressed   
+  style: compressed   

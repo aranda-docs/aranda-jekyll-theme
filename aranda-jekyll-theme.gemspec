@@ -3,7 +3,7 @@
 Gem::Specification.new do |spec|
     spec.name                    = "aranda-jekyll-theme"
     spec.version                 = "1.0"
-    spec.authors                 = ["Natalia Sanchez", "Claudia Parra", "Jaime Chavarriaga"]
+    spec.authors                 = ["Aranda Software"]
   
     spec.summary                 = %q{Aranda Docs Jekyll theme.}
     spec.homepage                = "https://github.com/aranda-docs/aranda-jekyll-theme"

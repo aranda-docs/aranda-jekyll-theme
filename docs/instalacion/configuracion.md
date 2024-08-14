@@ -1,9 +1,6 @@
 ---
 title: "Configuracion"
-permalink: /docs/instalacion/configuracion/
 excerpt: "Página de Configuración"
-chapter: "Instalación" 
-sidebar: docs
 ---
 
 # Configuración
