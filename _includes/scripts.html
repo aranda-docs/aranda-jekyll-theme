@@ -5,3 +5,41 @@
 <script src="{{ site.baseurl }}/assets/js/libs/iframeResizer.min.js"></script>
 <script src="{{ site.baseurl }}/assets/js/resize.js"></script>
 <script src="{{ site.baseurl }}/assets/js/modules/handleCopyClick.js"></script>
+<script>
+    function toggleLanguageSelector() {
+        var languageSelector = document.getElementById("language");
+        var langPrefix = document.getElementById("langPrefix");
+        var arrowIcon = document.getElementById("arrowIcon");
+        if (languageSelector.style.display === "none" || languageSelector.style.display === "") {
+            languageSelector.style.display = "block";
+            langPrefix.style.display = "none"; // Oculta el prefijo del idioma
+            arrowIcon.style.transform = "rotate(180deg)"; // Rota la flecha hacia arriba
+        } else {
+            languageSelector.style.display = "none";
+            langPrefix.style.display = "block"; // Muestra el prefijo del idioma
+            arrowIcon.style.transform = ""; // Restablece la rotación de la flecha
+        }
+    }
+</script>
+<script>
+
+    const translation = {
+        es: {
+            download: "Descargar PDF",
+        },
+        en: {
+            download: "Download PDF",
+        },
+        pt: {
+            download: "Baixar PDF",
+        },
+    };
+
+
+    const params = window.location.pathname.split('/');
+    const lang = params[2] || 'es';
+
+    const translatedText = translation[lang].download;
+
+    document.querySelector('.translatePDF').textContent = translatedText;
+</script>

@@ -2,13 +2,12 @@
 layout: default
 ---
 
-<header id="mastheadArea" class="sg_masthead">
-    <div class="sg_contain">
-        <div class="head">
-            {% include GA_Script.html %}
-            <!--Buscador Aranda docs-->
-            <div class="row no-gutters">
-                <!--<div class="col searchbar-container">
+<header id="mastheadArea" class="sg_masthead" <div class="sg_contain" style="padding: 0">
+    <div class="head">
+        {% include GA_Script.html %}
+        <!--Buscador Aranda docs-->
+        <div class="row no-gutters">
+            <!--<div class="col searchbar-container">
                     <div class="form-group input-group-lg buscador-container">
                         <input
                             id="searchbar"
@@ -18,52 +17,52 @@ layout: default
                     </div>
                     <div id="search_result"></div>
                 </div>-->
-                {% if site.title != "Aranda Database" %}
-                <div class="col-auto">
-                    <div class="pdf">
-                        <a
-                            id="convertPDF"
-                            class="mb-2 ml-5"
-                            href="{{ site.baseurl }}/assets/{{site.baseurl | remove_first: '/'}}.pdf"
-                            download
-                        >
-                            <img
-                                src="{{ site.baseurl }}/assets/images/icon-pdf.svg"
-                                width="64"
-                                alt="Adobe PDF"
-                                id="pdf-ic"
-                            />
-                            <h1>Descargar PDF</h1>
-                        </a>
-                    </div>
-                </div>
+            {% if site.title != "Aranda Database" %}
+
+            <div class="col-auto">
+                {% assign params = site.baseurl | split: '/' %}
+                {% assign lang = params[2] %}
+
+                {% if lang == null %}
+                {% assign lang = "es" %}
                 {% endif %}
+                <div class="pdf">
+                    <a id="convertPDF" class="mb-2 ml-5" href="{{ site.baseurl }}/assets/docs.pdf" download>
+                        <img src="{{ site.baseurl }}/assets/images/icon-pdf.svg" width="64" alt="Adobe PDF"
+                            id="pdf-ic" />
+                        <h1 class="translatePDF">Descargar PDF</h1>
+                    </a>
+                </div>
             </div>
-
-            <!-- Adding result container -->
-            <div class="row">
-                <ul id="result-box"></ul>
-            </div>
-            <!-- Adding result container -->
-
-            <!--Buscador Aranda docs-->
-            <!-- <div id="no-results"><p class="item-title">No hay resultados para la busqueda </p></div> -->
-            <div class="title header typo_ostrich">{{ page.title }}</div>
-            {% if page.info %}
-            <div class="sub_title typo_crow">{{ page.info }}</div>
             {% endif %}
         </div>
-        {% if page.nav == true %}
-        <aside id="nav">
-            <div class="header typo_hummingbird">Contents</div>
-            <ul></ul>
-        </aside>
+
+        <!-- Adding result container -->
+        <div class="row">
+            <ul id="result-box"></ul>
+        </div>
+        <!-- Adding result container -->
+
+        <!--Buscador Aranda docs-->
+        <!-- <div id="no-results"><p class="item-title">No hay resultados para la busqueda </p></div> -->
+        <div class="title header typo_ostrich translatedContent">
+            {{ page.title }}
+        </div>
+        {% if page.info %}
+        <div class="sub_title typo_crow">{{ page.info }}</div>
         {% endif %}
+    </div>
+    {% if page.nav == true %}
+    <aside id="nav">
+        <div class="header typo_hummingbird">Contents</div>
+        <ul></ul>
+    </aside>
+    {% endif %}
     </div>
 </header>
 
 <article id="documentationArea" class="sg_doc">
-    <div class="sg_contain" id="article-content">{{ content }}</div>
+    <div class="translatedContent" class="sg_contain" id="article-content">
+        {{ content }}
+    </div>
 </article>
-
-<script></script>

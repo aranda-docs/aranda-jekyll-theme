@@ -1,17 +1,108 @@
 <!DOCTYPE html>
 <html id="sg" {% if site.language %} lang="{{ site.language }}" {% endif %}>
-    <head>
-        {% include header.html %}
-    </head>
 
-    <body id="sg">
-        <div class="sg-pusher">
-            {% include sidebar.html %}
-            <main id="sgMain" class="sg-main">
+<head>
+    {% include header.html %}
+    <style>
+        #languageSelector {
+            position: absolute;
+            right: 45px;
+            top: 20px;
+            z-index: 1;
+            /* Asegura que este contenedor esté debajo del otro div */
+        }
+
+        #languageSelector>div {
+            z-index: 2;
+            /* Este div estará encima del select */
+        }
+
+        #language {
+            z-index: 0;
+            /* Asegura que el select esté debajo del div */
+        }
+
+        /* Estilo para la transición de la flecha */
+        #arrowIcon {
+            transition: transform 0.3s ease;
+            /* Ajusta la duración y tipo de transición según tus preferencias */
+        }
+
+        #language option:hover {
+            background-color: #ededf6;
+            /* Color de fondo cuando se hace hover */
+        }
+    </style>
+</head>
+
+<body id="sg">
+    <div class="sg-pusher" style="display: flex">
+        <aside id="sidebar">{% include sidebar.html %}</aside>
+        <main id="sgMain" class="sg-main" style="
+                        display: flex;
+                        flex-direction: column;
+                        flex-grow: 1;
+                        padding: 20px;
+                        margin-left: 285px; /* Asegúrate de que coincida con el ancho del sidebar */
+                    ">
+            <div id="languageSelector" style="
+                            position: absolute;
+                            right: 45px;
+                            top: 20px;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-end;
+                        ">
+                {% assign params = site.baseurl | split: '/' %}
+                {% assign lang = params[2] %}
+
+                {% if lang == null %}
+                {% assign lang = "es" %}
+                {% endif %}
+                <div style="display: flex; flex-direction: row; gap: 6px; align-items: center; cursor: pointer; position: absolute; right: 50px; top: 50px; width: max-content;"
+                    onclick="toggleLanguageSelector()">
+                    <img src="{{ site.baseurl }}/assets/images/ic_language.svg" alt=""
+                        style="height: 30px; width: 30px;" />
+                    <span id="langPrefix" style="font-size: 20px; color: #0865D0;">{{ lang | upcase }}</span>
+                    <img id="arrowIcon" src="{{ site.baseurl }}/assets/images/ic_arrow_up.svg" alt=""
+                        style="height: 13px; width: 13px;" />
+                </div>
+
+                <div id="language" onchange="translateText(); closeLanguageSelector();" style="
+                                padding: 3px;
+                                margin-top: 10px;
+                                background-color: #F2F2F4;
+                                border-radius: 5px;
+                                cursor: pointer;
+                                position: absolute;
+                                right: 30px;
+                                top: 75px;
+                                width: 120px;
+                                height: 150px;
+                            ">
+                    <option
+                        style="height: 50px; display: flex; align-items: center; justify-content: flex-end; color: #0865D0; font-size: 20px; padding-right: 16px;"
+                        value="es" {% if lang=="es" %} selected {% endif %}>Español</option>
+                    <option
+                        style="height: 50px; display: flex; align-items: center; justify-content: flex-end; color: #0865D0; font-size: 20px; padding-right: 16px;"
+                        value="en" {% if lang=="en" %} selected {% endif %}>English</option>
+                    <option
+                        style="height: 50px; display: flex; align-items: center; justify-content: flex-end; color: #0865D0; font-size: 20px; padding-right: 16px;"
+                        value="pt" {% if lang=="pt" %} selected {% endif %}>Português</option>
+                </div>
+            </div>
+
+            <div style="
+                            flex-grow: 1;
+                            box-sizing: border-box;
+                            overflow-y: auto;
+                        ">
                 {{ content }}
-                <!-- {% include footer.html %} -->
-            </main>
-        </div>
-        {% include scripts.html %}
-    </body>
+            </div>
+        </main>
+    </div>
+    
+    {% include scripts.html %}
+</body>
+
 </html>
