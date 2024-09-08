@@ -17,11 +17,11 @@
       </div>
       <div class="collapsible_child">
         <ul class="collapsible_content" id="{{item.chapter}}-content">
-          {% if item.pages %}            
+          {% if item.pages %}
             {% comment %} Siguiente nivel {% endcomment %}
             {% assign nav = item.pages %}
             {% include nav.html %}
-          {% else %}
+            {% else %}
             {% comment %} Ordenamiento por capítulo en página {% endcomment %}
             {% for sitePage in site.pages %}
               {% if sitePage.chapter == item.chapter %}
@@ -34,9 +34,15 @@
     {% elsif item.url %}
       {%  comment  %} Url {% endcomment %}
       {% include nav-item.html current_page=item %}
-    {% else %}
+      {% else %}
       {%  comment  %} Página {% endcomment %}
-      {% assign sitePage = site.pages | where: "path", item | first %}
+      {% if item.page %}
+        {% assign currentPage = item.page %}
+      {% else %}
+        {% assign currentPage = item %}
+      {% endif %}
+
+      {% assign sitePage = site.pages | where: "path", currentPage | first %}
       {% if sitePage %}
         {% include nav-item.html current_page=sitePage chapter=item.chapter %}
       {% endif %}

@@ -21,7 +21,7 @@ docs:
   - chapter: Chapter1
     title: Capítulo 1
     pages:
-      - docs/multilevel/level2.md
+      - page: docs/multilevel/level2.md
       - chapter: Chapter1.1
         title: Capítulo 1.1
         pages:
