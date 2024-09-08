@@ -12,11 +12,13 @@ Cada capitulo o elemento de la lista debe contener las siguientes propiedades:
 
 -   **title**: Titulo. Es el nombre del capítulo que se muestra en la barra lateral.
 
--   **pages**: Páginas, Es un arreglo con las páginas que contiene el capitulo, se especifican en el orden que se debe incluir en la barra lateral y la ruta debe usar el carácter **/** como separador de carpetas.
+-   **pages**: Páginas, Es un arreglo con las rutas de las páginas que contiene el capitulo, se especifican en el orden que se debe incluir en la barra lateral y la ruta debe usar el carácter **/** como separador de carpetas.
+
+    La página se puede colocar directamente como una cadena o como un objeto que contiene la propiedad **page**.
 
     Es posible agregar capítulos en niveles anidados, para ello agregue un capítulo **chapter** a la lista de páginas.
 
-    También es posible agregar vínculos externos, para ello agregue un elemento **url** que tenga **title** a la lista de páginas.
+    También es posible agregar vínculos externos, para ello agregue un elemento **url** con la propiedad **title** a la lista de páginas.
 
 Ejemplo: **\_data/sidebar.yml**
 
@@ -29,7 +31,7 @@ docs:
       - chapter: WindowsXP1.1
         title: Windows XP 1.1
         pages:
-          - docs/multilevel/level2.1.1A.md
+          - page: docs/multilevel/level2.1.1A.md
           - chapter: WindowsXP1.1.1
             title: Windows XP 1.1.1
             pages:
