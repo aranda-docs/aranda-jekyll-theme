@@ -7,19 +7,68 @@
 <script src="{{ site.baseurl }}/assets/js/modules/handleCopyClick.js"></script>
 <script>
     function toggleLanguageSelector() {
-        var languageSelector = document.getElementById("language");
+        var languageOptions = document.getElementById("language");
         var langPrefix = document.getElementById("langPrefix");
         var arrowIcon = document.getElementById("arrowIcon");
-        if (languageSelector.style.display === "none" || languageSelector.style.display === "") {
-            languageSelector.style.display = "block";
+
+        if (languageOptions.style.display === "none" || languageOptions.style.display === "") {
+            languageOptions.style.display = "block";
             langPrefix.style.display = "none"; // Oculta el prefijo del idioma
             arrowIcon.style.transform = "rotate(180deg)"; // Rota la flecha hacia arriba
         } else {
-            languageSelector.style.display = "none";
+            languageOptions.style.display = "none";
             langPrefix.style.display = "block"; // Muestra el prefijo del idioma
             arrowIcon.style.transform = ""; // Restablece la rotación de la flecha
         }
     }
+    
+    // Obtén el idioma de la URL o usa 'es' como predeterminado
+    const urlparams = window.location.pathname.split('/');
+    const langtranslate = urlparams[2] || 'es';
+
+    // Actualiza las opciones de idioma al cargar la página
+    updateLanguageOptions(langtranslate);
+
+    function changeLanguage(lang) {
+        var langPrefix = document.getElementById("langPrefix");
+        langPrefix.textContent = lang.toUpperCase(); // Cambia el texto del prefijo de idioma
+
+        var baseUrl = window.location.origin; // Obtiene la URL base actual
+        var jekyllBaseUrl = "{{ site.baseurl }}"; // Obtiene la URL base de Jekyll
+
+        // Remueve el segmento de idioma existente de la URL (asumiendo que está al final)
+        var languageRegex = /\/(en|es|pt)$/; // Añade o quita códigos de idioma según sea necesario
+        var cleanBaseUrl = jekyllBaseUrl.replace(languageRegex, '');
+
+        // Construye la URL dependiendo del idioma seleccionado
+        var newUrl;
+        if (lang === 'es') {
+            newUrl = `${baseUrl}${cleanBaseUrl}`;
+        } else {
+            newUrl = `${baseUrl}${cleanBaseUrl}/${lang}`;
+        }
+
+        window.location.href = newUrl;
+    }
+
+    // Cerrar el selector de idioma si se hace clic fuera de él
+    document.addEventListener("click", function (event) {
+        var languageOptions = document.getElementById("language");
+        var languageSelector = document.getElementById("languageSelector");
+        var arrowIcon = document.getElementById("arrowIcon");
+        var langPrefix = document.getElementById("langPrefix");
+
+        if (
+            event.target !== languageOptions &&
+            event.target !== languageSelector &&
+            !languageOptions.contains(event.target) &&
+            !languageSelector.contains(event.target)
+        ) {
+            languageOptions.style.display = "none";
+            arrowIcon.style.transform = ""; // Restablece la rotación de la flecha
+            langPrefix.style.display = "block"; // Muestra el prefijo del idioma
+        }
+    });
 </script>
 <script>
 
