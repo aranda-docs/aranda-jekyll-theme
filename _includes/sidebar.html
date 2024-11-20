@@ -14,8 +14,8 @@
 
   {% include home-item.html %}
 
-  {% if page.sidebar and site.data.sidebar[page.sidebar][lang] != null %}
-    {% assign toc = site.data.sidebar[page.sidebar][lang] %}
+  {% if page.sidebar and site.data.sidebar[page.sidebar] != null %}
+    {% assign toc = site.data.sidebar[page.sidebar] %}
 
     <ul>
       {% assign nav = toc %}
