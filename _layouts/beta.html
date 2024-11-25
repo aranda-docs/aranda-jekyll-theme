@@ -19,22 +19,25 @@ layout: default
                     <div id="search_result"></div>
                 </div>-->
 
-            <div class="col-auto">
+                <div class="col-auto">
+                    {% assign params = site.baseurl | split: '/' %} {% assign
+                    lang = params[2] %} {% if lang == null %} {% assign lang =
+                    "es" %} {% endif %}
                     <div class="pdf">
-                     <a
-                        id="convertPDF"
-                        class="mb-2 ml-5"
-                        href="{{ site.baseurl }}/assets/{{site.baseurl | remove_first: '/'}}.pdf"
-                        download
-                      >
-                        <img
-                            src="{{ site.baseurl }}/assets/images/icon-pdf.svg"
-                            width="64"
-                            alt="Adobe PDF"
-                            id="pdf-ic"
-                        />
-                       <h1>Descargar PDF</h1>
-                     </a>
+                        <a
+                            id="convertPDF"
+                            class="mb-2 ml-5"
+                            href="{{ site.baseurl }}/assets/{{site.baseurl | remove_first: '/'}}.pdf"
+                            download
+                        >
+                            <img
+                                src="{{ site.baseurl }}/assets/images/icon-pdf.svg"
+                                width="64"
+                                alt="Adobe PDF"
+                                id="pdf-ic"
+                            />
+                            <h1 class="translatePDF">Descargar PDF</h1>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -60,7 +63,6 @@ layout: default
         {% endif %}
     </div>
 </header>
-
 
 <article id="documentationArea" class="sg_doc">
     <div class="sg_post" id="post-content">

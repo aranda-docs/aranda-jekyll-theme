@@ -21,25 +21,23 @@ layout: default
 
 
                 <div class="col-auto">
+                    {% assign params = site.baseurl | split: '/' %}
+                    {% assign lang = params[2] %}
+
+                    {% if lang == null %}
+                    {% assign lang = "es" %}
+                    {% endif %}
                     <div class="pdf">
-                    <a
-                        id="convertPDF"
-                        class="mb-2 ml-5"
-                        href="{{ site.baseurl }}/assets/{{site.baseurl | remove_first: '/'}}.pdf"
-                        download
-                    >
-                        <img
-                            src="{{ site.baseurl }}/assets/images/icon-pdf.svg"
-                            width="64"
-                            alt="Adobe PDF"
-                            id="pdf-ic"
-                        />
-                        <h1>Descargar PDF</h1>
-                    </a>
-                        
-                   </div>
-                 </div>    
-            </div> 
+                        <a id="convertPDF" class="mb-2 ml-5"
+                            href="{{ site.baseurl }}/assets/{{site.baseurl | remove_first: '/'}}.pdf" download>
+                            <img src="{{ site.baseurl }}/assets/images/icon-pdf.svg" width="64" alt="Adobe PDF"
+                                id="pdf-ic" />
+                            <h1 class="translatePDF">Descargar PDF</h1>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
             <!-- Adding result container -->
             <div class="row">
                 <ul id="result-box"></ul>
@@ -64,10 +62,10 @@ layout: default
 
 <post id="documentationArea" class="sg_doc">
     <div class="sg_post" id="post-content">
-      <div class="post">
-         <div class="ts">{{ content }}</div>  
-    </div>
-  </post>
+        <div class="post">
+            <div class="ts">{{ content }}</div>
+        </div>
+</post>
 
 <script>
     /* document.getElementById("searchbar").addEventListener("keyup", () => {

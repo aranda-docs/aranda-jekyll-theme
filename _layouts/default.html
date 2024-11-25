@@ -5,13 +5,88 @@
     </head>
 
     <body id="sg">
-        <div class="sg-pusher">
-            {% include sidebar.html %}
+        <div class="sg-pusher" style="display: flex">
+            <aside id="sidebar">{% include sidebar.html %}</aside>
             <main id="sgMain" class="sg-main">
-                {{ content }}
-                <!-- {% include footer.html %} -->
+                <!-- Mostrar el valor de lang y params en un <span> -->
+                {% assign params = site.baseurl | split: '/' %} {% assign lang =
+                params[2] %} {% if lang == null %} {% assign lang = "es" %} {%
+                endif %}
+
+                <!-- Selector de idioma -->
+                <div id="languageSelector">
+                    <div class="selector" onclick="toggleLanguageSelector()">
+                        <img
+                            src="{{ site.baseurl }}/assets/images/ic_language.svg"
+                            alt=""
+                            style="height: 25px; width: 25px"
+                        />
+                        <span
+                            id="langPrefix"
+                            style="font-size: 16px; color: #0865d0"
+                            >{{ lang | upcase }}</span
+                        >
+                        <img
+                            id="arrowIcon"
+                            src="{{ site.baseurl }}/assets/images/ic_arrow_up.svg"
+                            alt=""
+                        />
+                    </div>
+
+                    <div id="language">
+                        <div
+                            class="languageOptionItem"
+                            onclick="changeLanguage('es')"
+                        >
+                            Español
+                        </div>
+                        <div
+                            class="languageOptionItem"
+                            onclick="changeLanguage('en')"
+                        >
+                            English
+                        </div>
+                        <div
+                            class="languageOptionItem"
+                            onclick="changeLanguage('pt')"
+                        >
+                            Português
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    style="
+                        flex-grow: 1;
+                        box-sizing: border-box;
+                        overflow-y: auto;
+                    "
+                >
+                    {% if lang == "es" or lang == "pt" %}
+
+                    <div
+                        style="
+                            position: absolute;
+                            left: 600px;
+                            height: 78px;
+                            width: 30%;
+                            background-color: #656ac13b;
+                            border-left: 4px solid;
+                            border-left-color: #656ac1;
+                            color: #656ac1;
+                            font-weight: normal;
+                            display: flex;
+                            align-items: center;
+                        "
+                    >
+                        <p style="margin: 0; padding-left: 10px;">🔄 <strong>Aviso</strong>: Esta página ha sido traducida por IA</p>
+                    </div>
+
+                    {% endif %} {{ content }}
+                </div>
             </main>
         </div>
+
         {% include scripts.html %}
     </body>
 </html>

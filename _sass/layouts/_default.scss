@@ -24,6 +24,61 @@ body#sg {
     -webkit-font-smoothing: antialiased;
 }
 
+#languageSelector {
+    position: absolute;
+    right: 45px;
+    top: 20px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    .selector {
+        display: flex;
+        flex-direction: row;
+        gap: 6px;
+        align-items: center;
+        cursor: pointer;
+        position: absolute;
+        top: 12px;
+        right: 15px;
+        width: max-content;
+        z-index: 2;
+    }
+}
+
+#language {
+    display: none;
+    padding: 3px;
+    margin-top: 10px;
+    background-color: #f2f2f4;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 35px;
+    width: 118px;
+    height: 125px;
+    .languageOptionItem {
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        color: #0865d0;
+        font-size: 16px;
+        padding-right: 16px;
+        cursor: pointer;
+    }
+    .languageOptionItem:hover {
+        background-color: #ededf6;
+    }
+}
+
+#arrowIcon {
+    transition: transform 0.3s;
+    height: 13px;
+                width: 13px;
+}
+
 .sg-pusher {
     position: relative;
     min-height: 100%;
