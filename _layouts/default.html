@@ -8,11 +8,13 @@
         <div class="sg-pusher" style="display: flex">
             <aside id="sidebar">{% include sidebar.html %}</aside>
             <main id="sgMain" class="sg-main">
-                {% if site.translated == true %}
+                <!-- Mostrar el valor de lang y params en un <span> -->
+                {% assign params = site.baseurl | split: '/' %} {% assign lang =
+                params[2] %} {% if lang == null %} {% assign lang = "es" %} {%
+                endif %}
+
+                <!-- Selector de idioma -->
                 <div id="languageSelector">
-                    {% assign params = site.baseurl | split: '/' %} {% assign
-                    lang = params[2] %} {% if lang == null %} {% assign lang =
-                    "es" %} {% endif %}
                     <div class="selector" onclick="toggleLanguageSelector()">
                         <img
                             src="{{ site.baseurl }}/assets/images/ic_language.svg"
@@ -53,7 +55,6 @@
                     </div>
                 </div>
 
-                {% endif %}
                 <div
                     style="
                         flex-grow: 1;
@@ -61,7 +62,27 @@
                         overflow-y: auto;
                     "
                 >
-                    {{ content }}
+                    {% if lang == "es" or lang == "pt" %}
+
+                    <div
+                        style="
+                            position: absolute;
+                            left: 600px;
+                            height: 78px;
+                            width: 30%;
+                            background-color: #656ac13b;
+                            border-left: 4px solid;
+                            border-left-color: #656ac1;
+                            color: #656ac1;
+                            font-weight: normal;
+                            display: flex;
+                            align-items: center;
+                        "
+                    >
+                        <p style="margin: 0; padding-left: 10px;">🔄 <strong>Aviso</strong>: Esta página ha sido traducida por IA</p>
+                    </div>
+
+                    {% endif %} {{ content }}
                 </div>
             </main>
         </div>

@@ -24,29 +24,12 @@ layout: default
                     lang = params[2] %} {% if lang == null %} {% assign lang =
                     "es" %} {% endif %}
                     <div class="pdf">
-                        <a
-                            id="convertPDF"
-                            class="mb-2 ml-5"
-                            {%
-                            if
-                            site.name
-                            %}
-                            href="{{ site.baseurl }}/assets/{{ site.name }}.pdf"
-                            {%
-                            else
-                            %}
-                            href="{{ site.baseurl }}/assets/{{site.baseurl | remove_first: '/'}}.pdf"
-                            {%
-                            endif
-                            %}
-                            download
-                        >
-                            <img
-                                src="{{ site.baseurl }}/assets/images/icon-pdf.svg"
-                                width="64"
-                                alt="Adobe PDF"
-                                id="pdf-ic"
-                            />
+                        <a id="convertPDF" class="mb-2 ml-5" {% if site.name %}
+                            href="{{ site.baseurl }}/assets/{{ site.name }}.pdf" {% else %}
+                            href="{{ site.baseurl }}/assets/{{site.baseurl | remove_first: '/'}}.pdf" {% endif %}
+                            download>
+                            <img src="{{ site.baseurl }}/assets/images/icon-pdf.svg" width="64" alt="Adobe PDF"
+                                id="pdf-ic" />
                             <h1 class="translatePDF">Descargar PDF</h1>
                         </a>
                     </div>
