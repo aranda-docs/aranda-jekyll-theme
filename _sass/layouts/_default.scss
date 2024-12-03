@@ -26,14 +26,14 @@ body#sg {
 
 #iaMessage {
     position: absolute;
-    right: 182px;
-    top: 25px;
+    right: 336px;
+    top: 35px;
     z-index: 1;
     display: flex;
     border: 1px solid #57657458;
     border-radius: 6px;
-    width: 689px;
-    height: 55px;
+    width: 500px;
+    height: 40px;
     flex-direction: row;
     align-items: flex-end;
     background-color: #FBFBFB;
@@ -43,8 +43,7 @@ body#sg {
 
     .alertText {
         color: #8395A7;
-        font-size: 20px;
-        padding-bottom: 3px;
+        font-size: 17px;
     }
 }
 
