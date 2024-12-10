@@ -8,21 +8,18 @@
         <div class="sg-pusher" style="display: flex">
             <aside id="sidebar">{% include sidebar.html %}</aside>
             <main id="sgMain" class="sg-main">
-                <!-- Mostrar el valor de lang y params en un <span> -->
                 {% assign params = site.baseurl | split: '/' %} {% assign lang =
                 params[2] %} {% if lang == null %} {% assign lang = "es" %} {%
-                endif %}
-
-                <!-- Mostrar el selector de idioma solo si site.translated es true -->
+                endif %} 
                 {% if site.translated == true %}
-
                 <div id="iaMessage">
                     <img
                         src="{{ site.baseurl }}/assets/images/ic_translated.svg"
-                        style="width: 20px; color: #8395A7;"
+                        style="width: 20px; color: #8395a7"
                     />
-                    <div class="alertText">El contenido página ha sido traducida por IA.</div>
+                    <div class="alertText"></div>
                 </div>
+                {% endif %}
                 <div id="languageSelector">
                     <div class="selector" onclick="toggleLanguageSelector()">
                         <img
@@ -63,7 +60,6 @@
                         </div>
                     </div>
                 </div>
-                {% endif %}
 
                 <div
                     style="
