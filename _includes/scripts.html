@@ -65,22 +65,28 @@
     });
 </script>
 <script>
-    const translation = {
+    const translations = {
         es: {
             download: "Descargar PDF",
+            alert: "Este artículo fue traducido usando Inteligencia Artificial.",
         },
         en: {
             download: "Download PDF",
+            alert: "This article was translated using Artificial Intelligence.",
         },
         pt: {
             download: "Baixar PDF",
+            alert: "Este artigo foi traduzido com recurso a Inteligência Artificial.",
         },
     };
 
     const params = window.location.pathname.split("/");
     const lang = params[2] || "es";
 
-    const translatedText = translation[lang].download;
+    const translatedDownloadText = translations[lang].download;
+    const translatedAlertText = translations[lang].alert;
 
-    document.querySelector(".translatePDF").textContent = translatedText;
+    document.querySelector(".translatePDF").textContent =
+        translatedDownloadText;
+    document.querySelector(".alertText").textContent = translatedAlertText;
 </script>
