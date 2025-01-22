@@ -65,28 +65,35 @@
     });
 </script>
 <script>
-    const translations = {
-        es: {
-            download: "Descargar PDF",
-            alert: "Este artículo fue traducido usando Inteligencia Artificial.",
-        },
-        en: {
-            download: "Download PDF",
-            alert: "This article was translated using Artificial Intelligence.",
-        },
-        pt: {
-            download: "Baixar PDF",
-            alert: "Este artigo foi traduzido com recurso a Inteligência Artificial.",
-        },
-    };
+    document.addEventListener("DOMContentLoaded", function () {
+        const translations = {
+            es: {
+                download: "Descargar PDF",
+                alert: "Este artículo fue traducido usando Inteligencia Artificial.",
+            },
+            en: {
+                download: "Download PDF",
+                alert: "This article was translated using Artificial Intelligence.",
+            },
+            pt: {
+                download: "Baixar PDF",
+                alert: "Este artigo foi traduzido com recurso a Inteligência Artificial.",
+            },
+        };
 
-    const params = window.location.pathname.split("/");
-    const lang = params[2] || "es";
+        const params = window.location.pathname.split("/");
+        const lang = params[2] || "es";
 
-    const translatedDownloadText = translations[lang].download;
-    const translatedAlertText = translations[lang].alert;
+        const translatedAlertText = translations[lang].alert;
 
-    document.querySelector(".translatePDF").textContent =
-        translatedDownloadText;
-    document.querySelector(".alertText").textContent = translatedAlertText;
+        const alertTextElement = document.querySelector(".alertText");
+        const iaMessageDiv = document.querySelector("#iaMessage");
+
+        if (translatedAlertText && alertTextElement && iaMessageDiv) {
+            alertTextElement.textContent = translatedAlertText;
+            iaMessageDiv.style.display = "flex"; 
+        } else {
+            iaMessageDiv.style.display = "none";
+        }
+    });
 </script>
