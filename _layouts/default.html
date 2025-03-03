@@ -8,9 +8,8 @@
         <div class="sg-pusher" style="display: flex">
             <aside id="sidebar">{% include sidebar.html %}</aside>
             <main id="sgMain" class="sg-main">
-                {% assign params = site.baseurl | split: '/' %} {% assign lang =
-                params[2] %} {% if lang == null %} {% assign lang = "es" %} {%
-                endif %} {% if site.translated == true %}
+                {% assign lang = site.language | default: "es" %}
+                {% if site.translated == true %}
                 <div id="iaMessage">
                     <img
                         src="{{ site.baseurl }}/assets/images/ic_translated.svg"

@@ -36,10 +36,8 @@ layout: default
                 </div>-->
 
                 <div class="col-auto">
-                    {% assign params = site.baseurl | split: '/' %} {% assign
-                    lang = params[2] %} {% if lang == null %} {% assign lang =
-                    "es" %} {% endif %}
-                    <div class="pdf">
+                    {% assign lang = site.language | default: "es" %}
+                    <div class="pdf" id="pdf-container">
                         <a
                             id="convertPDF"
                             class="mb-2 ml-5"
@@ -52,7 +50,7 @@ layout: default
                                 alt="Adobe PDF"
                                 id="pdf-ic"
                             />
-                            <h1 class="translatePDF">Descargar PDF</h1>
+                            <h1 id="translatePDF" class="translatePDF"></h1>
                         </a>
                     </div>
                 </div>
