@@ -37,15 +37,19 @@
         langPrefix.textContent = lang.toUpperCase();
 
         var jekyllBaseUrl = "{{ site.baseurl }}";
-        var languageRegex = /\/(en|es|pt)$/;
-        var cleanBaseUrl = jekyllBaseUrl.replace(languageRegex, "");
+        var currentUrl = "{{ page.url }}"; 
 
+        var languageRegex = /\/(en|es|pt)\//;
+        var cleanUrl = currentUrl.replace(languageRegex, "/");
+        
         var newUrl;
+
         if (lang === "es") {
-            newUrl = `${jekyllBaseUrl}${cleanBaseUrl}`;
+            newUrl = `${jekyllBaseUrl}${cleanUrl}`;
         } else {
-            newUrl = `${jekyllBaseUrl}${cleanBaseUrl}/${lang}`;
+            newUrl = `${jekyllBaseUrl}/${lang}${cleanUrl}`;
         }
+
         window.location.href = newUrl;
     }
 
