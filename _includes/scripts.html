@@ -27,10 +27,6 @@
     const lang = document.documentElement.lang || "es";
 
     updateLanguageOptions(lang);
-    function changeLanguage(lang) {
-        var langPrefix = document.getElementById("langPrefix");
-        langPrefix.textContent = lang.toUpperCase();
-    }
 
     function changeLanguage(newLang) {
         if (lang !== newLang) {
