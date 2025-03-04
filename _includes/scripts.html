@@ -32,25 +32,26 @@
         langPrefix.textContent = lang.toUpperCase();
     }
 
-    function changeLanguage(lang) {
-        var langPrefix = document.getElementById("langPrefix");
-        langPrefix.textContent = lang.toUpperCase();
+    function changeLanguage(newLang) {
+        if (lang !== newLang) {
+            var jekyllBaseUrl = "{{ site.baseurl }}";
+            var urlPath = "{{page.url}}".replace(jekyllBaseUrl, "");
 
-        var jekyllBaseUrl = "{{ site.baseurl }}";
-        var currentUrl = "{{ page.url }}"; 
+            var newUrl;
 
-        var languageRegex = /\/(en|es|pt)\//;
-        var cleanUrl = currentUrl.replace(languageRegex, "/");
-        
-        var newUrl;
+            if (lang !== "es") {
+                var languageRegex = /\/{{ site.language }}$/;
+                jekyllBaseUrl = jekyllBaseUrl.replace(languageRegex, "");
+            }
 
-        if (lang === "es") {
-            newUrl = `${jekyllBaseUrl}${cleanUrl}`;
-        } else {
-            newUrl = `${jekyllBaseUrl}/${lang}${cleanUrl}`;
+            if (newLang === "es") {
+                newUrl = `${jekyllBaseUrl}${urlPath}`;
+            } else {
+                newUrl = `${jekyllBaseUrl}/${newLang}${urlPath}`;
+            }
+
+            window.location.href = newUrl;
         }
-
-        window.location.href = newUrl;
     }
 
     document.addEventListener("click", function (event) {
