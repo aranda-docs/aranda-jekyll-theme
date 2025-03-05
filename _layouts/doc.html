@@ -34,13 +34,14 @@ layout: default
             </div>
             <div id="search_result"></div>
         </div> -->
-                {% if site.title != "Aranda Database" %}
+                {% assign parts = site.baseurl | split: "/" %}
+                {% if parts[1] != "database" %}
                 <div class="col-auto">
                     {% assign lang = site.language | default: "es" %}
                     <div class="pdf" id="pdf-container">
                         <a id="convertPDF" class="mb-2 ml-5" {% if site.name %}
                             href="{{ site.baseurl }}/assets/{{ site.name }}.pdf" {% else %}
-                            href="{{ site.baseurl }}/assets/{{site.baseurl | remove_first: '/'}}.pdf" {% endif %}
+                            href="{{ site.baseurl }}/assets/{{ site.baseurl | remove_first: '/' }}.pdf" {% endif %}
                             download>
                             <img src="{{ site.baseurl }}/assets/images/icon-pdf.svg" width="64" alt="Adobe PDF"
                                 id="pdf-ic" />
