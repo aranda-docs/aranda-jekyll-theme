@@ -1,5 +1,3 @@
-//-- enable javascript engine for the search control
-const { jsPDF } = window.jspdf;
 // Create Content List
 function contentList() {
   $('#documentationArea').find('h1').each(function () {
