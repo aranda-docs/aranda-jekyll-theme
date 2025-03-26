@@ -28,6 +28,17 @@
 
     updateLanguageOptions(lang);
 
+    function updateLanguageOptions(currentLang) {
+        const languageOptionItems = document.querySelectorAll(".languageOptionItem");
+        languageOptionItems.forEach(option => {
+            if (option.dataset.lang === currentLang) {
+                option.classList.add("selected");
+            } else {
+                option.classList.remove("selected"); 
+            }
+        });
+    }
+
     function changeLanguage(newLang) {
         if (lang !== newLang) {
             var jekyllBaseUrl = "{{ site.baseurl }}";
@@ -45,6 +56,9 @@
             } else {
                 newUrl = `${jekyllBaseUrl}/${newLang}${urlPath}`;
             }
+
+            lang = newLang;
+            updateLanguageOptions(newLang);
 
             window.location.href = newUrl;
         }

@@ -27,6 +27,12 @@
     padding-bottom: 16px;
 }
 
+@media only screen and (max-width: 540px) {
+    .col-auto {
+        padding-top: 16px;
+    }
+}
+
 @media only screen and (max-width: 480px) {
     .col-auto {
         display: none;
