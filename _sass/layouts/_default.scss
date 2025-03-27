@@ -97,14 +97,14 @@ body#sg {
     }
 }
 
-@media only screen and (max-width: $extended_screen) {
+@media only screen and (min-width: $large_screen) and (max-width: 2560px) {
     #language {
         top: 68px;
         right: 28px;
     }
 }
 
-@media only screen and (max-width: $large_screen) {
+@media only screen and (min-width: $medium-screen) and (max-width: $large_screen) {
     #language {
         top: 68px;
         right: 22px;
@@ -160,9 +160,9 @@ body#sg {
     }
 }
 
-@media only screen and (max-width: 350px) {
+@media only screen and (max-width: 359px) {
     #language {
-        top: 85px;
+        top: 70px;
         right: 0;
     }
 
@@ -549,22 +549,31 @@ body#sg {
         padding: 0 35px 0 52%;
     }
 
-    @media only screen and (min-width: $tablet-screen) and (max-width: $medium-screen) {
+    @media only screen and (min-width: 720px) and (max-width: $medium-screen) {
         position: absolute;
         gap: 10px;
-        padding: 0 40px 0 48%;
+        padding: 0 40px 0 46%;
     }
 
-    @media only screen and (min-width: 480px) and (max-width: 539px) { 
-        position: absolute;
-        gap: 10px;
-        padding: 0 27px 0 48%;
-    }
+    /* Para pantallas de 480px a 499px */
+@media only screen and (min-width: 480px) and (max-width: 499px) { 
+    position: absolute;
+    gap: 10px;
+    padding: 0 27px 0 20%;
+}
+
+/* Para pantallas de 500px a 539px */
+@media only screen and (min-width: 500px) and (max-width: 539px) { 
+    position: absolute;
+    gap: 10px;
+    padding: 0 27px 0 22%;
+}
+
 
     @media only screen and (min-width: $mobile-l-screen) and (max-width: $mobile-screen) {
         position: absolute;
         gap: 10px;
-        padding: 0 30px 0 14%;
+        padding: 0 30px 0 13%;
     }
 
     @media only screen and (min-width: $mobile-m-screen) and (max-width: $mobile-l-screen) {
