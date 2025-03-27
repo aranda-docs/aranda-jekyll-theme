@@ -138,7 +138,7 @@ body#sg {
         left: 188px;
     }
 
-    
+
     #iaMessage {
         .alertText {
             font-size: 14px;
@@ -166,7 +166,7 @@ body#sg {
         right: 0;
     }
 
-    
+
     #iaMessage {
         .alertText {
             font-size: 13px;
@@ -556,18 +556,18 @@ body#sg {
     }
 
     /* Para pantallas de 480px a 499px */
-@media only screen and (min-width: 480px) and (max-width: 499px) { 
-    position: absolute;
-    gap: 10px;
-    padding: 0 27px 0 20%;
-}
+    @media only screen and (min-width: 480px) and (max-width: 499px) {
+        position: absolute;
+        gap: 10px;
+        padding: 0 27px 0 20%;
+    }
 
-/* Para pantallas de 500px a 539px */
-@media only screen and (min-width: 500px) and (max-width: 539px) { 
-    position: absolute;
-    gap: 10px;
-    padding: 0 27px 0 22%;
-}
+    /* Para pantallas de 500px a 539px */
+    @media only screen and (min-width: 500px) and (max-width: 539px) {
+        position: absolute;
+        gap: 10px;
+        padding: 0 27px 0 22%;
+    }
 
 
     @media only screen and (min-width: $mobile-l-screen) and (max-width: $mobile-screen) {
