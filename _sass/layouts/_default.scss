@@ -555,14 +555,12 @@ body#sg {
         padding: 0 40px 0 46%;
     }
 
-    /* Para pantallas de 480px a 499px */
     @media only screen and (min-width: 480px) and (max-width: 499px) {
         position: absolute;
         gap: 10px;
         padding: 0 27px 0 20%;
     }
 
-    /* Para pantallas de 500px a 539px */
     @media only screen and (min-width: 500px) and (max-width: 539px) {
         position: absolute;
         gap: 10px;
