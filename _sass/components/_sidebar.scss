@@ -81,6 +81,16 @@
             color: $white;
             background-color: transparentize($white, 0.5);
             margin-left: 1rem;
+            white-space: normal;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+            width: 216px;
+            max-height: 38px;
+            line-height: 1.5rem;
         }
     }
 
@@ -120,6 +130,7 @@
         .group_title {
             font-weight: 400;
             padding: $margin;
+
             p {
                 width: 100%;
                 white-space: nowrap;

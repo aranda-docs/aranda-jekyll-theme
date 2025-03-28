@@ -25,43 +25,37 @@ body#sg {
 }
 
 #iaMessage {
-    position: absolute;
-    right: 336px;
-    top: 35px;
     z-index: 1;
     display: none;
-    border: 1px solid #57657458;
     border-radius: 6px;
-    width: 500px;
+    width: 100%;
     height: 40px;
     flex-direction: row;
-    align-items: flex-end;
-    background-color: #FBFBFB;
-    justify-content: center;
     align-items: center;
-    gap: 11px;
+    background-color: #FBFBFB;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    padding-right: 10px;
 
     .alertText {
         color: #8395A7;
-        font-size: 17px;
+        font-size: 15px;
     }
 }
 
 #languageSelector {
-    position: absolute;
-    right: 94px;
-    top: 82px;
     z-index: 1;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+
     .selector {
         display: flex;
         flex-direction: row;
         gap: 6px;
         align-items: center;
         cursor: pointer;
-        position: absolute;
         top: 12px;
         right: 15px;
         width: max-content;
@@ -71,16 +65,17 @@ body#sg {
 
 #language {
     display: none;
-    padding: 3px;
+    padding: 3px 0;
     margin-top: 10px;
     background-color: #f2f2f4;
     border-radius: 5px;
     cursor: pointer;
     position: absolute;
-    right: 0;
-    top: 35px;
+    right: 70px;
+    top: 54px;
     width: 118px;
     height: 125px;
+
     .languageOptionItem {
         height: 40px;
         display: flex;
@@ -91,15 +86,98 @@ body#sg {
         padding-right: 16px;
         cursor: pointer;
     }
+
     .languageOptionItem:hover {
         background-color: #ededf6;
+    }
+
+    .languageOptionItem.selected {
+        background-color: #e5e8ee;
+        color: #1a73e8;
+    }
+}
+
+@media only screen and (min-width: $large_screen) and (max-width: 2560px) {
+    #language {
+        top: 68px;
+        right: 28px;
+    }
+}
+
+@media only screen and (min-width: $medium-screen) and (max-width: $large_screen) {
+    #language {
+        top: 68px;
+        right: 22px;
+    }
+}
+
+@media only screen and (max-width: $medium_screen) {
+    #language {
+        top: 68px;
+        right: 20px;
+    }
+}
+
+@media only screen and (max-width: $tablet-screen) {
+    #language {
+        top: 68px;
+        right: 29px;
+    }
+}
+
+@media only screen and (max-width: $small_screen) {
+    #language {
+        top: 68px;
+        right: 15px;
+    }
+}
+
+@media only screen and (max-width: 429px) and (min-width: $mobile-m-screen) {
+    #language {
+        top: 71px;
+        left: 188px;
+    }
+
+
+    #iaMessage {
+        .alertText {
+            font-size: 14px;
+        }
+    }
+}
+
+/* iPhone 14 Pro */
+@media only screen and (max-width: 430px) and (min-width: 430px) {
+    #language {
+        top: 75px;
+        right: 18px;
+    }
+
+    #iaMessage {
+        .alertText {
+            font-size: 14px;
+        }
+    }
+}
+
+@media only screen and (max-width: 359px) {
+    #language {
+        top: 70px;
+        right: 0;
+    }
+
+
+    #iaMessage {
+        .alertText {
+            font-size: 13px;
+        }
     }
 }
 
 #arrowIcon {
     transition: transform 0.3s;
     height: 13px;
-                width: 13px;
+    width: 13px;
 }
 
 .sg-pusher {
@@ -142,6 +220,7 @@ body#sg {
     top: 0;
     right: 15px;
     display: none;
+
     @media only screen and (max-width: $large_screen) {
         display: block;
     }
@@ -164,16 +243,19 @@ body#sg {
             left: $left_rail + 20;
             color: $blue;
         }
+
         .sg_sidebar {
             width: $left_rail;
             left: 0;
         }
+
         .sg-main {
             left: $left_rail + 20;
             opacity: 0.2;
         }
     }
 }
+
 @media only screen and (max-width: $medium_screen) {
     .sg-pusher.show_sidebar {
         width: 60%;
@@ -184,16 +266,19 @@ body#sg {
             left: $left_rail + 20;
             color: $blue;
         }
+
         .sg_sidebar {
             width: 60%;
             left: 0;
         }
+
         .sg-main {
             left: $left_rail + 20;
             opacity: 0.2;
         }
     }
 }
+
 @media only screen and (max-width: $small_screen) {
     .sg-pusher.show_sidebar {
         width: 90%;
@@ -203,20 +288,24 @@ body#sg {
         .sg_sidebar_button {
             left: $left_rail - 30;
         }
+
         .sg_sidebar {
             width: 100%;
             left: 0;
         }
+
         .sg-main {
             position: absolute;
             left: $left_rail - 30;
             opacity: 0.2;
         }
+
         .sg_post {
             position: absolute;
             left: $left_rail - 30;
             opacity: 0.2;
         }
+
         .sg_apis {
             position: absolute;
             left: $left_rail - 30;
@@ -273,6 +362,7 @@ body#sg {
     color: #576574;
     padding: 10px 16px;
 }
+
 .apis h2 {
     color: #576574;
     font-weight: 500;
@@ -281,21 +371,26 @@ body#sg {
     background-color: #fcfcfc;
     margin-bottom: 36px;
 }
+
 .apis th {
     color: #576574;
 }
+
 .apis td {
     color: #576574;
 }
+
 .content-instal {
     position: absolute;
     padding-left: 315px;
     max-width: 68%;
 }
+
 .instal p {
     color: #999999;
     font-size: 14px;
 }
+
 .instal h1 {
     color: #727e89;
     font-weight: 500;
@@ -305,6 +400,7 @@ body#sg {
     font-size: 22px;
     margin-top: 46px;
 }
+
 .instal h2 {
     color: #727e89;
     font-weight: 500;
@@ -314,6 +410,7 @@ body#sg {
     font-size: 22px;
     margin-top: 46px;
 }
+
 .instal h3 {
     color: #727e89;
     font-weight: 500;
@@ -323,6 +420,7 @@ body#sg {
     font-size: 22px;
     margin-top: 46px;
 }
+
 .instal h4 {
     color: #727e89;
     font-weight: 500;
@@ -330,23 +428,28 @@ body#sg {
     font-size: 22px;
     margin-top: 31px;
 }
+
 .title_alert {
     color: #f57171;
     font-size: 14px;
     margin-left: 24px;
     margin-top: 8px;
 }
+
 .content_alert {
     border-bottom: 1px solid #feeded;
 }
+
 .alert {
     padding-top: 35px;
     padding-left: 28px;
     display: -webkit-box;
 }
+
 .notes {
     display: inline-block;
 }
+
 .notes h1 {
     font-size: 13px;
     color: #f57171;
@@ -354,6 +457,7 @@ body#sg {
     margin-right: 22px;
     margin-bottom: 14px;
 }
+
 .notes li {
     font-size: 13px;
     color: #f57171;
@@ -363,6 +467,7 @@ body#sg {
     display: block;
     margin-top: 17px;
 }
+
 .note-icon {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -372,6 +477,7 @@ body#sg {
     border-radius: 4px;
     padding-bottom: 13px;
 }
+
 .note-icon h2 {
     margin-left: 14px;
     font-size: 1rem;
@@ -397,19 +503,20 @@ body#sg {
     padding: 0 1px;
 }
 
-#contenido .body p > code {
+#contenido .body p>code {
     display: block;
     padding: 15px;
     white-space: pre;
 }
+
 .sg-main {
     padding: 0;
     width: 100%;
     height: auto;
     min-height: calc(100vh - 30px);
 }
+
 .sg_contain {
-    /*  problema padding */
     max-width: 70rem;
     margin: 0 auto;
 
@@ -417,6 +524,69 @@ body#sg {
         padding: 0 $right_rail 0 $left_rail + 12;
     }
 }
+
+.sg-message-selector {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    /* Surface Duo */
+    @media only screen and (min-width: 540px) and (max-width: 720px) {
+        position: absolute;
+        gap: 10px;
+        padding: 0 35px 0 27%;
+    }
+
+    @media only screen and (min-width: $large_screen) and (max-width: 2560px) {
+        position: absolute;
+        gap: 10px;
+        padding: 0 40px 0 70%;
+    }
+
+    @media only screen and (min-width: $medium-screen) and (max-width: $large_screen) {
+        position: absolute;
+        gap: 10px;
+        padding: 0 35px 0 52%;
+    }
+
+    @media only screen and (min-width: 720px) and (max-width: $medium-screen) {
+        position: absolute;
+        gap: 10px;
+        padding: 0 40px 0 46%;
+    }
+
+    @media only screen and (min-width: 480px) and (max-width: 499px) {
+        position: absolute;
+        gap: 10px;
+        padding: 0 27px 0 20%;
+    }
+
+    @media only screen and (min-width: 500px) and (max-width: 539px) {
+        position: absolute;
+        gap: 10px;
+        padding: 0 27px 0 22%;
+    }
+
+
+    @media only screen and (min-width: $mobile-l-screen) and (max-width: $mobile-screen) {
+        position: absolute;
+        gap: 10px;
+        padding: 0 30px 0 13%;
+    }
+
+    @media only screen and (min-width: $mobile-m-screen) and (max-width: $mobile-l-screen) {
+        position: absolute;
+        gap: 10px;
+        padding: 0 4px 0 6%;
+    }
+
+    @media only screen and (max-width: 350px) {
+        position: absolute;
+        gap: 10px;
+        padding: 0 4px 0 1%;
+    }
+}
+
 .sg_post {
     max-width: 70rem;
     margin: 0 auto;
@@ -425,6 +595,7 @@ body#sg {
     @media only screen and (max-width: $extended_screen) {
         max-width: 52rem;
     }
+
     @media only screen and (max-width: $large_screen) {
         padding: 0;
     }
