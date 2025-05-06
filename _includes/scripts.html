@@ -29,24 +29,28 @@
     updateLanguageOptions(lang);
 
     function updateLanguageOptions(currentLang) {
-        const languageOptionItems = document.querySelectorAll(".languageOptionItem");
-        languageOptionItems.forEach(option => {
+        const languageOptionItems = document.querySelectorAll(
+            ".languageOptionItem"
+        );
+        languageOptionItems.forEach((option) => {
             if (option.dataset.lang === currentLang) {
                 option.classList.add("selected");
             } else {
-                option.classList.remove("selected"); 
+                option.classList.remove("selected");
             }
         });
     }
 
     function changeLanguage(newLang) {
-        if (lang !== newLang) {
+        var currentLang = document.documentElement.lang || "es";
+
+        if (currentLang !== newLang) {
             var jekyllBaseUrl = "{{ site.baseurl }}";
             var urlPath = "{{page.url}}".replace(jekyllBaseUrl, "");
 
             var newUrl;
 
-            if (lang !== "es") {
+            if (currentLang !== "es") {
                 var languageRegex = /\/{{ site.language }}$/;
                 jekyllBaseUrl = jekyllBaseUrl.replace(languageRegex, "");
             }
@@ -57,7 +61,7 @@
                 newUrl = `${jekyllBaseUrl}/${newLang}${urlPath}`;
             }
 
-            lang = newLang;
+            document.documentElement.lang = newLang;
             updateLanguageOptions(newLang);
 
             window.location.href = newUrl;
