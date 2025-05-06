@@ -1,10 +1,15 @@
+{% assign path = '' %}
+{% if site.language != 'es' %}
+  {% assign path = site.language | append: '/' %}
+{% endif %}
+
 {% case site.section %}
   {% when "notes" %}
-    <a href="https://docs.arandasoft.com/notes.html">Home</a>
+    <a href="https://docs.arandasoft.com/{{ path }}notes.html">Home</a>
   {% when "ts" %}
-    <a href="https://docs.arandasoft.com/ts.html">Home</a>
+    <a href="https://docs.arandasoft.com/{{ path }}ts.html">Home</a>
   {% when "api" %}
-    <a href="https://docs.arandasoft.com/apis.html">Home</a>
+    <a href="https://docs.arandasoft.com/{{ path }}apis.html">Home</a>
   {% else %}
-    <a href="https://docs.arandasoft.com/">Home</a>
+    <a href="https://docs.arandasoft.com/{{ path }}">Home</a>
 {% endcase %}
