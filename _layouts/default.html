@@ -9,8 +9,7 @@
             <aside id="sidebar">{% include sidebar.html %}</aside>
             <main id="sgMain" class="sg-main">
                 <div>
-                    {% assign lang = site.language | default: "es" %} {% if
-                    site.translated == true %}
+                    {% assign lang = site.language | default: "es" %}
                     <div class="sg-message-selector">
                         <div id="iaMessage">
                             <img
@@ -68,7 +67,6 @@
                             </div>
                         </div>
                     </div>
-                    {% endif %}
 
                     <div>{{ content }}</div>
                 </div>
