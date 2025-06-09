@@ -11,6 +11,7 @@
                 <div>
                     {% assign lang = site.language | default: "es" %}
                     <div class="sg-message-selector">
+                        {% if site.translated == true %}
                         <div id="iaMessage">
                             <img
                                 src="{{ site.baseurl }}/assets/images/ic_translated.svg"
@@ -20,6 +21,7 @@
                                 {{ translations[lang].alert }}
                             </div>
                         </div>
+                        {% endif %}
                         <div id="languageSelector">
                             <div
                                 class="selector"
