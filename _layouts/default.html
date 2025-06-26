@@ -11,15 +11,28 @@
                 <div>
                     {% assign lang = site.language | default: "es" %}
                     <div class="sg-message-selector">
+                        {% if lang == "es" %}
+                        <div id="iaMessage" style="background-color: white">
+                            <div class="alertText" style="color: white">
+                                {{ translations[lang].alert }}
+                            </div>
+                        </div>
+                        {% else %}
                         <div id="iaMessage">
                             <img
                                 src="{{ site.baseurl }}/assets/images/ic_translated.svg"
-                                style="width: 20px; color: #8395a7;padding-left: 18px;"
+                                style="
+                                    width: 20px;
+                                    color: #8395a7;
+                                    padding-left: 18px;
+                                "
                             />
                             <div class="alertText">
                                 {{ translations[lang].alert }}
                             </div>
                         </div>
+                        {% endif %}
+
                         <div id="languageSelector">
                             <div
                                 class="selector"
