@@ -11,7 +11,7 @@
                 <div>
                     {% assign lang = site.language | default: "es" %}
                     <div class="sg-message-selector">
-                        {% if lang == "es" %}
+                        {% unless  translated %}
                         <div id="iaMessage" style="background-color: white">
                             <div class="alertText" style="color: white">
                                 {{ translations[lang].alert }}
@@ -31,7 +31,7 @@
                                 {{ translations[lang].alert }}
                             </div>
                         </div>
-                        {% endif %}
+                        {% endunless %}
 
                         <div id="languageSelector">
                             <div
