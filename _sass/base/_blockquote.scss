@@ -7,6 +7,7 @@ blockquote {
     font-size: 15px;
     line-height: 1.428571429;
     padding: 19px 0px 1px 12px;
+    font-weight: lighter;
     margin-left: 1px;
     position: relative;
     margin-right: 1px;
@@ -14,7 +15,7 @@ blockquote {
 blockquote#alert {
     border-left: 4px solid;
     border-left-color: #EA0443;
-    color: #EA0443;
+    color: $alert-font-color;
     background-color: #FFDBE5;
     font-weight: normal;
 }
@@ -28,8 +29,9 @@ blockquote#alert {
  blockquote#related{
     border-left: 4px solid;
     border-left-color: #1e90ff;
-    color: #091f3e;
+    color: $related-font-color;
     background-color: #1e90ff0a;
     font-size: 15px;
     font-weight: normal;
 }
+ 
