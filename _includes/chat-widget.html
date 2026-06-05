@@ -1,0 +1,85 @@
+{% if site.chat_widget.enabled %}
+{% assign chat_api_url = site.chat_widget.api_base_url | default: "" %}
+{% assign chat_version = site.chat_widget.version | default: "1" %}
+{% assign chat_lang = site.language | default: "es" %}
+{% if chat_lang == "en" %}
+  {% assign chat_launcher_label = "Intelligent search" %}
+  {% assign chat_locale = "en-US" %}
+{% elsif chat_lang == "pt" %}
+  {% assign chat_launcher_label = "Busca inteligente" %}
+  {% assign chat_locale = "pt-BR" %}
+{% else %}
+  {% assign chat_launcher_label = "Búsqueda inteligente" %}
+  {% assign chat_locale = "es-419" %}
+{% endif %}
+
+<script src="{{ chat_api_url }}/assets/chat-widget-loader.js?v={{ chat_version }}"></script>
+<script>
+  (function () {
+    if (window._arandaChatListenerSet) return;
+    window._arandaChatListenerSet = true;
+
+    function initChatWidget() {
+      if (!window.ArandaChatWidget) return;
+
+      var isSmall = window.innerWidth <= 768;
+
+      window.ArandaChatWidget.init({
+        apiBaseUrl: "{{ chat_api_url }}",
+
+        placement: {
+          corner: "bottom-right",
+          offsetX: isSmall ? 8 : 24,
+          offsetY: isSmall ? 8 : 24,
+        },
+
+        panel: {
+          width:        Math.min(440, window.innerWidth  - (isSmall ? 0 : 32)),
+          height:       Math.min(680, window.innerHeight - (isSmall ? 0 : 32)),
+          borderRadius: 24,
+          borderColor:  "#e4e7ec",
+          background:   "#ffffff",
+        },
+
+        launcher: {
+          label:           "{{ chat_launcher_label }}",
+          iconUrl:         "{{ site.baseurl }}/assets/images/ic_boton_ia.svg",
+          size:            60,
+          backgroundColor: "transparent",
+          textColor:       "#ffffff",
+        },
+
+        embedConfig: {
+          locale: "{{ chat_locale }}",
+          skipIntake: true,
+          branding: {
+            agentName: "Asistente",
+          },
+          shell: {
+            showMaximize: false,
+            themeVars: {
+              "--primary":      "#111827",
+              "--primary-dark": "#0f172a",
+            },
+          },
+          chatkit: {
+            header:  { enabled: false },
+            history: { enabled: true, showDelete: true, showRename: true },
+          },
+        },
+      });
+    }
+
+    document.addEventListener('turbolinks:before-visit', function () {
+      if (window.ArandaChatWidget) {
+        window.ArandaChatWidget.destroy();
+      }
+    });
+
+    document.addEventListener('turbolinks:load', initChatWidget);
+    if (typeof window.Turbolinks === 'undefined') {
+      document.addEventListener('DOMContentLoaded', initChatWidget);
+    }
+  })();
+</script>
+{% endif %}

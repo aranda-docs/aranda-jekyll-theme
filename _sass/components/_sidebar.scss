@@ -1,3 +1,5 @@
+@use "sass:color";
+
 .sg_sidebar {
     color: $white;
     background: $sidebar-color;
@@ -40,7 +42,7 @@
     }
 
     li {
-        border-top: 1px solid transparentize($white, 0.8);
+        border-top: 1px solid color.adjust($white, $alpha: -0.8);
         line-height: $heading-line-height;
     }
 
@@ -79,7 +81,7 @@
         &:hover,
         &.active {
             color: $white;
-            background-color: transparentize($white, 0.5);
+            background-color: color.adjust($white, $alpha: -0.5);
             margin-left: 1rem;
         }
     }
