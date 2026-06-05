@@ -1,5 +1,12 @@
 ## Aranda Docs Jekyll Theme Settings
 
+## Chat Widget
+## ===========
+chat_widget:
+  enabled: true
+  api_base_url: https://app-aranda-docsagentdev.azurewebsites.net
+  version: 2
+
 ## Theme Settings
 ## ==============
 
