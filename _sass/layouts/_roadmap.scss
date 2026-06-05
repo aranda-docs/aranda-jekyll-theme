@@ -1,4 +1,3 @@
-@use "sass:color";
 
 // Roadmap Layout
 #sg_roadmap {
@@ -79,7 +78,7 @@
     }
 
     &:hover {
-      background: color.adjust($smoke, $alpha: -0.8);
+      background: transparentize($smoke, 0.8);
 
       .header,
       .icon {

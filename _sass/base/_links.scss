@@ -1,12 +1,10 @@
-@use "sass:color";
-
 // Links
 a {
   color: $link-color;   // @CHANGE
-  
+
   &:hover,
   &:focus {
-    color: color.adjust($link-color, $lightness: -12%);
+    color: darken($link-color, 12%);
   }
 }
 

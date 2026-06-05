@@ -3,7 +3,7 @@
 ## Chat Widget
 ## ===========
 chat_widget:
-  enabled: true
+  enabled: false
   api_base_url: https://app-aranda-docsagentdev.azurewebsites.net
   version: 2
 
