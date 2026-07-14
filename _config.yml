@@ -3,8 +3,9 @@
 ## Chat Widget
 ## ===========
 chat_widget:
-  enabled: false
-  api_base_url: https://app-aranda-docsagentdev.azurewebsites.net
+  enabled: true
+  api_base_url: https://ai.arandasoft.com
+  loader_base_url: https://ai.arandasoft.com/aidocs
   version: 2
 
 ## Theme Settings
