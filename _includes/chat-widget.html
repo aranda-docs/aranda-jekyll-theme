@@ -1,5 +1,6 @@
 {% if site.chat_widget.enabled %}
 {% assign chat_api_url = site.chat_widget.api_base_url | default: "" %}
+{% assign chat_loader_url = site.chat_widget.loader_base_url | default: chat_api_url %}
 {% assign chat_version = site.chat_widget.version | default: "1" %}
 {% assign chat_lang = site.language | default: "es" %}
 {% if chat_lang == "en" %}
@@ -13,7 +14,7 @@
   {% assign chat_locale = "es-419" %}
 {% endif %}
 
-<script src="{{ chat_api_url }}/assets/chat-widget-loader.js?v={{ chat_version }}"></script>
+<script src="{{ chat_loader_url }}/assets/chat-widget-loader.js?v={{ chat_version }}"></script>
 <script>
   (function () {
     if (window._arandaChatListenerSet) return;
@@ -56,7 +57,7 @@
             agentName: "Asistente",
           },
           shell: {
-            showMaximize: false,
+            showMaximize: true,
             themeVars: {
               "--primary":      "#111827",
               "--primary-dark": "#0f172a",
