@@ -1,3 +1,4 @@
+
 // Roadmap Layout
 #sg_roadmap {
   
@@ -77,7 +78,7 @@
     }
 
     &:hover {
-      background: transparentize($smoke, .8);
+      background: transparentize($smoke, 0.8);
 
       .header,
       .icon {
