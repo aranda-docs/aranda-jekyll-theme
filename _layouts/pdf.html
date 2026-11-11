@@ -25,5 +25,40 @@
         <div class="sg-pusher">
             <main class="sg-main">{{ content }}</main>
         </div>
+
+        <script>
+            // Clasifica las imágenes del contenido por tamaño; el CSS no puede leer el tamaño natural.
+            (function () {
+                var MAX = 120;
+                var WIDE = 700;
+
+                function explicitWidth(img) {
+                    var match = /^(\d+(?:\.\d+)?)px$/.exec(img.style.width || "");
+                    return match ? parseFloat(match[1]) : null;
+                }
+
+                function classify(img) {
+                    var width = explicitWidth(img);
+                    if (width !== null && width <= MAX) {
+                        img.classList.add("pdf-inline");
+                    } else if (width === null && img.naturalWidth < MAX && img.naturalHeight < MAX) {
+                        img.classList.add("pdf-icon");
+                    } else if ((width !== null ? width : img.naturalWidth) > WIDE) {
+                        img.classList.add("pdf-wide");
+                    }
+                }
+
+                var images = document.querySelectorAll("main.sg-main img:not(.cover)");
+                Array.prototype.forEach.call(images, function (img) {
+                    if (img.complete && img.naturalWidth) {
+                        classify(img);
+                    } else {
+                        img.addEventListener("load", function () {
+                            classify(img);
+                        });
+                    }
+                });
+            })();
+        </script>
     </body>
 </html>
